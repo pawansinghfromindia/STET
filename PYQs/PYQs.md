@@ -8,6 +8,1777 @@
 
 <br/>
 
+Q.1. What is the main purpose of inheritance in OOP?
+- [ ] A. To create instances of classes
+- [ ] B. To prevent data abstraction
+- [x] C. To establish a parent-child relationship between classes
+- [ ] D. To define exception
+
+Correct answer: C To establish a parent-child relationship between classes.
+
+**1. Understand the concept** <br/>
+**Inheritance** is an Object-Oriented Programming (OOP) feature that allows one class to acquire properties and methods from another class.
+
+There are two important terms:
+- Parent class (base class): The class whose properties and methods can be inherited.
+- Child class (derived class): The class that inherits from the parent class.
+
+For example, a Dog is an Animal. A dog can use common animal behaviors while also having its own specific behaviors.
+
+
+**2. Python example**
+```py
+class Animal:             # Parent class
+   def eat(self):
+       print("Animal is eating")
+
+class Dog(Animal):        # Child class
+   def bark(self):
+      print("Dog is barking")
+
+d = Dog()
+d.eat()
+d.bark()
+
+# Output:
+# Animal is eating
+# Dog is barking
+```
+Notice that `Dog` defines only the `bark()` method, but its object can also call `eat()` because `Dog` inherits from `Animal`.
+
+**3. Why are the other options incorrect?**
+| Option	                          | Explanation                                                               |
+|-----------------------------------|---------------------------------------------------------------------------|
+| A. To create instances of classes	| Creating objects is called instantiation, not inheritance.                |
+| B. To prevent data abstraction	  | Inheritance does not prevent abstraction. These are separate OOP concepts.|
+| C. To establish a parent-child relationship	| A child class inherits features from a parent class.            |
+| D. To define exception	          | Exceptions are handled using exception-handling mechanisms such as try and except in Python. |
+
+**4. Benefits of inheritance**
+- **Code reusability**: Reuse existing methods instead of writing them again.
+- **Extensibility**: Add new behavior in a child class.
+- **Maintainability**: Common functionality can be managed in the parent class.
+
+**5. Exam tip: Remember these distinctions**
+- **Inheritance** -> acquiring features from another class.
+- **Encapsulation** -> bundling data and methods together and controlling access.
+- **Abstraction** -> exposing essential features while hiding implementation details.
+- **Polymorphism** -> the same interface or method call can behave differently in different contexts.
+
+---
+
+**Question 2: Application of Microcontrollers**
+
+Q.2. Microcontrollers find application in various fields. What is a typical application of microcontrollers in the automotive industry? bihar-stet-class-11-12-computer-science-3Nov2025pdf.pdf
+- [ ] A. Operating systems for computers
+- [ ] B. Entertainment systems in airplanes
+- [x] C. Engine control in cars
+- [ ] D. Weather forecasting systems
+
+Correct answer: C Engine control in cars
+
+**1. What is a microcontroller?** <br/>
+A **microcontroller (MCU) is a small integrated circuit** that contains the essential components of a computer on a single chip.
+
+It typically includes:
+- **CPU**: Executes instructions.
+- **Memory**: Stores programs and data.
+- **Input/output (I/O) interfaces**: Communicate with sensors and other devices.
+- **Timers and other peripherals**: Help control operations and measure time.
+Unlike a general-purpose computer, a microcontroller is commonly designed to perform a specific control task inside a larger device.
+
+
+**2. How does a microcontroller control a car engine?**
+
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/9d2bf335-d9b1-4b0b-bdc4-fbe651210b91" />
+
+For example, when engine conditions change, the engine control unit (ECU) processes sensor readings and adjusts fuel injection or ignition timing as needed.
+
+The microcontroller is one of the components that makes this automatic control possible.
+
+**3. Why are the other options incorrect?**
+| Option	                            | Explanation       |
+|-------------------------------------|-------------------|
+| A. Operating systems for computers	| General-purpose computer operating systems are not the typical automotive microcontroller application described here. |
+| B. Entertainment systems in airplanes	 | Such systems may use embedded computing, but this option is not an application in the automotive industry.  |
+| C. Engine control in cars.    |  Microcontrollers process sensor inputs and control engine functions. |
+| D. Weather forecasting systems | Weather forecasting generally relies on powerful computing systems rather than the specific embedded control application asked about. |
+
+
+**4. Microcontroller vs. microprocessor**
+
+This is a useful exam concept because questions often compare these two terms.
+
+| Microcontroller	       | Microprocessor   |
+|------------------------|------------------|
+| CPU, memory and peripherals commonly integrated on one chip |	Primarily a processing unit; often relies on external memory and other components |
+| Common in embedded control systems	| Common in general-purpose computing systems  |
+| Example: engine control unit	      | Example: CPU in a desktop computer           |
+
+These are general distinctions; modern devices can blur the boundaries.
+
+
+**5. Remember for the exam: Microcontroller = embedded control**.
+
+Common applications include:
+- **Cars**: `engine control`, `airbags` and other `control systems`.
+- **Washing machines**: `wash cycles` and `motor control`.
+- **Microwave ovens**: `timing` and `heating control`.
+- **Medical devices**: `monitoring` and `device control`.
+
+A washing machine automatically controls its motor and wash cycle. Which component is most suitable for carrying out these predefined control tasks?
+- [x] A. Microcontroller
+- [ ] B. Desktop operating system
+- [ ] C. Web browser
+- [ ] D. Weather forecasting software
+
+Correct!
+A microcontroller can read inputs and control the motor and wash cycle according to a programmed sequence.
+
+---
+
+Q.2. FTA stands for _____
+- [ ] A. File Allocation Tree
+- [x] B. File Allocation Table
+- [ ] C. File Allocation Graph
+- [ ] D. All of the above
+
+Correct answer: B. File Allocation Table
+
+
+**Step 1: What is FAT?** <br/>
+**FAT** stands for **File Allocation Table**. <br/>
+It is a file system structure used to keep track of how files are stored on a storage device, such as a hard disk, USB drive, or memory card.
+
+**Step 2: Why is it needed?**<br/>
+A file may occupy multiple clusters on a disk. <br/>
+FAT keeps track of those clusters so the operating system can locate the file's contents.
+
+Simple example: How a file is stored
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/4fe682dd-4c3f-48a5-a79b-60a6a4b7b453" />
+
+**4. Exam memory tip** <br/>  
+Remember: **FAT = File Allocation Table → file system → tracks disk clusters**.
+
+Don't confuse FAT with a folder tree: the folder structure organizes names and directories, while FAT tracks the allocation of file data.
+
+What does FAT primarily help the operating system track?
+- [ ] The CPU's instructions
+- [x] The disk clusters allocated to files
+- [ ] The computer's network password
+- [ ] The screen resolution
+
+Correct! FAT tracks file-data allocation on the storage device.
+
+---
+
+Q.4 What is CRUD an acronym for in database operations?
+- [x] A. Create, Read, Update, Delete
+- [ ] B. Cache, Read, Update, Delete
+- [ ] C. Copy, Replace, Update, Delete
+- [ ] D. Collect, Read, Use, Discard
+
+Correct answer: A. Create, Read, Update, Delete
+
+**1. Understand CRUD step by step** <br/>
+CRUD represents the four basic operations performed on data in a database.
+
+<img width="500" height="450" alt="image" src="https://github.com/user-attachments/assets/836ae379-af7f-4bf0-b9d5-c6cc47e2e72f" />
+
+**2. See CRUD in SQL** <br/>
+Here is how these operations commonly map to SQL commands:
+| CRUD operation | SQL command |
+|----------------|-------------|
+| Create	       | `INSERT`    |
+| Read	         | `SELECT`    |
+| Update	       | `UPDATE`    |
+| Delete	       | `DELETE`    |
+
+For example, adding a student:
+```sql
+INSERT INTO Students (RollNo, Name)
+VALUES (101, 'Ravi');
+```
+Reading student records:
+```sql
+SELECT * FROM Students;
+```
+
+Important distinction: In CRUD, Create means creating a data record, not necessarily creating a database table. Creating a table uses SQL's CREATE TABLE statement.
+
+**3. Why are the other options wrong?**
+- B. Cache, Read, Update, Delete - Cache is not the C in CRUD.
+- C. Copy, Replace, Update, Delete - Copy and Replace are not the standard CRUD operations.
+- D. Collect, Read, Use, Discard - These are not the standard database-operation terms.
+
+Which SQL command corresponds to the Update operation in CRUD?
+- [ ] `INSERT`
+- [ ] `SELECT`
+- [x] `UPDATE`
+- [ ] `DELETE`
+
+Correct! UPDATE modifies existing records.
+
+---
+
+Q.5 Which principle ensures that only essential information is visible to the outside world?
+- [ ] A. Polymorphism
+- [ ] B. Information hiding
+- [ ] C. Encapsulation
+- [x] D. Abstraction
+
+Correct answer: D. Abstraction
+
+**1. Understand the concept step by step** <br/>
+**Abstraction** means exposing the important features of an object while hiding unnecessary implementation details.
+
+Think about driving a car:
+```
+What you use
+- Steering wheel, accelerator and brake.
+
+What you don't need to manage directly
+- Internal engine mechanisms and fuel-injection details.
+
+You can drive the car without knowing every detail of how its engine works.
+This illustrates abstraction.
+```
+In programming, a user might call a method such as `car.start()` without needing to know all the internal steps used to start the engine.
+
+**2. Differentiate the four options** <br/>
+These concepts are related, but they are not identical.
+| Concept	                | Main idea	                          | Simple example                               |
+|-------------------------|-------------------------------------|----------------------------------------------|
+| **Polymorphism**	      | One interface, different behaviors	| `draw()` works differently for a circle and a rectangle |
+| **Information hiding**	| Prevent direct access to internal details	| A private variable cannot be accessed directly from outside a class |
+| **Encapsulation**	      | Bundle data and methods together and control access	| A BankAccount class manages its balance through methods |
+| **Abstraction**	        | Show essential features and hide implementation complexity | Drive a car without understanding its engine internals |
+
+**Exam tip**: When the question emphasizes essential features or hiding implementation complexity, choose Abstraction. When it emphasizes restricting access to internal data, think Information hiding or Encapsulation, depending on the wording.
+
+You use an ATM to withdraw money without knowing how the bank processes the transaction internally. Which OOP principle does this best illustrate?
+- [ ] Polymorphism
+- [x] Abstraction
+- [ ] Inheritance
+- [ ] Method overloading
+
+Correct! You use the essential ATM functions without needing to know the internal processing.
+
+
+---
+
+**1. What is an Ethernet network?** <br/>
+Ethernet is a widely used technology for connecting devices in a Local Area Network (LAN), such as computers in a school, office, or computer lab.
+
+<img width="976" height="327" alt="image" src="https://github.com/user-attachments/assets/ebd47fa9-5404-45e8-a862-b8eef4cc7af1" />
+
+For example, computers in a school lab can use Ethernet to communicate with one another, access shared resources, and connect to the internet through a network device.
+
+**2. Important Ethernet facts for the exam**
+- **Network type**: Commonly used in LANs.
+- **IEEE standard**: IEEE 802.3.
+- **Common medium**: Twisted-pair copper cables and fibre-optic cables.
+- **Addressing**: Ethernet frames use MAC addresses for local network delivery.
+- **Device commonly used**: An Ethernet switch connects devices within a LAN.
+- **Data unit**: Ethernet transmits data in frames.
+
+**3. How does Ethernet differ from the other options?**
+| Option	                  | What it refers to                                                    |
+|---------------------------|----------------------------------------------------------------------|
+| A. **Ethernet networks**	    | LAN technology standardized by IEEE 802.3                            |
+| B. **Token Ring networks**	  | A LAN technology that uses a token-passing access method             |
+| C. **ATM networks**	          | Asynchronous Transfer Mode, a networking technology using fixed-size cells |
+| D. **Point-to-Point networks**|	A direct link between two endpoints; a general connection arrangement rather than a specific LAN technology like Ethernet |
+
+
+Exam memory tip: Remember **Ethernet = IEEE 802.3, while Token Ring = IEEE 802.5**.
+
+---
+
+Q.7 Stealing someone's intellectual work and representing it as your own is known as ………… .
+- [ ] A. Fraud
+- [ ] B. Identity Theft
+- [ ] C. Online Stealing
+- [x] D. Plagiarism
+
+Correct answer: D. Plagiarism
+
+**1. Understand the concept step by step** <br/>
+Plagiarism means using another person's original work or ideas and presenting them as your own without proper acknowledgment.
+
+Examples include:
+- Copying someone's assignment and submitting it under your name.
+- Copying paragraphs from a website into your project without citing the source.
+- Using someone else's research or writing and claiming that you created it.
+
+**2. Why are the other options incorrect?**
+| Option	                | Meaning	                                                  | Why it is incorrect here |
+|-------------------------|-----------------------------------------------------------|--------------------------|
+| A. **Fraud**	          | Deliberate deception, often for unlawful gain	Too general;| the specific act described is plagiarism. |
+| B. **Identity Theft**	  | Using another person's identifying information without authorization | Concerns someone's identity, not specifically copying their work. |
+| C. **Online Stealing**	| A general, nonstandard description	| Not the established term for presenting another person's intellectual work as your own. |
+| D. **Plagiarism**	      | Presenting another person's work or ideas as your own without proper credit	| Correct answer. |
+
+**3. Exam memory tip**
+- **Plagiarism** -> copying intellectual work without proper credit.
+- **Identity theft** -> misusing another person's identity.
+- **Fraud** -> deception for an improper or unlawful purpose.
+
+
+A student copies an article from the internet and submits it as their own assignment without mentioning the author. What is this called?
+- [ ] Identity theft
+- [x] Plagiarism
+- [ ] Data encryption
+- [ ] Authentication
+      
+Correct! Copying someone else's work without proper credit is plagiarism.
+
+---
+
+Q.8 Even with two-factor authentication, users may still be vulnerable to _____________ attacks.
+- [ ] A. Scripting
+- [ ] B. Cross attack
+- [x] C. Man-in-the-middle
+- [ ] D. Radiant
+
+Correct answer: C. Man-in-the-middle
+
+**1. Understand the concept step by step** <br/>
+First, let's understand two-factor authentication (2FA).
+
+Two-factor authentication requires two different forms of verification to sign in. For example:
+1. Something you know - your password.
+2. Something you have - a one-time code from an authenticator app.
+Even with 2FA, an attacker may use a man-in-the-middle (MITM) attack to intercept or relay communication between the user and the legitimate service.
+
+<img width="591" height="316" alt="image" src="https://github.com/user-attachments/assets/8615ab28-c0dc-4786-8d66-8c593224cf04" />
+
+
+Important: **2FA still significantly improves security**. However, some forms of 2FA, such as codes entered into a phishing site, can be relayed by an attacker. Phishing-resistant authentication, such as passkeys, offers stronger protection against this type of attack.
+
+
+**2. Why are the other options incorrect?**
+- A. **Scripting** - Too broad; scripting can be involved in different attacks, but it is not the best answer here.
+- B. **Cross attack** - Not a standard, specific attack name in this context.
+- C. **Man-in-the-middle** - Correct. An attacker can intercept or relay communication, potentially compromising a login session.
+- D. **Radiant** - Not a recognized attack type in this context.
+
+**3. Exam memory tip** <br/>
+**MITM = Man in the Middle**. An attacker positions themselves between two communicating parties to intercept or manipulate communication.
+
+What does MITM stand for?
+- [ ] Multiple Internet Transmission Method
+- [x] Man-in-the-middle
+- [ ] Managed Internal Threat Monitoring
+- [ ] Multi-Input Transfer Mechanism
+
+Correct! MITM stands for Man-in-the-middle.
+
+---
+
+Que. 9 The ability of a class to provide different implementations of a method based on the input parameters?
+- [x] A. Overloading
+- [ ] B. Polymorphism
+- [ ] C. Inheritance
+- [ ] D. Encapsulation
+
+Correct answer: A. Overloading
+
+**1. Understand method overloading step by step** <br/>
+Method overloading means defining multiple methods with the same name but different parameter lists.
+
+For example, in Java:
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+Both methods are named `add`, but they accept different numbers of parameters.
+```java
+add(2, 3);       // Calls the first method: 5
+add(2, 3, 4);    // Calls the second method: 9
+```
+The compiler selects the appropriate method based on the arguments supplied.
+
+**2. Exam memory tip**
+- Same method name + different parameters -> **Overloading**
+- Subclass provides its own implementation of an inherited method -> **Overriding**
+
+Which example demonstrates method overloading?
+- [x] `print(int x)` and `print(String x)` in the same class
+- [ ] A child class inherits a field from its parent
+- [ ] A class makes a variable private
+- [ ] A class creates an object
+
+Correct! Both methods have the same name but different parameter types.
+
+
+---
+
+Q.10 Which of the following refers to creating products tailored to individual customers?
+- [x] A. Customization
+- [ ] B. Adaptation
+- [ ] C. Direct material
+- [ ] D. Auction
+
+Correct answer: A. Customization
+
+**1. Understand the concept step by step** <br/>
+Customization means modifying or designing a product or service according to an individual customer's needs, preferences, or requirements.
+
+For example, imagine you're buying a laptop online.
+```
+A customer chooses:
+- RAM: 16 GB
+- Storage: 1 TB
+- Color: Silver
+The customer selects the specifications they prefer instead of accepting only one fixed configuration. This illustrates customization.
+```
+Other examples include personalized T-shirts, customized phone cases, and made-to-order furniture.
+
+**2. Why are the other options incorrect?**
+| Option	              | Meaning	                                                    | Why it isn't correct |
+|-----------------------|-------------------------------------------------------------|----------------------|
+| A. **Customization**	| Tailoring a product to an individual customer's preferences	| Correct answer. |
+| B. **Adaptation**	    | Adjusting something to suit a new condition or environment	| Broader than individual product personalization. |
+| C. **Direct material** | Material that becomes part of a manufactured product	| A production-cost term, not the process described. |
+| D. **Auction**	       | A process in which buyers bid for an item	| Describes a selling method, not product customization. |
+
+**5. Exam memory tip: Customization = customer-specific product**.
+
+Don't confuse it with mass production, where many identical products are manufactured, or mass customization, where products are produced at scale while still allowing individual choices.
+
+A company allows customers to print their own names and select designs on phone covers. What is this an example of?
+- [ ] Auction
+- [x] Customization
+- [ ] Direct material
+- [ ] Data encryption
+
+Correct! Customers personalize the product to their preferences.
+
+---
+
+Q.11 The length of an IPv6 address is:
+- [ ] A. 32 bits
+- [ ] B. 64 bits
+- [x] C. 128 bits
+- [ ] D. 256 bits
+
+Correct answer: C. 128 bits
+
+An IPv6 address is 128 bits long. This is the standard address length defined for Internet Protocol version 6.
+
+**1. Understand the concept step by step** <br/>
+
+Step 1: **What is an IP address?** <br/>
+An Internet Protocol (IP) address identifies a network interface so devices can communicate across networks.
+
+There are two important versions:
+| Feature	       | IPv4	                             | IPv6                                   |
+|----------------|-----------------------------------|----------------------------------------|
+| Address length | 32 bits	                         | 128 bits                               |
+| Format	       | Decimal numbers separated by dots | Hexadecimal groups separated by colons |
+| Example	       | `192.168.1.1`                     | `2001:db8::1`                          |
+
+Step 2: **Why does IPv6 use 128 bits?** <br/>
+IPv6 was designed to provide a much larger address space than IPv4.
+- IPv4 provides `2^32` possible bit patterns.
+- IPv6 provides `2^128` possible bit patterns.
+That means IPv6 can support an enormously larger number of addresses.
+
+Step 3: **How is an IPv6 address organized?** <br/>
+A full IPv6 address has eight groups of hexadecimal digits. Each group represents 16 bits.
+
+`8 x 16 = 128 bits`
+
+For example: `2001:0db8:0000:0000:0000:0000:0000:0001` <br/>
+The address can be shortened to `2001:db8::1` by using IPv6's zero-compression rules.
+
+**2. Exam memory tip**
+- **IPv4 = 32 bits**
+- **IPv6 = 128 bits**
+
+How many bits are in an IPv4 address?
+- [ ] 16 bits
+- [x] 32 bits
+- [ ] 64 bits
+- [ ] 128 bits
+
+Correct! IPv4 uses 32 bits, while IPv6 uses 128 bits.
+
+---
+
+Q.12 A platform where individuals or groups regularly publish written content, typically in a reverse chronological order is known as:
+- [ ] A. News Group
+- [x] B. Blog
+- [ ] C. Chat Group
+- [ ] D. Social Networking
+
+Correct answer: B. Blog
+
+A blog is a website or online platform where an individual or group publishes articles, opinions, tutorials, or other written content.
+
+The clue in this question is "written content, typically in a reverse chronological order."
+
+
+**1. Understand "reverse chronological order"** <br/>
+- **Chronological order** means arranging events from oldest to newest.
+- **Reverse chronological** order means arranging them from newest to oldest.
+
+For example, suppose a computer science blog publishes these posts:
+
+
+<img width="562" height="247" alt="image" src="https://github.com/user-attachments/assets/e214aef7-03fe-459c-97ef-2ac515b5a935" />
+
+
+**2. Why are the other options incorrect?**
+| Option	                  | Meaning                                                       |
+|---------------------------|---------------------------------------------------------------|
+| A. **News Group**	        | An online discussion forum or group organized around a topic  |
+| B. **Blog**	              | A platform for publishing articles and written posts - correct|
+| C. **Chat Group**	        | A group for exchanging messages and conversations             |
+| D. **Social Networking**	| A platform for connecting and interacting with people         |
+
+> A social networking site can also contain blog posts, but Blog is the most specific answer to this question.
+
+
+**3. Exam memory tip, Remember these clues:**
+- Articles or posts, newest first -> **Blog**
+- Real-time messaging -> **Chat group**
+- Connecting with people -> **Social networking**
+
+
+A teacher regularly publishes computer programming tutorials on a website, with the latest tutorial displayed at the top. What is this website most likely called?
+- [x] Blog
+- [ ] Chat group
+- [ ] News group
+- [ ] Operating system
+
+Correct! A blog publishes posts or articles, often with the newest first.
+
+---
+
+Q.13 A text file `song.txt` contains the following contents in it: `Life goes on as it never ends`
+What will be the output of the following code snippet?
+```py
+f1 = open("song.txt", "r")
+s1 = f1.read(5)
+s2 = f1.readline(4)
+s3 = f1.read(3)
+print(s1, s3, sep="#")
+```
+- [ ] A. goes # on
+- [ ] B. Life #goes # on
+- [x] C. Life # on
+- [ ] D. Error
+
+Correct answer: C. Life # on
+
+Let's trace the code carefully. The key is that each read operation continues from the file's current position.
+
+**1. Step-by-step execution** 
+```
+Initially, the file contains:
+
+Life goes on as it never ends
+
+Step 1: s1 = f1.read(5)
+
+The read(5) method reads the next 5 characters.
+
+s1 = "Life "
+
+Notice that the fifth character is a space after Life.
+------------------------------------------------------
+
+Step 2: s2 = f1.readline(4)
+
+The file pointer has moved past those first five characters.
+readline(4) now reads up to four characters from the current position.
+
+s2 = "goes"
+
+The file pointer is now just before the space following goes.
+--------------------------------------------------------------
+
+Step 3: s3 = f1.read(3)
+
+The next three characters are a space, o, and n.
+
+s3 = " on"
+-------------------------------------------------------------
+Step 4: print(s1, s3, sep="#")
+
+The print() function prints s1 and s3, placing # between them.
+- s1 contains "Life " - with a trailing space.
+- s3 contains " on"   - with a leading space.
+-------------------------------------------------------------
+Therefore, the output is: "Life # on"
+```
+1. `read(5)` -> `"Life "`
+2. `readline(4)` -> `"goes"`
+3. `read(3)` -> `" on"`
+
+Exam memory tips
+- `read(n)` reads up to n characters.
+- `readline(n)` reads up to n characters from the current position, stopping earlier if a newline is encountered.
+- Reading advances the file pointer.
+- Only variables included in `print()` are displayed.
+
+If we changed the last line to print(s2), what would be printed?
+- [ ] `Life` 
+- [x] `goes`
+- [ ] `on`
+- [ ] The entire file
+
+Correct! s2 contains the four characters 'goes'.
+
+---
+
+Q14. Who used the term “IoT” first?
+- [ ] A. Steve Jobs
+- [ ] B. Bill Simpson
+- [x] C. Kevin Aston
+- [ ] D. None of these
+
+Correct answer: C. Kevin Ashton. He coined the term Internet of Things (IoT) in 1999 while working on a presentation related to supply-chain management and RFID technology.
+
+**Understand the concept** <br/>
+**IoT (Internet of Things)** means physical objects connected to the internet that can collect, send, or receive data.
+
+Examples:
+- A smartwatch tracking your steps.
+- A smart thermostat adjusting room temperature.
+- Sensors monitoring soil moisture on a farm.
+
+
+- **Steve Jobs** — known for co-founding Apple, not for coining IoT.
+
+**Exam tip: Remember Kevin Ashton -> Internet of Things (IoT) -> 1999.**
+
+Which technology is commonly used in IoT devices to identify objects wirelessly?
+- [x] A. RFID
+- [ ] B. HTML
+- [ ] C. SMTP
+- [ ] D. SQL
+
+**RFID stands for Radio-Frequency Identification**. It uses radio waves to identify and track objects wirelessly.
+
+Example: RFID tags are used in library books, access cards, and inventory tracking.
+
+Exam tip: RFID is commonly associated with IoT because it helps devices identify and track physical objects.
+
+---
+
+Q15. Languages commonly supported by Dreamweaver for web development?
+- [ ] A. Python and Ruby
+- [x] B. HTML and CSS
+- [ ] C. C++ and Java
+- [ ] D. PHP and MySQL
+
+**Adobe Dreamweaver** is a web development tool used to create and edit websites.
+- **HTML (HyperText Markup Language)**: Defines the structure of a webpage, such as headings, paragraphs, images, and links.
+- **CSS (Cascading Style Sheets)**: Controls the appearance of a webpage, including colors, fonts, spacing, and layout.
+
+```html
+<h1>Hello Students!</h1>
+```
+
+```css
+h1 {
+  color: blue;
+}
+```
+
+HTML creates the heading; CSS makes its text blue.
+
+Why the other options are incorrect: 
+- Python and Ruby are not the primary languages this question targets;
+- C++ and Java are not standard webpage structure/styling languages;
+- PHP and MySQL are commonly used for server-side programming and databases, respectively.
+
+---
+
+Q16. What is the purpose of a constructor in OOP?
+- [ ] A. To destroy objects
+- [ ] B. To create instances of abstract classes
+- [x] C. To initialize object properties
+- [ ] D. To define abstract methods
+
+**A constructor is a special method that runs when an object is created**. <br/>
+Its main purpose is to initialize the object's properties so the object starts with the required values.
+
+Example in Java
+```java
+class Student {
+    String name;
+
+    Student(String studentName) {
+        name = studentName;
+    }
+}
+
+Student s1 = new Student("Rahul");
+```
+
+Why the other options are incorrect
+
+- A. To destroy objects - destruction or cleanup is handled differently depending on the language; a constructor creates/initializes rather than destroys.
+- B. To create instances of abstract classes - abstract classes generally cannot be instantiated directly.
+- D. To define abstract methods - abstract classes may declare abstract methods, but that is not the purpose of a constructor.
+
+Exam tip: 
+
+**Constructor = object initialization**. <br/>
+In Java, a constructor has the same name as its class and has no return type.
+
+---
+
+Q.17 What is the main advantage of using abstract classes over interfaces
+- [ ] A. Abstract classes can have multiple inheritance, unlike interfaces
+- [ ] B. Interfaces can have constructors, while abstract classes cannot
+- [x] C. Abstract classes can provide default implementations of methods
+- [ ] D. Interfaces allow for private access modifiers, unlike abstract classes
+
+Correct answer: Option C because an abstract class can contain both implemented methods and abstract methods that subclasses must implement.
+
+**Understand the concept from the basics** <br/>
+
+Let's understand the difference between an abstract class and an interface using Java.
+
+**1. What is an abstract class?**
+> An abstract class is a class that cannot be instantiated directly.
+> It can provide common functionality to its subclasses.
+
+```java
+abstract class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+
+    abstract void sound();
+}
+```
+Notice two methods:
+- `eat()` has a body, so it already provides an implementation.
+- `sound()` has no body, so a concrete subclass must implement it.
+
+Now, a subclass can reuse the existing `eat()` method:
+```
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Barking");
+    }
+}
+```
+
+When a `Dog` object calls `eat()`, it uses the implementation inherited from Animal. 
+The `Dog` class only needs to implement `sound()`.
+
+This is the key idea: an abstract class can provide shared, ready-to-use method implementations while leaving some behavior for subclasses to define.
+
+**2. What is an interface?**
+> An interface defines a contract that implementing classes agree to follow.
+```java
+interface Animal {
+    void sound();
+}
+```
+A class implementing this interface must provide the required `sound()` implementation:
+```java
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Barking");
+    }
+}
+```
+
+Important Java nuance: modern Java interfaces can also have default methods with implementations. So Option C describes a capability of abstract classes, but it is not an exclusive advantage over every modern interface.
+
+
+**3. Why are the other options incorrect?**
+
+| Option	                | Explanation       |
+|-------------------------|-------------------|
+| A. **Multiple inheritance** |	Incorrect. Java classes cannot extend multiple classes. A class can, however, implement multiple interfaces. |
+| B. **Interfaces have constructors**	| Incorrect. Interfaces do not have constructors. Abstract classes can have constructors, which run when a subclass is instantiated.
+| C. **Default implementations in abstract classes**	| Correct for the intended exam answer. Abstract classes can provide concrete methods that subclasses reuse. |
+| D. **Interfaces allow private access modifiers, unlike abstract classes**	| Incorrect. Abstract classes support private members. Modern Java interfaces can also have private methods, subject to Java's interface rules. |
+
+
+**4. Exam memory tip**
+- **Abstract class**: shared state, constructors, and implemented methods.
+- **Interface**: a contract that classes implement; a class can implement multiple interfaces.
+- **Multiple class inheritance**: not supported in Java.
+- **Modern Java**: interfaces can have default and static methods, and private methods since Java 9.
+
+
+Suppose three classes - `Dog`, `Cat`, and `Cow` - all need the same implemented `eat()` method, but each must provide its own `sound()` method.
+
+Which is a suitable design?
+- [x] A. An abstract class with an implemented `eat()` method and an abstract `sound()` method
+- [ ] B. A constructor that destroys objects
+- [ ] C. Three unrelated classes with no shared functionality
+- [ ] D. An interface with a constructor
+
+Correct! Option A.
+
+An abstract class is a suitable choice because it lets related classes share common functionality while implementing their own specific behavior.
+
+In our example:
+- `Animal` provides the common `eat()` method.
+- `Dog`, `Cat`, and `Cow` inherit that method.
+- Each class implements its own `sound()` method.
+
+Remember for the exam: **An abstract class can contain both `concrete methods` (methods with a body) and `abstract methods` (methods without a body).**
+
+---
+
+Q. 18 Which networking devices is used to regenerate and transmit the weakened signal ahead?
+- [ ] A. Hub
+- [ ] B. Ethernet Card
+- [x] C. Repeater
+- [ ] D. Modem
+
+Correct answer: C. Repeater
+
+**1. Understand the concept from the basics**
+
+A **repeater** is a networking device that receives a weakened signal and regenerates it so that the signal can travel farther.
+
+Imagine sending a message across a long distance:
+1. A signal travels through a network cable.
+2. As it travels, the signal can weaken.
+3. A repeater receives the signal.
+4. It regenerates the signal and sends it onward.
+
+This helps extend the distance over which a network signal can travel.
+
+**Real-world example** <br/>
+Suppose a network cable needs to cover a distance beyond its supported range. A repeater can help extend the connection by regenerating the signal.
+
+Important distinction: A traditional repeater regenerates signals; it does not decide where packets should be routed.
+
+**2. Why are the other options incorrect?**
+| Option	             | Purpose                                                                            |
+|----------------------|------------------------------------------------------------------------------------|
+| A. **Hub**	         | Connects multiple devices in a LAN and forwards incoming data to its other ports.  |
+| B. **Ethernet Card** | A network interface card that allows a computer to connect to an Ethernet network. |
+| C. **Repeater**	     | Regenerates a weakened signal to extend its transmission distance. Correct.        |
+| D. **Modem**	       | a modem modulates and demodulates signals for communication.                       |
+
+
+**3. Exam memory tip** <br/>
+Remember these associations:
+- **Repeater** -> Regenerates a signal.
+- **Hub** -> Connects devices in a LAN.
+- **Switch** -> Forwards frames based on MAC addresses.
+- **Router** -> Forwards packets between networks.
+- **NIC/Ethernet card** -> Connects a device to a network.
+
+
+A computer can connect to an Ethernet network using which hardware component?
+- [ ] A. Repeater
+- [x] B. Ethernet card (NIC)
+- [ ] C. Hub
+- [ ] D. Router
+
+Correct! Option B: Ethernet card (NIC).
+
+A **Network Interface Card (NIC)** is the hardware component that enables a computer to connect to a network. <br/>
+An **Ethernet card** is a type of NIC used for wired Ethernet connections.
+
+Remember the difference
+- **NIC / Ethernet card**: Connects a computer to a network.
+- **Repeater**: Regenerates a weakened signal.
+- **Hub**: Connects multiple devices in a LAN.
+- **Router**: Connects different networks and forwards packets between them.
+
+Exam tip: If the question mentions regenerating a weakened signal, choose Repeater. If it asks which hardware enables a computer to connect to Ethernet, choose NIC / Ethernet card.
+
+---
+
+The maximum length (in bytes) of an IPv4 datagram is:
+- [ ] A. 32
+- [ ] B. 256
+- [ ] C. 1024
+- [x] D. 65535
+
+Correct answer: D. 65535 bytes
+
+The maximum total length of an IPv4 datagram is 65,535 bytes. This includes both the IPv4 header and the data (payload).
+
+**1. What is an IPv4 datagram?** <br/>
+IPv4 is a network-layer protocol used to deliver packets across networks. <br/>
+An IPv4 datagram has two main parts:
+
+<img width="995" height="237" alt="image" src="https://github.com/user-attachments/assets/7cc2ab9d-840d-4b37-897e-9afd00afd9c0" />
+
+
+The IPv4 header contains a Total Length field that specifies the length of the entire datagram, including the header and payload.
+
+**2. Why is the maximum 65,535 bytes?** <br/>
+The Total Length field is 16 bits wide.
+
+A 16-bit unsigned field can represent values from: **`0 to 2^16-1`** <br/>
+Therefore: `2^16-1 = 65,536-1 = 65,535` <br/>
+That is the maximum IPv4 datagram length.
+
+Important: The minimum IPv4 header is 20 bytes, so with that header size, the maximum payload is `65,535 - 20 = 65,515` bytes. A longer header reduces the maximum payload further.
+
+**3. Exam memory tip**
+
+Remember this formula:
+- **IPv4 Total Length field = 16 bits**
+- **Maximum value = 2^16-1**
+- **Maximum datagram length = 65,535 bytes**
+
+Don't confuse this with the IPv4 address length, which is 32 bits.
+
+
+An IPv4 datagram has a 20-byte header and a total length of 1,500 bytes. How many bytes are payload?
+- [ ] A. 20 bytes
+- [x] B. 1,480 bytes
+- [ ] C. 1,500 bytes
+- [ ] D. 1,520 bytes
+
+**`Payload = Total Length - Header Length`**
+
+Remember: Total length includes both the header and payload. Subtract the header to find the payload.
+
+---
+
+Ginni has created a table, SCORES in MySQL to store runs scored by players in a cricket match. The table contains the following records:
+| PLAYER	| SCORE |
+|---------|-------|
+| Ranveer	| 50    |
+| Sukesh	| 35    |
+| Mirza	  | 10    |
+| John	  | 51    |
+| Murugan	| 70    |
+
+Which of the following statements will give 10 as output?
+- [ ] A. `SELECT MAX(Score) FROM Scores`;
+- [x] B. `SELECT MIN(Score) FROM Scores`;
+- [ ] C. `SELECT SUM(Score) FROM Scores`;
+- [ ] D. `SELECT AVG(Score) FROM Scores`;
+
+Correct answer: B. `SELECT MIN(Score) FROM Scores`
+
+SQL provides **aggregate functions** to perform calculations on a group of rows and return a result.
+
+Let's understand all four functions using the scores in the question.
+
+**`MIN()` - Minimum value**
+```sql
+SELECT MIN(Score) FROM Scores;
+-- Returns the smallest score: 10.
+```
+
+**`MAX()` - Maximum value**
+```sql
+SELECT MAX(Score) FROM Scores;
+-- Returns the largest score: 70.
+```
+
+**`SUM()` - Total value**
+```sql
+SELECT SUM(Score) FROM Scores;
+-- Adds all the scores: 50 + 35 + 10 + 51 + 70 = 216
+```
+
+**`AVG()` - Average value**
+```sql
+SELECT AVG(Score) FROM Scores;
+-- return average 216/5 = 43.2
+```
+
+**`COUNT()`- count the records(rows)**
+```sql
+SELECT count(player) FROM Scores;
+-- Return total rows in the table = 5
+```
+
+Important exam point: These functions operate on a column's values. For ordinary numeric columns, `MIN()` and `MAX()` return the lowest and highest non-NULL values, respectively.
+
+
+Suppose a table named Students contains these marks: `45, 80, 65, 90, 20` <br/>
+Which query returns the second-highest mark?
+```
+The marks are: 45, 80, 65, 90, 20
+Arrange them in descending order: 90, 80, 65, 45, 20
+- Highest mark = 90
+- Second-highest mark = 80
+
+Step by step
+1. The inner MAX(Marks) returns 90.
+2. WHERE Marks < 90 excludes the highest mark.
+3. The outer MAX(Marks) returns the largest remaining mark, 80.
+Output: 80
+```
+How can we find the second-highest mark in SQL?
+```sql
+SELECT MAX(Marks) FROM Students WHERE Marks < (SELECT MAX(Marks) FROM Students);
+```
+This method returns the second-highest distinct mark. If the highest mark occurs more than once, it excludes that value entirely.
+
+---
+
+Q. 21 Which data type is used to implement Queue data structure in Python?
+- [ ] A. Sets
+- [ ] B. Dictionary
+- [ ] C. Tuple
+- [ ] D. List
+
+Correct answer: D. List
+
+A Python list can be used to implement a queue because it supports adding and removing elements. However, a tuple is immutable, so it cannot be modified after creation in the usual way needed for a queue.
+
+**What is a queue?** <br/>
+A queue is a linear data structure that follows `FIFO - First In, First Out`.
+
+Think of people standing in a line at a ticket counter:
+- The first person to join the line gets served first.
+- A new person joins at the back.
+- The person at the front leaves first.
+
+<img width="987" height="212" alt="image" src="https://github.com/user-attachments/assets/5c5f8d97-a9ec-4bc7-b90e-ff67a585b5e0" />
+
+
+A simple implementation using a list is:
+```py
+queue = []
+
+queue.append(10)
+queue.append(20)
+queue.append(30)
+
+print(queue.pop(0))  # 10
+```
+- `append()` adds an element to the end of the list.
+- `pop(0)` removes and returns the element at index 0, the front of the queue.
+
+A Python list can implement a queue, but `collections.deque` is generally better for efficient removal from the front.
+
+
+**Why are the other options incorrect?**
+| Option	Explanation
+| A. **Sets**	      | Sets are unordered collections of unique elements; they are not suitable for maintaining a FIFO sequence. |
+| B. **Dictionary**	| Dictionaries store key-value pairs. They can be adapted for queue-like behavior, but they are not the intended answer here.|
+| C. **Tuple**	    | Tuples are immutable, so adding and removing elements is not supported directly. | 
+| D. **List**	      |  Lists support appending elements and removing the front element. |
+
+
+**Exam memory tip**
+- **Queue** -> FIFO (First In, First Out)
+- **Stack** -> LIFO (Last In, First Out)
+- **Python list** -> can implement a queue.
+- **Python deque** -> preferred for efficient queue operations.
+
+
+Which data structure follows LIFO (Last In, First Out)?
+- [ ] A. Queue
+- [x] B. Stack
+- [ ] C. Tree
+- [ ] D. Graph
+
+Correct! Option B: Stack.
+
+A stack follows LIFO — Last In, First Out.
+
+Think of a stack of plates: the last plate you place on top is the first one you remove.
+
+Example:
+```py
+stack = []
+
+stack.append(10)
+stack.append(20)
+stack.append(30)
+
+print(stack.pop())  # 30
+```
+
+---
+
+Q. 22 In an ideal microcomputer, where is the Arithmetic Logic Unit (ALU) located?
+- [x] A. CPU
+- [ ] B. Memory
+- [ ] C. Input devices
+- [ ] D. Output devices
+
+Correct answer: A. CPU
+
+The **Arithmetic Logic Unit (ALU) is a component of the Central Processing Unit (CPU)**. <br/>
+It performs two main types of operations: <br/>
+**1. Arithmetic operations** <br/>
+Mathematical calculations such as `addition`, `subtraction`, `multiplication`, and `division`. <br/>
+Example: `10 + 5 = 15`
+
+**2. Logical operations** <br/>
+Operations such as `AND`, `OR`, `NOT`, and comparisons. <br/>
+Example: `Is 10 > 5 ? Yes`.
+
+<img width="811" height="681" alt="image" src="https://github.com/user-attachments/assets/fab40971-6567-47a9-94d1-e73092e8929b" />
+
+
+> **The ALU is a part of the CPU**. <br/>
+The CPU also contains registers and other components.
+
+> Think of the **CPU as the computer's brain** and the **ALU as its calculator**. <br/>
+The **CPU coordinates processing, while the ALU performs arithmetic and logical operations**.
+
+| Option	           | Explanation                           |
+|--------------------|---------------------------------------|
+| **Memory**	       | Memory stores data and instructions. The ALU processes data; it is not located in memory. |
+| **Input devices**	 | Devices such as keyboards and mice send data or commands to the computer. They do not contain the CPU's ALU. |
+| **Output devices** |	Devices such as monitors and printers present the results of processing. They do not contain the CPU's ALU. |
+
+**Exam memory tip**
+> **ALU = Arithmetic + Logic = part of the CPU**.
+
+Remember the roles:
+- **ALU**: Performs calculations and logical operations.
+- **CU (Control Unit)**: Directs and coordinates computer operations.
+- **Memory**: Stores data and instructions.
+
+
+Which component of the CPU is primarily responsible for controlling and coordinating the execution of instructions?
+- [ ] A. Arithmetic Logic Unit (ALU)
+- [x] B. Control Unit (CU)
+- [ ] C. RAM
+- [ ] D. Hard disk
+
+Correct! Option B - Control Unit (CU)
+
+The Control Unit (CU) is responsible for controlling and coordinating the execution of instructions inside the CPU.
+
+Think of a computer as a team:
+- **Control Unit (CU)**: The manager who tells each component what to do.
+- **Arithmetic Logic Unit (ALU)**: The calculator that performs mathematical and logical operations.
+- **Memory**: Stores data and instructions.
+
+Example
+Suppose the computer needs to calculate `5 + 3`.
+1. The Control Unit coordinates the steps needed to execute the instruction.
+2. The ALU performs the addition.
+3. The result, `8`, can be stored in a register or memory, as required.
+
+
+| Option	         | Why it is incorrect                                   |
+|------------------|-------------------------------------------------------|
+| A. **ALU**       | Performs arithmetic and logical operations, rather than primarily coordinating instruction execution. |
+| B. **CU**        | Controls and coordinates instruction execution.        |
+| C. **RAM**	     | Temporarily stores data and programs currently in use. |
+| D. **Hard disk** | Provides long-term storage for files and programs.     |
+
+
+Exam memory tip **CU = Control; ALU = Calculate**.
+- **CU**: Directs operations.
+- **ALU**: Calculates and compares.
+- **RAM**: Temporarily stores data.
+- **Hard disk**: Stores data long-term.
+
+---
+
+Q23. What consists of the identification of risks or threats, the implementation of security measures, and the monitoring of those measures for effectiveness?
+- [ ] A. Risk assessment
+- [ ] B. Security
+- [x] C. Risk Management
+- [ ] D. None of the above
+
+Correct!  C. Risk Management is the best answer. because the question includes identifying risks, implementing security measures, and monitoring their effectiveness.
+
+Risk management is the overall process of identifying risks, evaluating them, deciding how to handle them, and monitoring the effectiveness of the actions taken.
+
+Imagine a school wants to protect its computer lab from cyberattacks.
+
+**Step 1: Identify risks** <br/>
+Find possible threats, such as viruses, stolen passwords, or unauthorized access.
+
+**Step 2: Assess risks** <br/>
+Evaluate how likely each threat is and how much damage it could cause.
+
+**Step 3: Implement security measures** <br/>
+Install antivirus software, use strong passwords, and restrict access.
+
+**Step 4: Monitor and review** <br/>
+Check whether the security measures are working and improve them if necessary.
+
+All four steps fit within the broader process of risk management.
+
+| Option	                | Meaning	                                      | Why it is incorrect here         |
+|-------------------------|-----------------------------------------------|----------------------------------|
+| A. **Risk assessment**	| Evaluates the likelihood and impact of risks. | It is only one part of risk management, not the entire process described. |
+| B. **Security**	        | Protects systems, data, and resources from threats.	| It describes the protective objective or state, rather than the complete process of identifying, treating, and monitoring risks. |
+| C. **Risk Management**	Identifies, assesses, treats, and monitors risks. |	Correct. It covers the full process described in the question. |
+
+Exam memory tip, Remember this distinction:
+- **Risk assessment** = How likely is the risk, and how serious is it?
+- **Risk management** = Identify + assess + treat + monitor risks.
+
+For example, finding that weak passwords are dangerous is part of risk assessment. Introducing stronger password rules and checking whether they work are part of the broader risk-management process.
+
+A company identifies that employees may click on phishing emails, evaluates the threat, introduces security training, and regularly checks whether phishing incidents decrease. <br/>
+Which process does this best describe?
+- [ ] A. Risk assessment only
+- [x] B. Risk management
+- [ ] C. Data storage
+- [ ] D. Input processing
+
+Correct! B. Risk management
+
+**Risk assessment** focuses on identifying and evaluating risks, including how likely they are and how much damage they could cause.
+
+Assessing the possibility of employees clicking phishing emails is part of risk assessment. <br/>
+However, the company also:
+1. Identifies the phishing threat.
+2. Evaluates the risk.
+3. Introduces security training to reduce the risk.
+4. Monitors whether phishing incidents decrease.
+   
+The entire process is risk management, because it includes taking action and monitoring the results, not just evaluating the risk.
+
+| Risk assessment	                | Risk management                                      |
+|---------------------------------|------------------------------------------------------|
+| Identifies and evaluates risks.	| Covers the overall process of handling risks.        |
+| Estimates likelihood and impact.| Includes assessment, risk treatment, and monitoring. |
+| One part of risk management.	  | The broader process.                                 |
+
+Exam memory tip
+> Assessment = Evaluate. <br/>
+> Management = Evaluate + Act + Monitor.
+
+---
+
+Q24. Which attributes is not a valid attribute of the tag in HTML ?
+- [ ] A. text
+- [ ] B. background
+- [ ] C. bgcolor
+- [x] D. width
+
+If the intended tag is `body`, `text`, `background`, and `bgcolor` have all been used in older HTML, while `width` is not a standard body attribute. 
+
+**What are HTML attributes?** <br/>
+HTML attributes provide additional information about an HTML element. 
+
+For example:
+```html
+<img src="flower.jpg" width="200" alt="A flower">
+```
+Here:
+- `src` specifies the image source.
+- `width` specifies the image width.
+- `alt` provides alternative text.
+
+
+| Option	        | Meaning and usage                      |
+|-----------------|----------------------------------------|
+| A. `text`	      | Not a standard global HTML attribute. It has been used as an attribute on certain older HTML elements, such as body. |
+| B. `background`	| Used on older HTML elements, such as body, to specify a background image. It is obsolete in modern HTML. |
+| C. `bgcolor`	  | Used on older elements to specify a background color. It is obsolete in modern HTML. |
+| D. `width`	    | A valid attribute on elements such as `img`, `canvas`, and `iframe`.                 |
+
+**Exam memory tip**
+- HTML attributes depend on the element.
+- `width` is valid on some elements, but not all.
+- `background` and `bgcolor` are obsolete HTML attributes; modern pages should use CSS for backgrounds.
+- Always identify the HTML tag before deciding whether an attribute is valid.
+
+Which is the recommended modern way to set a page's background color?
+- [ ] A. Use the text attribute
+- [ ] B. Use the bgcolor attribute
+- [x] C. Use the CSS background-color property
+- [ ] D. Use the width attribute
+
+Correct! Option C - Use the CSS `background-color` property
+
+CSS (Cascading Style Sheets) controls the appearance and styling of HTML elements. <br/>
+The `background-color` property sets an element's background color.
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+       <style>
+           body {
+              background-color: lightblue;
+           }
+       </style>
+   </head>
+<body>
+   <h1> Hello, Students! </h1>
+</body>
+</html>
+```
+Here, `background-color: lightblue;` makes the page background light blue.
+
+Exam memory tip, **HTML = structure; CSS = styling**.
+- `background-color` -> sets background color.
+- `color` -> sets text color.
+- `width` -> sets width.
+
+---
+
+Q25. SQL applies conditions on the groups through ______ clause after groups have been formed.
+- [ ] A. `WHERE`
+- [x] B. `HAVING`
+- [ ] C. `NEW`
+- [ ] D. `ALL`
+
+Correct! Option B - `HAVING`
+
+What does `GROUP BY` do?
+Suppose we have this Employees table:
+| Employee | Department	| Salary |
+|----------|------------|--------|
+| Ravi	   | IT	        | 40,000 |
+| Priya	   | HR	        | 30,000 |
+| Amit	   | IT	        | 50,000 |
+| Neha	   | HR	        | 35,000 |
+| Kiran	   | Sales	    | 25,000 |
+
+We want to calculate the total salary for each department.
+```sql
+SELECT Department, SUM(Salary)
+FROM Employees
+GROUP BY Department;
+```
+Result
+| Department | Total Salary |
+|------------|--------------|
+| IT	       | 90,000       |
+| HR	       | 65,000       |
+| Sales	     | 25,000       |
+
+`GROUP BY` combines rows with the same department so aggregate functions, such as `SUM()`, can calculate a result for each group.
+
+What if we want only departments whose total salary exceeds ₹50,000?
+```sql
+SELECT Department, SUM(Salary) AS TotalSalary
+FROM Employees
+GROUP BY Department
+HAVING SUM(Salary) > 50000;
+```
+| Department | Total Salary |
+|------------|--------------|
+| IT	       | 90,000       |
+| HR	       | 65,000       |
+
+Sales is excluded because its total salary is only ₹25,000.
+
+Why `HAVING`? <br/>
+Because the condition is applied to the groups after they have been formed.
+
+Then what does `WHERE` do? <br/>
+`WHERE` filters individual rows before grouping.
+
+```sql
+SELECT Department, SUM(Salary) AS TotalSalary
+FROM Employees
+WHERE Salary > 30000
+GROUP BY Department;
+```
+
+**`WHERE` vs `HAVING`**
+| Feature	             | `WHERE`	                  | `HAVING`                     |
+|----------------------|----------------------------|------------------------------|
+| Filters	             | Individual rows	          | Groups                       |
+| Applied conceptually | Before grouping	          | After grouping               |
+| Commonly used with	 | Ordinary column conditions	| Aggregate conditions         |
+| Example	             | `WHERE Salary > 30000`	    | `HAVING SUM(Salary) > 50000` |
+
+5. Exam memory tip, Remember:
+- `WHERE` -> Rows
+- `HAVING` -> Groups
+
+A useful **SQL execution-order** shortcut is: `FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY`
+
+This is the conceptual processing order, not necessarily the order in which a database physically executes every operation.
+
+Consider the following query:
+```sql
+SELECT Department, COUNT(*)
+FROM Employees
+GROUP BY Department
+HAVING COUNT(*) > 2;
+```
+What does `HAVING COUNT(*) > 2` do?
+- [ ] A. Selects employees whose individual salary is greater than 2
+- [x] B. Shows only departments containing more than 2 employees
+- [ ] C. Limits the result to 2 departments
+- [ ] D. Counts only 2 employees in each department
+
+Correct! Option B - Shows only departments containing more than 2 employees
+
+1. `FROM Employees` - Reads the employee records.
+2. `GROUP BY Department` - Groups employees belonging to the same department.
+3. `COUNT(*)` - Counts the employees in each department.
+4. `HAVING COUNT(*) > 2` - Keeps only departments with more than two employees.
+
+| Department | Number of employees |
+|------------|---------------------|
+| IT 	       | 4                   |
+| HR	       | 2                   |
+| Sales	     | 3                   |
+| Finance	   | 1                   |
+
+After applying `HAVING COUNT(*) > 2`, the result is:
+
+| Department | Number of employees |
+|------------|---------------------|
+| IT 	       | 4                   |
+| Sales	     | 3                   |
+
+HR and Finance are excluded because they have two and one employees, respectively.
+
+Exam memory tip: **`GROUP BY` creates groups; `HAVING` filters those groups**.
+
+---
+
+Q26. Given binary numbers `A = 101010` and `B = 111111`, what is the result of `(A AND B) OR (A XOR B)`?
+- [x] A. 111111
+- [ ] B. 101111
+- [ ] C. 111010
+- [ ] D. 101010
+
+**Understand the three bitwise operators** <br/>
+Each binary digit is a bit: either `0` or `1`.
+| A bit	| B bit	| AND (&)	| XOR (^)	| OR (l) |
+|-------|-------|---------|---------|--------|
+| 0	    | 0	    | 0	      | 0	      | 0      |
+| 0	    | 1	    | 0	      | 1	      | 1      |
+| 1	    | 0	    | 0	      | 1	      | 1      |
+| 1	    | 1	    | 1	      | 0	      | 1      |
+
+Remember:
+- `AND`: Result is 1 only when both bits are 1.
+- `XOR`: Result is 1 when the bits are different.
+- `OR`: Result is 1 when at least one bit is 1.
+
+Solve it step by step
+```
+Given:
+A = 101010
+B = 111111
+
+Step 1: Calculate A AND B
+
+A       = 101010
+B       = 111111
+          ------
+A AND B = 101010
+
+Since every bit in B is 1, AND keeps each bit of A unchanged.
+----------------------------------
+Step 2: Calculate A XOR B
+XOR gives 1 when the two bits are different.
+
+A       = 101010
+B       = 111111
+          ------
+A XOR B = 010101
+
+Every bit in B is 1, so XOR flips each bit of A: 1 becomes 0, and 0 becomes 1.
+-----------------------------------
+Step 3: Calculate (A AND B) OR (A XOR B)
+
+               A AND B = 101010
+               A XOR B = 010101
+                         ------
+(A AND B) OR (A XOR B) = 111111
+```
+
+---
+
+Q 27. DFA exist is a ________
+- [x] A. Regular Language
+- [ ] B. Non-Regular Language
+- [ ] C. Any language
+- [ ] D. Cannot be said
+
+Correct! Option A - Regular Language is the best answer based on the visible wording and the standard **theory of finite automata**.
+
+**DFA** stands for **Deterministic Finite Automaton**. <br/> 
+In formal language theory, a language that can be recognized by a DFA is a regular language.
+
+It is a mathematical model used to recognize patterns in strings.
+
+A language is called regular if some finite automaton, such as a DFA, can recognize it.
+
+For example, consider the language of binary strings that end in `1`:
+- `101` -> Accepted
+- `111` -> Accepted
+- `100` -> Rejected
+- `110` -> Rejected
+
+A DFA can recognize this language by keeping track of whether the most recently read bit is `1`.
+
+**Visualize how a DFA works**
+
+<img width="987" height="551" alt="image" src="https://github.com/user-attachments/assets/b7972cc3-f05d-4407-a7f0-e9e23446f60f" />
+
+The DFA has a finite number of states and follows defined transitions for each input symbol. This is why it can recognize this regular language.
+
+
+Exam memory tip, **DFA -> Regular Language**.
+- **DFA**: Deterministic Finite Automaton
+- **NFA**: Nondeterministic Finite Automaton
+- Both DFA and NFA recognize exactly the class of regular languages.
+
+---
+
+**Q28. Website vs. Web Page**
+
+What is the difference between a website and a web page?
+- [x] A. A website is a collection of web pages, while a web page is a single document that is displayed on the web.
+- [ ] B. A website is a software program, while a web page is a hardware device.
+- [ ] C. A website is a physical object, while a web page is a logical object.
+- [ ] D. All of the above.
+
+
+**Website vs. Web Page**
+- **Website**: A collection of related web pages available under a common domain name.
+- **Web page**: A single document displayed in a web browser.
+
+**2. Imagine a school website**.
+
+<img width="995" height="597" alt="image" src="https://github.com/user-attachments/assets/d56dcec6-df4d-4b65-8c4a-5dc436171d7d" />
+
+
+Think of a book:
+- A website is like the entire book.
+- A web page is like one page of that book.
+A website can contain many web pages, and each page can have its own content and URL.
+
+
+**3. Exam memory tip** <br/>
+Remember this simple rule: **Website = Collection. Web page = Single document**.
+
+For example, `youtube.com` is a website, while an individual `YouTube video's page` is a web page.
+
+A school website contains Home, About Us, Courses, and Contact Us pages. How many web pages are mentioned?
+- [ ] A. One
+- [ ] B. Three
+- [x] C. Four
+- [ ] D. Five
+
+The school website contains these four web pages:
+1. Home
+2. About Us
+3. Courses
+4. Contact Us
+
+Each is an individual web page, and together they form a website.
+- Website = Collection of web pages.
+- Web page = A single document displayed on the web.
+
+---
+
+**Q29. Turing Machine**
+
+The "Turing Machine" showed that you could use a/an _____ system to program any algorithmic task.
+- [x] A. Binary
+- [ ] B. Electro-chemical
+- [ ] C. Recursive
+- [ ] D. Semantic
+
+**What is a Turing Machine?** <br/>
+A Turing Machine is a theoretical model of computation introduced by Alan Turing. 
+
+It consists of:
+- An infinite tape divided into cells for storing symbols.
+- A read/write head that reads and writes symbols.
+- A set of rules that determine what to do next.
+
+<img width="767" height="367" alt="image" src="https://github.com/user-attachments/assets/8ca1c6ab-fb38-4b4f-aa63-6a4f4e4c0ef4" />
+
+It helps us understand what problems can be solved by an algorithm.
+
+**What does "recursive" mean here?** <br/>
+In computability theory, a recursive function is a function that can be computed by an algorithm that eventually halts for every valid input.
+
+Turing Machines and recursive functions are closely related: they characterize the same class of computable functions.
+
+For example, adding two natural numbers can be performed by an algorithm, so it is computable.
+
+Important distinction: A Turing Machine does not prove that every conceivable task can be programmed. It models the computation of algorithmically computable tasks.
+
+
+| Option	                | Explanation      |
+|-------------------------|------------------|
+| A. **Binary**	          | Binary uses the symbols `0` and `1`. Computers commonly use binary, but the theoretical result about Turing Machines is not specifically that every algorithm requires a binary system. |
+| B. **Electro-chemical**	| This describes a physical implementation approach, not the central theoretical result of a Turing Machine. |
+| C. **Recursive**	      | Likely intended answer. Recursive functions are equivalent in computational power to Turing Machines. |
+| D. **Semantic**	        | Semantics concerns the meaning of symbols or programs; it is not the expected term for this result. |
+
+**Exam memory tip**
+- **Alan Turing** -> Turing Machine
+- **Turing Machine** -> Model of computation
+- **Recursive functions** -> Computable functions
+- **Binary** -> Representation using `0` and `1`
+
+
+Which of the following is a theoretical model used to study what can be computed by an algorithm?
+- [x] A. Turing Machine
+- [ ] B. HTML page
+- [ ] C. Database table
+- [ ] D. Network cable
+
+> **A Turing Machine is a theoretical model used to study what problems can be solved by algorithms.**
+
+A Turing Machine has three basic components:
+- **Tape**: Stores symbols and data.
+- **Read/write head**: Reads and writes symbols on the tape.
+- **Control unit**: Follows rules to determine the next operation.
+
+For example, an algorithm for adding two numbers can be represented using a computational model such as a Turing Machine.
+
+Remember for the exam
+- Turing Machine -> Model of computation.
+- Alan Turing -> Introduced the concept.
+- Recursive functions -> Closely related to computable functions.
+- Binary -> Uses `0` and `1`.
+
+---
+
+**Q30. Exception in Programming**
+
+The condition that occurs during program execution that disrupts the normal flow of instructions?
+- [ ] A. Abstraction
+- [ ] B. Inheritance
+- [x] C. Exception
+- [ ] D. Encapsulation
+
+**1. What is an exception?** <br/>
+An exception is an event or condition that occurs during program execution and disrupts the normal flow of instructions.
+
+For example, consider this Python program:
+```py
+a = 10
+b = 0
+
+result = a / b
+
+print(result)
+print("Program finished")
+```
+When Python tries to divide `10` by `0`, it raises a `ZeroDivisionError`.
+```
+a = 10 executes successfully.
+b = 0 executes successfully.
+a / b raises an exception.
+print("Program finished") is not executed in this example.
+```
+We can handle this exception using `try` and `except`:
+```py
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+print("Program finished")
+
+# output: 
+# Cannot divide by zero
+# Program finished
+```
+The exception is handled, allowing the program to continue.
+
+| Option	          | Meaning	                                  | Why it is incorrect                              |
+|-------------------|-------------------------------------------|--------------------------------------------------|
+| **Abstraction**	  | Hiding unnecessary implementation details	| It is an OOP concept, not the condition described.|
+| **Inheritance**	  | One class acquiring properties and methods from another class	| It supports code reuse and class relationships; it is not an exception. |
+| **Exception**	    | An event or condition disrupting normal program execution	| Correct answer. |
+| **Encapsulation**	| Bundling data and methods together and controlling access	| It is an OOP concept, not the condition described. |
+
+4. Exam memory tip, Remember these four terms:
+- **Abstraction** -> Hide complexity.
+- **Inheritance** -> Reuse or extend a class.
+- **Exception** -> An abnormal event during execution.
+- **Encapsulation** -> Bundle data and methods together.
+
+| Option	          | Meaning                                                      |
+|-------------------|--------------------------------------------------------------|
+| TypeError	        | An operation is applied to an incompatible type.             |
+| ZeroDivisionError	| Division or modulo operation uses zero as the divisor.       |
+| NameError	        | A name is used that Python cannot find in the current scope. |
+| SyntaxError	      | The code violates Python's syntax rules.                     |
+
+Exam memory tip
+- **Divide by zero** -> ZeroDivisionError
+- **Wrong type of operation** -> TypeError
+- **Undefined name** -> NameError
+- **Invalid syntax** -> SyntaxError
+  
+---
+
+**Q31. Meaning of Data**
+
+The term "Data" refers to:
+- [ ] A. The electronic representation of the information (or data)
+- [ ] B. Basic information
+- [ ] C. Raw Facts and figures
+- [x] D. Both A and C
+
+**1. What is data?** <br/>
+Data refers to raw facts and figures that can be collected, stored, and processed by a computer.
+
+Examples:
+- `25` - a number
+- `Naman` - a name
+- `85, 90, 78` - exam marks
+- `24/10/2027` — a date
+By themselves, these values are data. When organized and interpreted, they can provide useful information.
+
+**Understand data vs. information**
+```
+Data
+85, 90, 78
+
+Raw exam marks
+--------------------
+Information
+"The student's average mark is 84.33."
+
+The data has been processed to provide meaning.
+```
+
+A teacher records these marks: 70, 85, 90. Before calculating the average, what do these numbers represent?
+- [ ] A. Processed information
+- [x] B. Raw data
+- [ ] C. A computer program
+- [ ] D. An output device
+
+Understand the difference
+- **Data**: `70, 85, 90` - the individual marks.
+- **Processing**: Calculate the average: `(70 + 85 + 90)/ 3`.
+- **Information**: The average mark is approximately `81.67`.
+
+**Exam memory tip**
+> Raw facts and figures = Data.
+
+> Processed data that conveys meaning = Information.
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
 
 
 ---
@@ -20,7 +1791,1042 @@
 
 <br/>
 
+| Questions 1–5: Digital media, Boolean algebra, and graphs |
+|-----------------------------------------------------------|
 
+---
+
+Q1. Audio compression can be used for _____
+- [ ] (A) Voice and data
+- [ ] (B) Video and voice
+- [x] (C) Speech or music
+- [ ] (D) Picture and colors
+
+Correct answer: (C) Speech or music
+
+Concept: Audio compression reduces the amount of data needed to store or transmit sound.
+- Lossless compression preserves the original audio exactly.
+- Lossy compression removes some less perceptible audio information to reduce file size.
+
+Examples include FLAC (lossless) and MP3 (lossy). Image compression, by contrast, is used for pictures.
+
+---
+
+Q2. _____ is basically a form of pictorial presentation.
+- [ ] (A) Photography
+- [ ] (B) Animations
+- [x] (C) Drawing
+- [ ] (D) Creativity
+
+Best answer: (C) Drawing
+
+Concept: A drawing represents information visually through lines, shapes, and symbols. <br/>
+Photography and animation are also visual media, so the wording is somewhat broad, but drawing is the most likely intended answer.
+
+---
+
+Q3. Consider two binary numbers A = 110001 and B = 001100. What is the result of (A AND B) OR (NOT A AND NOT B)?
+- [ ] (A) 000000
+- [ ] (B) 110001
+- [ ] (C) 001100
+- [ ] (D) 111101
+
+Correct calculation: 000010 — none of the listed options.
+
+Let's solve it bit by bit. For this question, use six-bit binary numbers and six-bit complements.
+```
+A                 = 110001
+B                 = 001100
+A AND B           = 000000
+
+NOT A             = 001110
+NOT B             = 110011
+NOT A AND NOT B   = 000010
+
+Final OR result   = 000010
+```
+
+Concepts to remember:
+- `AND`: The output bit is 1 only when both input bits are 1.
+- `OR`: The output bit is 1 when at least one input bit is 1.
+- `NOT`: Flips each bit, with the number of bits fixed by the representation.
+
+The expression is equivalent to bitwise XNOR: it produces 1 wherever the corresponding bits of A and B are equal. The provided options appear to contain an error.
+
+---
+
+Q4. What is the minimized expression for the Boolean function F(A,B,C,D)=Sigma(0,1,2,4,5,6,10,12,13) using the K-map method?
+
+
+One minimized sum-of-products expression is: `F = A'C' + BC' + A'D' + B'CD'`
+
+Here, a prime (`′`) means `NOT`. For example, `A'` means `NOT A`.
+
+Concept: **Karnaugh map (K-map)**
+
+A K-map groups adjacent cells containing 1s in groups of 1, 2, 4, 8, and so on. Larger groups generally produce simpler Boolean expressions.
+
+For this function, the groups can be represented as:
+| Grouped minterms	| Simplified term |
+|-------------------|-----------------|
+| 0, 1, 4, 5	      | A'C'            |
+| 4, 5, 12, 13	    | BC'             |
+| 0, 2, 4, 6	      | A'D'            |
+| 2, 10	            | B'CD'           |
+
+These groups cover all the given minterms. Some minterms can appear in more than one group, which is allowed in K-map simplification.
+
+---
+
+Q5. The minimum number of edges in a spanning tree of a connected graph with `n` vertices is:
+- [ ] (A) `n`
+- [x] (B) `n-1`
+- [ ] (C) `n+1`
+- [ ] (D) `n(n-1)/2`
+  
+Correct answer: (B) `n-1`
+
+Concept: A spanning tree connects every vertex of a connected graph without forming any cycle.
+
+For example, if a graph has 5 vertices, a spanning tree needs exactly `5 - 1 = 4` edges.
+
+Remember:
+- A tree with `n` vertices has `n-1` edges.
+- Adding an edge to a tree creates a cycle.
+- Removing an edge from a tree disconnects it.
+
+---
+
+Q6. In pointer implementation of linked lists, which operation can be performed in constant time `O(1)` when inserting or deleting nodes?
+- [x] (A) Inserting at the beginning
+- [ ] (B) Inserting at the end
+- [ ] (C) Inserting at a specific position
+- [ ] (D) Deleting a specific node
+
+Correct answer: (A) Inserting at the beginning
+
+Concept: Inserting at the beginning of a singly linked list takes constant time because only a small number of pointers need to be changed.
+```
+Before: HEAD → 20 → 30 → NULL
+
+Insert 10:
+
+After:  HEAD → 10 → 20 → 30 → NULL
+```
+
+The number of existing nodes does not affect the number of pointer changes.
+
+Exam caution: Inserting at the end can also be `O(1)` if a tail pointer is maintained. Deleting a specific node depends on whether the required node and its predecessor are already available.
+
+---
+
+Q7. For a 2-D array represented in row-major order, the index formula to access the element at row i and column j, using base address B, is:
+- [x] (A) `Index = B + (i x n + j)`
+- [ ] (B) `Index = B + (j x n + i)`
+- [ ] (C) `Index = B + (i + j)`
+- [ ] (D) `Index = B + (i x m + j)`
+
+Best answer: (A), assuming n is the number of columns and indices are zero-based.
+
+Concept: Row-major order stores an entire row contiguously before moving to the next row.
+
+For an array with n columns, the element `offset = i x n+j`
+
+If B is a byte address and each element occupies w bytes, the full address formula is: `Address = B + (i x n+j) x w`
+
+The question's formula omits the element-size factor, so it is really an element-index formula unless each element occupies one address unit.
+
+---
+
+Q8. In general, a file is basically a collection of all related _____.
+- [ ] (A) Rows and columns
+- [ ] (B) Database
+- [ ] (C) Fields
+- [x] (D) Records
+
+Correct answer: (D) Records
+
+Concept: In the traditional file-processing model:
+- Field: One item of information, such as a student's name.
+- Record: A collection of related fields about one entity, such as one student's details.
+- File: A collection of related records.
+- Database: An organized collection of related data, often stored in multiple tables or files.
+
+---
+
+Q9. Which of the following refers to the number of attributes in a relation?
+- [ ] (A) Row
+- [x] (B) Degree
+- [ ] (C) Column
+- [ ] (D) All of the above
+
+Correct answer: (B) Degree
+
+Concept in relational databases:
+- Degree: Number of attributes (columns) in a relation.
+- Cardinality: Number of tuples (rows) in a relation.
+
+For example, a Student table with RollNo, Name, and Class has degree 3. If it contains 40 student records, its cardinality is 40.
+
+---
+
+Q10. Process-to-process communication involves communication between:
+- [ ] (A) Different network layers
+- [ ] (B) Different devices on the same network
+- [ ] (C) Devices using different protocols
+- [x] (D) Processes on different devices
+
+Correct answer: (D) Processes on different devices
+
+Concept: Process-to-process communication means data is exchanged between application processes running on communicating hosts. At the transport layer, TCP and UDP use port numbers to identify the relevant application processes.
+
+For example, a browser process communicates with a web server process. The devices do not necessarily have to be on the same local network.
+
+---
+
+Q11. The term HTTP stands for:
+- [ ] (A) Hyper Terminal Tracing Program
+- [ ] (B) Hypertext Tracing Program
+- [x] (C) Hypertext Transfer Protocol
+- [ ] (D) Hypertext Tracing Protocol
+
+Correct answer: (C) Hypertext Transfer Protocol
+
+Concept: HTTP is an application-layer protocol used for communication between web clients and servers.
+
+For example, when a browser requests a webpage, it can send an HTTP request and receive an HTTP response.
+
+Remember these common protocols:
+| Protocol	| Full form and primary use                       |
+|-----------|-------------------------------------------------|
+| HTTP	    | Hypertext Transfer Protocol — web communication |
+| HTTPS	    | HTTP Secure — HTTP protected using TLS          |
+| FTP	      | File Transfer Protocol — file transfer          |
+| SMTP	    | Simple Mail Transfer Protocol — sending email   |
+| DNS	      | Domain Name System — resolves domain names      |
+| DHCP	    | Dynamic Host Configuration Protocol — assigns network configuration |
+
+---
+
+Q12. Which software life cycle model is based on iterative prototyping?
+- [ ] (A) Waterfall model
+- [ ] (B) Spiral model
+- [ ] (C) Agile model
+- [x] (D) Prototype model
+
+Best answer: (D) Prototype model
+
+Concept: The Prototype Model develops an early working version of the software so that users can evaluate it and provide feedback. Developers refine the prototype repeatedly until the requirements are better understood.
+
+Example:
+1. Build a basic school website.
+2. Show it to teachers.
+3. Collect feedback about the timetable and student section.
+4. Improve the design and functionality.
+5. Develop the final system.
+Exam distinction: The Spiral Model also uses repeated cycles and can include prototyping, but its defining feature is risk-driven development. Since the question specifically emphasizes iterative prototyping, the Prototype Model is the most direct answer.
+
+---
+
+Q13. ISO 9000 and SEI CMM are both frameworks related to:
+- [ ] (A) Software testing
+- [ ] (B) Software documentation
+- [x] (C) Software quality assurance and process improvement
+- [ ] (D) Software design principles
+
+Correct answer: (C) Software quality assurance and process improvement
+
+Concept:
+- ISO 9000 family: Standards related to quality management systems.
+- SEI CMM: Capability Maturity Model, developed to assess and improve an organization's software-development processes.
+
+The key idea is that consistent, well-managed processes can improve the quality and reliability of software.
+
+---
+
+Q14. What is the term for defining multiple methods in a class with the same name but different parameters?
+- [ ] (A) Overriding
+- [x] (B) Overloading
+- [ ] (C) Inheriting
+- [ ] (D) Inheritance
+
+Correct answer: (B) Overloading
+
+Concept: Method overloading means using the same method name with different parameter lists.
+
+Example in Java:
+```java
+int add(int a, int b) {
+    return a + b;
+}
+
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+```
+Both methods are named `add`, but they accept different numbers of arguments.
+
+Compare:
+- Overloading: Same name, different parameter lists.
+- Overriding: A subclass provides its own implementation of an inherited method.
+- Inheritance: A class acquires or extends properties and behavior from another class.
+In Java, changing only the return type is not sufficient to overload a method.
+
+---
+
+Q15. The language accepted by Pushdown Automata is:
+- [ ] (A) Recursive language
+- [x] (B) Context-free language
+- [ ] (C) Linearly bounded language
+- [ ] (D) All of the mentioned
+
+Correct answer: (B) Context-free language
+
+Concept: A Pushdown Automaton (PDA) is like a finite automaton with an additional memory structure called a stack.
+
+The stack helps it recognize patterns such as matching numbers of opening and closing parentheses.
+
+For example:
+```
+ L = { a^n b^n | n>=0}
+```
+This language contains strings such as ab, aabb, and aaabbb. <br/>
+A PDA can recognize it by pushing a symbol for each a and popping one for each b.
+
+Exam fact: A nondeterministic PDA recognizes context-free languages. A deterministic PDA recognizes the smaller class of deterministic context-free languages.
+
+---
+
+Q16. Which of the following is the best example of a semantic network?
+- [x] (A) WordNet
+- [ ] (B) Human food chain
+- [ ] (C) MYCIN
+- [ ] (D) Autonomous car driver
+
+Correct answer: (A) WordNet
+
+Concept: A semantic network represents concepts and the relationships between them as a graph.
+
+For example:
+- Dog is a animal.
+- Dog has a tail.
+- Animal is a living thing.
+
+WordNet is a lexical database that organizes words into groups of synonyms and connects them through semantic relationships.
+
+MYCIN, in contrast, is a well-known rule-based medical expert system.
+
+---
+
+Q17. Which of the following is not a characteristic of expert systems?
+- [ ] (A) Understandable
+- [ ] (B) Highly responsive
+- [x] (C) Unreliable
+- [ ] (D) High performance
+
+Correct answer: (C) Unreliable
+
+Concept: An expert system uses a knowledge base and an inference mechanism to solve problems in a specialized domain.
+
+Its desirable characteristics include:
+- Reliable and consistent advice.
+- Good performance within its defined domain.
+- Explanation of conclusions, where supported.
+- Fast responses for suitable problems.
+
+Being unreliable is a weakness, not a desirable characteristic.
+
+---
+
+Q18. Unclassified email is called:
+- [ ] (A) Extra mail
+- [x] (B) Spam
+- [ ] (C) Junk mail
+- [ ] (D) None of the above
+
+Best answer: (B) Spam
+
+Concept: Spam is unsolicited or unwanted electronic messaging, especially bulk email.
+
+Important wording note: The phrase “unclassified email” is imprecise. Both spam and junk mail are commonly used for unwanted email, so options B and C overlap. In typical computer-awareness questions, spam is the expected term.
+
+---
+
+Q19. Which of the following is the abbreviation of JPEG?
+- [x] (A) Joint Photographic Experts Group
+- [ ] (B) Joint Photographs Expansion Group
+- [ ] (C) Joint Photographic Expanded Group
+- [ ] (D) Joint Photographic Expansion Group
+
+Correct answer: (A) Joint Photographic Experts Group
+
+Concept: JPEG is associated with a widely used image-compression standard, especially for photographs.
+- JPEG commonly uses lossy compression.
+- It can greatly reduce image file size.
+- Repeated saving with lossy compression may reduce image quality.
+
+Remember: PNG is another common image format and generally uses lossless compression.
+
+---
+
+Q20. When adding two positive binary numbers using the 2's complement method, if the result has a carry-out from the most significant bit (MSB), what should be done?
+- [x] (A) Ignore the carry
+- [ ] (B) Add the carry to the least significant bit (LSB)
+- [ ] (C) Add the carry to the sign bit
+- [ ] (D) Subtract the carry from the MSB
+
+Correct answer: (A) Ignore the carry
+
+Concept: In fixed-width 2's complement arithmetic, the carry-out beyond the most significant bit is discarded. Overflow is a separate issue and must be checked independently.
+
+For example, using four bits:
+```
+  0011   (+3)
++ 0010   (+2)
+------
+  0101   (+5)
+```
+
+This example has no carry-out. In fixed-width addition, any carry beyond the four-bit result is discarded.
+
+Exam distinction: Discarding carry-out does not mean signed overflow can never happen. For example, adding two positive signed numbers can produce a negative-looking bit pattern if the mathematical result exceeds the representable range.
+
+
+---
+
+Q21. In the All-Pairs Shortest Paths algorithm, what does the term “transitive property” refer to?
+- [ ] (A) The property of having a cycle path
+- [ ] (B) The property of having all vertices connected to each other
+- [x] (C) The property of being able to reach one vertex from another
+- [ ] (D) The property of a path being shorter than another path
+
+Best available answer: (C), but the wording is imprecise.
+
+Concept: In the context of shortest-path algorithms, the key idea is that a route from vertex \(i\) to vertex \(j\) may be improved by passing through an intermediate vertex \(k\).
+
+The Floyd–Warshall update is:
+```
+d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+```
+
+It compares the current path with a route that goes through `k`.
+
+Strictly speaking, this is the shortest-path relaxation principle, not a precise definition of the transitive property. Option C is the closest available choice.
+
+---
+
+Q22. In a Binary Search Tree (BST), deleting a node with one child involves:
+- [ ] (A) Removing the node and replacing it with its left child
+- [ ] (B) Removing the node and replacing it with its right child
+- [ ] (C) Removing the node and replacing it with its parent
+- [ ] (D) Removing the node and leaving the subtree unaltered
+
+Correct concept: Replace the node with its only child.
+
+Options A and B are both incomplete: either can be correct depending on which child the node has. Therefore, the question does not have one universally correct option as written.
+
+Example:
+```
+Before:          After deleting 20:
+
+    20                  30
+      \
+       30
+```
+
+If the node has only a left child, promote the left child. If it has only a right child, promote the right child. This preserves the BST ordering property.
+
+---
+
+Q23. Counting Sort is particularly efficient for sorting arrays where the range of elements is:
+- [ ] (A) Very large
+- [x] (B) Very small
+- [ ] (C) Constant
+- [ ] (D) Sorted
+
+Correct answer: (B) Very small
+
+Concept: Counting Sort counts how many times each value occurs, then uses those counts to reconstruct the sorted sequence.
+
+Its typical time complexity is: `O(n+k)` where: `n` is the number of elements, `k` is the size of the value range.
+
+Example: 
+```
+Sorting [2, 1, 2, 0, 1] is efficient because the values range only from 0 to 2.
+```
+If the range is extremely large compared with the number of elements, Counting Sort may waste considerable time and memory.
+
+
+---
+
+Q24. What is the primary function of SNMP (Simple Network Management Protocol)?
+- [ ] (A) File transfer
+- [ ] (B) Remote terminal access
+- [x] (C) Network management and monitoring
+- [ ] (D) Web browsing
+
+Correct answer: (C) Network management and monitoring
+
+Concept: SNMP is used to monitor and manage network devices such as routers, switches, and servers.
+
+A network administrator may use it to collect information about:
+- Interface traffic.
+- Device availability.
+- Error counts.
+- Performance and resource usage.
+
+
+Quick revision of the related protocols:
+| Protocol	| Main purpose                      |
+|-----------|-----------------------------------|
+| SNMP	    | Network monitoring and management |
+| FTP	      | File transfer                     |
+| SSH	      | Secure remote access              |
+| HTTP	    | Web communication                 |
+
+---
+
+Q25. Frame design in the Data Link Layer includes:
+- [ ] (A) Deciding the routing path for data packets
+- [x] (B) Defining the structure of data frames
+- [ ] (C) Assigning IP addresses to devices
+- [ ] (D) Setting the data transmission rate
+
+Correct answer: (B) Defining the structure of data frames
+
+Concept: The Data Link Layer organizes bits into frames so devices on the same link can exchange data.
+
+A frame may contain:
+- Header information, such as source and destination MAC addresses.
+- Payload, which carries the data.
+- Trailer information, such as an error-detection value.
+
+Remember the distinction:
+- Data Link Layer: Frames and MAC addressing.
+- Network Layer: Packets and IP addressing.
+- Transport Layer: Segments, ports, and end-to-end transport.
+
+Routing paths are generally selected at the Network Layer, not during frame design.
+
+---
+
+Q26. TCP regulates end-to-end packet flow using:
+- [ ] (A) Source quench messages
+- [x] (B) A window size advertisement
+- [ ] (C) Fixed-size segments
+- [ ] (D) Binary exponential backoff
+
+Correct answer: (B) A window size advertisement
+
+Concept: TCP uses a sliding-window mechanism to control how much data a sender can transmit before receiving acknowledgements.
+
+The receiver advertises a receive window indicating how much additional data it can accept. This is called flow control.
+
+Do not confuse it with congestion control:
+- Flow control: Prevents overwhelming the receiver.
+- Congestion control: Helps prevent overloading the network.
+
+Source Quench is obsolete, and binary exponential backoff is associated with Ethernet contention and related protocols rather than TCP's receive-window mechanism.
+
+---
+
+Q27. What is the primary purpose of a Software Requirements Specification (SRS) document?
+- [ ] (A) To list the programming languages used
+- [ ] (B) To describe the user-interface design
+- [x] (C) To define the software’s functional and non-functional requirements
+- [ ] (D) To specify the hardware components required
+
+Correct answer: (C) To define the software’s functional and non-functional requirements
+
+Concept: An SRS explains what a software system must do and the constraints under which it must operate.
+- Functional requirement: A student can view examination results.
+- Non-functional requirement: The results page should load within a specified time under defined conditions.
+
+An SRS may mention interfaces or hardware constraints, but its primary purpose is to specify requirements rather than prescribe every implementation detail.
+
+---
+
+Q28. What is encapsulation in OOP?
+- [ ] (A) The ability to inherit properties from multiple classes
+- [ ] (B) The process of creating objects
+- [x] (C) The bundling of data and methods that operate on the data
+- [ ] (D) The use of abstract classes only
+
+Correct answer: (C) The bundling of data and methods that operate on the data
+
+Concept: Encapsulation combines data and the methods that work on that data within a class. Access controls can also restrict how the internal state is modified.
+
+Example in Java:
+```java
+class BankAccount {
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+
+Here, balance is private, and the class provides controlled ways to access or change it.
+
+Remember the four common OOP concepts:
+- Encapsulation — bundling and controlled access.
+- Abstraction — exposing essential features while hiding implementation details.
+- Inheritance — deriving a class from another class.
+- Polymorphism — one interface or method name supporting different behavior.
+
+---
+
+Q29. What is the purpose of CSS media queries?
+- [ ] (A) To add multimedia content to a webpage
+- [ ] (B) To create animations
+- [x] (C) To apply different styles based on the device’s characteristics
+- [ ] (D) To define color schemes for a website
+
+Correct answer: (C) To apply different styles based on the device’s characteristics
+
+Concept: Media queries let you apply CSS conditionally based on screen width, orientation, and other device or display characteristics.
+
+Example:
+```css
+/* Default styles */
+.container {
+    width: 80%;
+}
+
+/* Styles for narrower screens */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+```
+On screens up to 600 pixels wide, the container uses the full width.
+
+This is an important technique in responsive web design, helping webpages adapt to phones, tablets, and desktops.
+
+---
+
+Q30. How can you make an asynchronous request to a server in JavaScript?
+- [ ] (A) Using the async keyword
+- [ ] (B) Using the await keyword
+- [x] (C) Using the fetch API or XMLHttpRequest
+- [ ] (D) By defining a callback function
+
+Best answer: (C) Using the fetch API or XMLHttpRequest
+
+Concept: `fetch()` is a modern JavaScript API for making network requests. It returns a `Promise`, allowing the program to continue doing other work while waiting for the response.
+
+Example:
+```js
+async function getData() {
+    const response = await fetch(
+        "https://example.com/data"
+    );
+
+    const data = await response.json();
+    console.log(data);
+}
+```
+
+Understand the difference:
+- `fetch()` initiates the network request.
+- `async` allows a function to return a Promise.
+- `await` pauses execution within an async function until a Promise settles.
+- `Callbacks` are another way to handle asynchronous operations.
+
+Options A, B, and D can all be involved in asynchronous programming, but C most directly identifies APIs used to make the request.
+
+---
+
+Q31. What is the purpose of SQL injection attacks?
+- [ ] (A) To increase the performance of database queries
+- [x] (B) To bypass authentication systems
+- [ ] (C) To improve database security
+- [ ] (D) To enhance data encryption
+
+Correct answer: (B) To bypass authentication systems
+
+Concept: SQL injection is a security vulnerability in which malicious input changes the meaning of a SQL query.
+
+For example, if an application builds SQL by concatenating untrusted user input, an attacker may alter the query to access data or bypass login checks.
+
+SQL injection can be used to:
+- Bypass authentication.
+- Read unauthorized data.
+- Modify or delete database records.
+- In some circumstances, perform other privileged database actions.
+
+Prevention: Use parameterized queries or prepared statements instead of directly concatenating user input into SQL.
+
+---
+
+Q32. A grammar that produces more than one parse tree for the same sentence is called:
+- [ ] (A) Contiguous
+- [x] (B) Ambiguous
+- [ ] (C) Unambiguous
+- [ ] (D) Regular
+
+Correct answer: (B) Ambiguous
+
+Concept: A context-free grammar is ambiguous if at least one string in its language has more than one distinct parse tree, or equivalently, more than one leftmost or rightmost derivation.
+
+Example: `a + b * c`
+Without suitable precedence rules, an expression grammar might interpret this as either:
+- `a + (b * c)`
+- `(a + b) * c`
+
+These interpretations produce different parse trees and meanings.
+
+Exam tip: Ambiguity concerns multiple valid syntactic structures for the same string, not merely multiple strings produced by a grammar.
+
+---
+
+Q33. The minimum number of productions required to produce a language consisting of palindrome strings over `Sigma = {a,b}` is:
+- [ ] (A) 3
+- [ ] (B) 7
+- [X] (C) 5
+- [ ] (D) 6
+
+Likely intended answer: (C) 5
+
+One standard grammar for all palindromes over {a, b}, including the empty string, is: ` S -> aSa | bSb | a | b | epsilon`
+
+This has five production alternatives:
+```
+1. S -> aSa
+2. S -> bSb
+3. S -> a
+4. S -> b
+5. S -> epsilon
+```
+
+Why it works: A palindrome reads the same forwards and backwards. The first two productions add matching symbols to both ends, while the final three allow the derivation to end with a one-character palindrome or the empty string.
+
+Important caveat: The question does not specify whether the empty string is included or how productions are counted. The answer of five follows the conventional grammar above; different conventions can change the count.
+
+---
+
+Q34. Which of the following is true for the language {a^p | p is a prime}?
+- [ ] (A) It is regular but not context-free
+- [x] (B) It is neither regular nor context-free, but accepted by a Turing machine
+- [ ] (C) It is not accepted by a Turing Machine
+- [ ] (D) It is context-free but not regular
+
+Correct answer: (B) It is neither regular nor context-free, but accepted by a Turing machine
+
+Concept: This language contains strings whose lengths are prime numbers:
+```
+aa       length 2  → prime
+aaa      length 3  → prime
+aaaaa    length 5  → prime
+aaaaaaa  length 7  → prime
+```
+
+Strings of lengths 4, 6, and 8 are not in the language.
+
+Why is the language not regular? A unary regular language must have an ultimately periodic set of accepted lengths. Prime numbers do not form such a set, so a finite automaton cannot recognize this language.
+
+Why is it not context-free? Every context-free language over a one-symbol alphabet is regular. Since this language is not regular, it cannot be context-free either.
+
+However, a Turing machine can count the input length and test whether that length is prime. Therefore, the language is decidable and is certainly accepted by a Turing machine.
+
+---
+
+Q35. Which products are people most likely to be more uncomfortable buying on the Internet?
+- [ ] (A) Books
+- [ ] (B) Movie ticket
+- [x] (C) Furniture
+- [ ] (D) None of the above
+
+Best answer: (C) Furniture
+
+Concept: Furniture is a physical product that buyers may want to inspect in person before purchasing. They may want to check its size, material, comfort, colour, and build quality.
+
+Books and movie tickets are commonly purchased online because buyers generally don't need to inspect the physical product in the same way.
+
+This is a question about consumer behaviour in e-commerce, not a universal rule: modern online furniture shopping is common, but the traditional exam answer is likely furniture.
+
+---
+
+Q36. The study of encryption is called:
+- [ ] (A) Encryption
+- [x] (B) Cryptography
+- [ ] (C) Decryption
+- [ ] (D) None of the above
+
+Correct answer: (B) Cryptography
+
+Concept: Cryptography studies techniques for securing information, including encryption, decryption, authentication, and digital signatures.
+- Plaintext: Original readable message.
+- Encryption: Converts plaintext into ciphertext using an algorithm and key.
+- Ciphertext: The transformed message.
+- Decryption: Converts ciphertext back into readable plaintext using the appropriate key.
+
+Example:
+```
+Plaintext → Encryption + Key → Ciphertext
+Ciphertext → Decryption + Key → Plaintext
+```
+
+Remember: encryption is one part of cryptography; cryptography is the broader field.
+
+---
+
+Q37. SMTP, FTP, and HTTP — full forms and uses
+
+| Protocol	| Full form	                    | Main use                   |
+|-----------|-------------------------------|----------------------------|
+| SMTP	    | Simple Mail Transfer Protocol	| Sending email              |
+| FTP	      | File Transfer Protocol	      | Transferring files         |
+| HTTP	    | Hypertext Transfer Protocol	  | Transferring web resources |
+
+Concept to remember:
+- SMTP is used to send email, including between mail servers.
+- FTP is used to transfer files between a client and server.
+- HTTP is used for communication between web clients and servers.
+
+Exam trap: Receiving email is commonly associated with POP3 or IMAP, rather than SMTP.
+
+---
+
+Q38. MIMD Full form: Multiple Instruction, Multiple Data.
+- MIMD is a classification of computer architecture in Flynn's taxonomy.
+
+It means multiple processing units can execute different instruction streams on different data at the same time.
+
+Examples include multicore processors and multiprocessor systems running independent tasks.
+
+Flynn's four categories:
+| Category	| Instruction streams	| Data streams |
+|-----------|---------------------|--------------|
+| SISD	    | Single	            | Single       |
+| SIMD	    | Single 	            | Multiple     |
+| MISD	    | Multiple	          | Single       |
+| MIMD	    | Multiple	          | Multiple     |
+
+Remember: SIMD is useful for applying the same operation to many data elements; MIMD allows different operations on different data.
+
+---
+
+Q39. Binary-to-Gray code conversion
+
+Rule: Keep the most significant bit (MSB) unchanged. Each subsequent Gray bit is the XOR of two adjacent binary bits.
+
+```
+G0 = B0
+Gi = Bi-1 (+) Bi
+Here, (+) represents XOR.
+```
+Example: Convert binary `1011` to Gray code.
+| Step	     | Calculation | Gray bit |
+|------------|-------------|----------|
+| First bit	 | Copy MSB	   | 1        |
+| Second bit | 1 (+) 0	   | 1        |
+| Third bit	 | 0 (+) 1     | 1        |
+| Fourth bit | 1 (+) 1     | 0        |
+Answer: `1110` 
+
+Why Gray code matters: Consecutive Gray-code values differ by only one bit, which helps reduce errors during transitions in devices such as rotary encoders.
+
+---
+
+Q40. Merge Sort — worst-case time complexity <br/>
+Answer: `O(nlog n)`
+
+Merge Sort divides the array into halves, sorts each half recursively, and merges the sorted halves.
+
+Its recurrence is: `T(n) = 2T(n/2) + O(n)` 
+
+Therefore, its best-, average-, and worst-case time complexities are all `O(nlog n)`.
+
+Space complexity: Standard array-based Merge Sort generally requires `O(n)` additional space.
+
+---
+
+Q41. Abstraction <br/>
+Definition: Abstraction means exposing essential features while hiding unnecessary implementation details.
+
+For example, when using an ATM, you select an operation such as withdrawing money without needing to know the internal banking software logic.
+
+In OOP, abstraction can be implemented using abstract classes and interfaces, depending on the programming language.
+
+Distinguish it from encapsulation:
+- Abstraction: Hides implementation complexity and presents a simplified interface.
+- Encapsulation: Bundles data and methods together and controls access to internal state.
+
+---
+
+Q42. One-to-many (1:M) relationship
+
+A one-to-many relationship means one record in one entity can be associated with multiple records in another entity.
+
+Example:
+```
+One Department
+      |
+      | 1:M
+      |
+Many Employees
+```
+
+One department can have many employees, while each employee belongs to one department in this simplified model.
+
+Database implementation: The primary key of the “one” side is usually stored as a foreign key in the table on the “many” side.
+
+Example:
+- Department(DepartmentID, DepartmentName)
+- Employee(EmployeeID, Name, DepartmentID)
+Here, `Employee.DepartmentID` references `Department.DepartmentID`.
+
+---
+
+Q43. RFID — full form <br/>
+RFID = Radio Frequency Identification.
+
+RFID uses radio waves to identify or track tagged objects.
+
+A typical system contains:
+- Tag: Attached to an object and stores identification information.
+- Reader: Communicates with the tag.
+- Backend system: Processes the collected information, when used.
+
+Applications include inventory tracking, access cards, toll collection, and supply-chain management.
+
+Exam distinction: RFID does not necessarily require direct visual contact between the reader and the tag.
+
+---
+
+Q44. Pushdown Automata — grammar name  <br/>
+Answer: Context-Free Grammar (CFG).
+
+A pushdown automaton (PDA) recognizes context-free languages. Context-free grammars generate context-free languages.
+
+A CFG is formally represented as: 
+```
+G = (V, Sigma, P, S)
+Where:
+V = variables or non-terminals.
+Sigma = terminals.
+P = production rules.
+S = start symbol.
+
+For example:
+S -> aSb | epsilon
+
+generates strings such as ab, aabb, and aaabbb.
+```
+Exam trap: A general nondeterministic PDA recognizes all context-free languages. A deterministic PDA recognizes only deterministic context-free languages.
+
+---
+
+Q45–46. BLE — full form <br/>
+BLE = Bluetooth Low Energy.
+
+BLE is a wireless communication technology designed for devices that need to communicate while consuming relatively little power.
+
+Common uses include:
+- Fitness trackers and smartwatches.
+- Beacons and proximity detection.
+- Sensors and Internet of Things (IoT) devices.
+
+BLE versus classic Bluetooth: BLE is particularly suited to small, intermittent data exchanges with low energy consumption. It is not simply another name for all Bluetooth communication.
+
+---
+
+Q47. What HTML tag is used for `a` URL link? <br/>
+Answer: The anchor tag, <a>.
+
+Example:
+```html
+<a href="https://example.com">Visit website</a>
+```
+- `<a>` creates the hyperlink.
+- `href` specifies the destination URL.
+- `Visit website` is the clickable text.
+
+Remember: `<link>` is generally used to connect external resources such as stylesheets in the document head. For a clickable link in webpage content, use `<a>`.
+
+---
+
+Q48. FAT stands for what? <br/>
+**FAT = File Allocation Table**.
+
+FAT is a file-system structure used to track how files occupy storage space.
+
+Common variants include FAT12, FAT16, and FAT32.
+
+The file system maintains information that helps the operating system locate file data on a storage device. FAT32 is commonly associated with removable storage and broad device compatibility.
+
+---
+
+Q49. UDP, DDL, and INSERT INTO
+
+**UDP — User Datagram Protocol**
+
+UDP is a transport-layer protocol that sends datagrams without establishing a connection. It has low overhead but does not guarantee delivery, ordering, or retransmission.
+
+Common applications include real-time voice/video, online gaming, and DNS queries.
+
+**DDL — Data Definition Language**
+
+DDL commands define or modify database structures.
+
+Common examples:
+- `CREATE` — creates a table or other database object.
+- `ALTER` — changes an existing structure.
+- `DROP` — removes a database object.
+- `TRUNCATE` — removes all rows from a table while retaining the table structure.
+
+**`INSERT INTO` - SQL command**
+```sql
+--- INSERT INTO adds new records to a table.
+
+INSERT INTO Student (RollNo, Name)
+VALUES (101, 'Amit');
+```
+This inserts a student record with roll number 101 and name Amit.
+
+Exam distinction: `INSERT` is a DML command in the common classification, not DDL.
+
+---
+
+Q50. Abstract Data Type (ADT) <br/>
+An Abstract Data Type defines a data type in terms of its values and permitted operations, without specifying the internal implementation.
+
+For example, a stack ADT supports operations such as:
+- `push()` — add an item.
+- `pop()` — remove the top item.
+- `peek()` — inspect the top item.
+
+A stack can be implemented using an array or a linked list. The ADT describes the behavior; the implementation describes how that behavior is achieved.
+
+---
+
+Q51–52. HTML — full form <br/>
+**HTML = HyperText Markup Language.**
+
+HTML defines the structure and meaning of content on a webpage using elements and tags.
+
+Example:
+```html
+<h1>My School</h1>
+<p>Welcome to our website.</p>
+```
+- `<h1>` represents a top-level heading.
+- `<p>` represents a paragraph.
+
+Remember the distinction:
+- HTML — structure and content.
+- CSS — presentation and styling.
+- JavaScript — behavior and interactivity.
+ 
 ---
 </details>
 <!----------------------------->
@@ -1554,8 +4360,1137 @@ For example, a date field is useful when a document should display the current d
 
 ---
 
+| Keyboard Shortcuts, Data Structures and OOP |
+|---------------------------------------------|
+
+---
+
+**Q81. End Key**
+
+Question: The End key is used to:
+- [x] (A) Move the cursor to the end of the line
+- [ ] (B) Move the cursor to the end of the document
+- [ ] (C) Move the cursor to the end of the paragraph
+- [ ] (D) Move the cursor to the end of the screen
+
+Correct answer: (A) Move the cursor to the end of the line
+
+Explanation: In standard text-editing applications such as Microsoft Word, pressing End moves the cursor to the end of the current line.
+
+Remember:
+- `Home` → Beginning of the line
+- `End` → End of the line
+- `Ctrl + Home` → Beginning of the document
+- `Ctrl + End` → End of the document
+
+---
+
+**Q82. `Ctrl + Page Down`**
+
+Question: `Ctrl + Page Down` is used to:
+- [ ] (A) Move the cursor one paragraph down
+- [x] (B) Move the cursor one page down
+- [ ] (C) Move the cursor one line down
+- [ ] (D) Move the cursor one screen down
+
+Answer indicated in the paper: (B) Move the cursor one page down
+
+Explanation: In older Microsoft Word versions, `Ctrl + Page Down` moves to the next page or browsing location, depending on the version and navigation context. It is not the same as moving down one line.
+
+---
+
+**Q83. `Ctrl + Down Arrow`**
+
+Question: `Ctrl + Down Arrow` is used to:
+- [x] (A) Move the cursor one paragraph down
+- [ ] (B) Move the cursor one line down
+- [ ] (C) Move the cursor one page down
+- [ ] (D) Move the cursor one screen down
+
+Correct answer: (A) Move the cursor one paragraph down
+
+Explanation: In Microsoft Word, `Ctrl + Down Arrow` moves the insertion point to the beginning of the next paragraph.
+
+Exam tip: Do not confuse the `Down Arrow` with `Ctrl + Down Arrow`.
+
+---
+
+**Q84. Non-Linear Data Structure**
+
+Question: Which one is a non-linear data structure?
+- [ ] (A) Stack
+- [ ] (B) Queue
+- [ ] (C) Linked list
+- [x] (D) Tree
+
+Correct answer: (D) Tree
+
+Explanation:
+- Stack: Linear data structure; follows LIFO.
+- Queue: Linear data structure; follows FIFO.
+- Linked list: Usually classified as linear.
+- Tree: Non-linear data structure with hierarchical relationships.
+Examples of trees include binary trees, binary search trees, and heaps.
+
+---
+
+**Q85. `Ctrl + Left Arrow`**
+
+Question: `Ctrl + Left Arrow` is used to:
+- [ ] (A) Move the cursor to the beginning of the line
+- [x] (B) Move the cursor one word left
+- [ ] (C) Move the cursor one paragraph up
+- [ ] (D) Move the cursor one paragraph down
+
+Correct answer: (B) Move the cursor one word left
+
+Explanation: `Ctrl + Left Arrow` moves the cursor to the previous word boundary in most text editors.
+
+Compare:
+- `Left Arrow` → Move left one character.
+- `Ctrl + Left Arrow` → Move left one word boundary.
+- `Right Arrow` → Move right one character.
+- `Ctrl + Right Arrow` → Move right one word boundary.
+
+---
+
+**Q86. Abstraction**
+
+Question: Abstraction means:
+- [ ] (A) Summarization
+- [ ] (B) Elimination
+- [x] (C) Hiding
+- [ ]  (D) Casting
+
+Correct answer: (C) Hiding
+
+Explanation: In object-oriented programming, abstraction means exposing essential features while hiding unnecessary implementation details.
+
+Example: When you use an ATM, you select an operation and enter a PIN without needing to understand the internal banking software.
+
+Important distinction:
+- Abstraction: Hides implementation details and exposes essential functionality.
+- Encapsulation: Bundles data and methods together and controls access to them.
+
+---
+
+**Q87. `Ctrl + Page Up`**
+
+Question: `Ctrl + Page Up` is used to:
+- [x] (A) Move the cursor one page up
+- [ ] (B) Move the cursor one paragraph up
+- [ ] (C) Move the cursor one screen up
+- [ ] (D) Move the cursor one line up
+
+Answer indicated in the paper: (A) Move the cursor one page up
+
+Explanation: In older versions of Word, `Ctrl + Page Up` navigates to the previous page or browsing location, depending on the context.
+
+---
+
+**Q88. Polymorphism**
+
+Question: Polymorphism is a feature of:
+- [ ] (A) Procedural programming
+- [ ] (B) SQL
+- [ ] (C) Non-procedural programming
+- [x] (D) Object-oriented programming
+
+Correct answer: (D) Object-oriented programming
+
+Explanation: Polymorphism means “many forms.” It allows the same interface or method name to behave differently depending on the object or arguments involved.
+
+For example, in Java, a method named `draw()` might draw a circle for a Circle object and a rectangle for a Rectangle object.
+
+Common forms include:
+- Compile-time polymorphism: Method overloading.
+- Runtime polymorphism: Method overriding through dynamic dispatch.
+
+---
+
+**Q89. `Ctrl + Home`**
+
+Question: `Ctrl + Home` is used to:
+- [x] (A) Move the cursor to the beginning of the document
+- [ ] (B) Move the cursor to the beginning of the line
+- [ ] (C) Move the cursor to the beginning of the paragraph
+- [ ] (D) All of these
+Correct answer: (A) Move the cursor to the beginning of the document
+
+Explanation: In Microsoft Word, `Ctrl + Home` takes the insertion point to the beginning of the document.
+
+**Quick revision**
+
+| Shortcut	          | Function                          |
+|---------------------|-----------------------------------|
+| `Home`	            | Beginning of the line             |
+| `End`	              |	End of the line                   |
+| `Ctrl + Home`	      | Beginning of the document         |
+| `Ctrl + End`        | End of the document               |
+| `Ctrl + Left Arrow` | Previous word boundary            |
+| `Ctrl + Down Arrow`	| Next paragraph                    |
+| `Ctrl + Page Up`	  | Previous page/navigation location |
+| `Ctrl + Page Down`	| Next page/navigation location     |
+
+---
+
+| MS Word and Microsoft Excel |
+|-----------------------------|
+
+---
+
+**Q90. `Ctrl + End`**
+
+Question: `Ctrl + End` is used to:
+- [ ] (A) Move the cursor to the end of the line
+- [x] (B) Move the cursor to the end of the document
+- [ ] (C) Move the cursor to the end of the paragraph
+- [ ] (D) None of these
+
+Correct answer: (B) Move the cursor to the end of the document
+
+Explanation: `Ctrl + End` moves the insertion point to the end of a document in Microsoft Word.
+
+Remember: `Ctrl + Home` moves to the beginning; `Ctrl + End` moves to the end.
+
+---
+
+**Q91. Excel Auto Calculation**
+
+Question: How can you update the values of formula cells if Auto Calculate mode in Excel is disabled?
+- [ ] (A) F8
+- [x] (B) F9
+- [ ] (C) F10
+- [ ] (D) F11
+
+Correct answer: (B) F9
+
+Explanation: In Excel, pressing `F9` recalculates formulas in open workbooks. This is useful when calculation mode is set to manual.
+
+Exam tip: `F9` is the key to remember for recalculation.
+
+---
+
+**Q92. Excel Custom Lists**
+
+Question: You want Excel to produce Jaistha, Aashadh, and so on when you type Baishakh and drag the fill handle. What should you set?
+- [x] (A) Custom List
+- [ ] (B) Auto Fill Options
+- [ ] (C) Fill Across Worksheet
+- [ ] (D) Fill Series
+
+Correct answer: (A) Custom List
+
+Explanation: Excel's Custom Lists feature lets you define a sequence of items that AutoFill can recognise.
+
+For example, after creating the sequence Baishakh, Jaistha, Aashadh, entering Baishakh and dragging the fill handle can continue that sequence.
+
+---
+
+**Q93. Changing Excel Calculation Mode**
+
+Question: Where can you change automatic or manual calculation mode in Excel?
+- [ ] (A) Double-click the CAL indicator on the status bar
+- [ ] (B) Go to Tools → Options → Calculation and select the corresponding option
+- [x] (C) Both (A) and (B)
+- [ ] (D) None of these
+
+Answer indicated in the paper: (C) Both (A) and (B)
+
+Explanation: The question refers to older Excel versions and their interface. In current Excel, calculation settings are generally found under Formulas → Calculation Options, where you can select Automatic or Manual.
+
+---
+
+**Q94. Excel Gridlines**
+
+Question: How can you show or hide gridlines in an Excel worksheet?
+- [ ] (A) Tools → Options → View tab → select or clear Gridlines
+- [ ] (B) Click the Gridline tool on the Forms toolbar
+- [x] (C) Both (A) and (B)
+- [ ] (D) None of these
+
+Answer indicated in the paper: (C) Both (A) and (B)
+
+Explanation: The question uses an older Excel interface. In modern Excel, you can generally show or hide worksheet gridlines from the View tab by toggling the Gridlines option.
 
 
+---
+
+**Q95. Excel Screen Components**
+
+Question: Which of the following Excel screen components cannot be turned on or off?
+- [ ] (A) Formula Bar
+- [ ] (B) Status Bar
+- [x] (C) Tool Bar
+- [ ] (D) None of these
+
+Answer indicated in the paper: (C) Tool Bar
+
+Explanation: The question is based on older Excel versions, where toolbars could be shown or hidden through menus. The exact interface and behaviour depend on the Excel version.
+
+---
+
+**Q96. `Ctrl + X` in Excel**
+
+Question: What happens when you press Ctrl + X after selecting some cells in Excel?
+- [ ] (A) The cell contents disappear from the cells and are stored in the Clipboard
+- [x] (B) The cells selected are marked for cutting
+- [ ] (C) The selected cells are deleted and cells are shifted left
+- [ ] (D) The selected cells are deleted and cells are shifted up
+
+Correct answer: (B) The selected cells are marked for cutting
+
+Explanation: `Ctrl + X` cuts the selected cells. Excel marks the range for cutting so it can be pasted elsewhere. The data is moved when you complete the paste operation.
+
+---
+
+**Q97. Excel Paste Special**
+
+Question: Which of the following options is not available in the Paste Special dialog box?
+- [ ] (A) Add
+- [ ] (B) Subtract
+- [ ] (C) Divide
+- [x] (D) SORT
+
+Correct answer: (D) SORT
+
+Explanation: Excel's Paste Special includes arithmetic operations such as `Add`, `Subtract`, `Multiply`, and `Divide`. <br/>
+`Sort` is a separate feature, not a Paste Special arithmetic operation.
+
+---
+
+**Q98. Converting a Column into a Row**
+
+Question: Which command would you choose to convert a column of data into a row?
+- [ ] (A) Cut and Paste
+- [ ] (B) Edit → Paste Special → Transpose
+- [x] (C) Both (A) and (B)
+- [ ] (D) None of these
+
+Correct answer indicated in the paper: (C) Both (A) and (B)
+
+Explanation: The reliable Excel feature for changing columns into rows is Transpose.
+
+Example:
+| Original column	| After transpose |
+|-----------------|-----------------|
+| Apple	          | Apple           |
+| Banana	        | Banana          |
+| Mango	          | Mango           |
+
+The items originally arranged vertically become arranged horizontally. Simply cutting and pasting does not automatically transpose a range in the usual workflow, so Paste Special → Transpose is the key concept to remember.
+
+---
+
+**Q99. Text Overflow in Excel**
+
+Question: It is acceptable to let long text flow into adjacent cells on a worksheet when:
+- [ ] (A) Data will be entered in the adjacent cells
+- [x] (B) No data will be entered in the adjacent cells
+- [ ] (C) There is no suitable abbreviation for the text
+- [ ] (D) There is no time to format the text
+
+Correct answer: (B) No data will be entered in the adjacent cells
+
+Explanation: Excel can display text overflowing into neighbouring empty cells. If the adjacent cell contains data, the overflow is blocked.
+
+Example: If `A1` contains Computer Science and `B1` is empty, the text may extend visually into `B1`.
+
+---
+
+**Q100. Excel Cell Pointer — Selection**
+
+Question: Which cell pointer indicates that you can make a selection?
+- [ ] (A) Doctor's symbol (big plus)
+- [ ] (B) Small thin plus icon
+- [x] (C) Mouse pointer with anchor at the tip
+- [ ] (D) None of these
+
+Answer indicated in the paper: (C) Mouse pointer with anchor at the tip
+
+Explanation: In the older Excel interface described by this question, the pointer's shape indicates the action available. The pointer with an arrow-like tip is used for selecting cells or ranges.
+
+---
+
+**Q101. Excel Cell Pointer — Fill Series**
+
+Question: Which cell pointer indicates that you can fill a series?
+- [x] (A) Doctor's symbol (big plus)
+- [ ] (B) Small thin plus icon
+- [ ] (C) Mouse pointer with anchor at the tip
+- [ ] (D) None of these
+
+Answer indicated in the paper: (A) Doctor's symbol (big plus)
+
+Explanation: In Excel, the small black plus-shaped pointer at the fill handle is used to copy data or extend a series.
+
+For example, enter `1` in `A1` and `2` in `A2`, select both cells, and drag the fill handle downward to continue `3, 4, 5....`
+
+---
+
+**Q102. Active Cell**
+
+Question: On an Excel sheet, the active cell is indicated by:
+- [ ] (A) A dotted border
+- [x] (B) A dark wide border
+- [ ] (C) A blinking border
+- [ ] (D) Italic text
+
+Correct answer: (B) A dark wide border
+
+Explanation: The active cell is the currently selected cell, normally identified by a prominent border. Data you type is entered into this cell.
+
+---
+
+**Q103. Comments in Excel**
+
+Question: What term describes explanatory text attached to a cell?
+- [ ] (A) Context
+- [ ] (B) Callout
+- [x] (C) Comment
+- [ ] (D) Dialog
+
+Correct answer: (C) Comment
+
+Explanation: A comment or note provides additional information associated with a cell without changing the cell's actual value.
+
+---
+
+**Q104. Selecting All Cells**
+
+Question: Which of the following will not select all the cells in a document?
+- [ ] (A) Using the Edit → Select All menu
+- [ ] (B) Pressing Ctrl + A on the keyboard
+- [x] (C) Clicking three times with the right mouse button in the spreadsheet
+- [ ] (D) None of these
+
+Correct answer: (C) Clicking three times with the right mouse button in the spreadsheet
+
+Explanation: `Ctrl + A` is a standard shortcut for selecting data or the worksheet, depending on the current selection and context. Triple-clicking the right mouse button is not the standard Select All command.
+
+---
+
+**Q105. Default Style in Excel**
+
+Question: The default style for new data keyed into a new workbook is:
+- [ ] (A) Comma
+- [x] (B) Normal
+- [ ] (C) Currency
+- [ ] (D) Per cent
+
+Correct answer: (B) Normal
+
+Explanation: The Normal style is the standard default cell style in the Excel versions this question refers to. Currency, Percentage, and Comma are specialised number formats or styles.
+
+---
+
+**Q106. Confirming Cell Entry**
+
+Question: If you press ______, the cell accepts your typing as its contents.
+- [ ] (A) `Tab`
+- [ ] (B) `Ctrl + Enter`
+- [ ] (C) `Enter`
+- [ ] (D) `Alt + Enter`
+
+Correct answer: (C) `Enter`
+
+Explanation: Pressing `Enter` normally confirms the value or formula entered into the active cell and moves the selection down one row.
+
+Other useful shortcuts:
+- `Tab` — confirms the entry and moves right.
+- `Alt + Enter` — inserts a new line within a cell while editing.
+- `Ctrl + Enter` — enters the same content into all selected cells.
+
+---
+
+**Q107. Microsoft Excel**
+
+Question: Which among the following is associated with Excel?
+- [ ] (A) Graphic program
+- [ ] (B) Word Processor
+- [ ] (C) Presentation
+- [x] (D) Spreadsheet
+
+Correct answer: (D) Spreadsheet
+
+Explanation: Microsoft Excel is spreadsheet software used for calculations, tables, charts, data analysis, and formulas.
+
+---
+
+**Q108. Logical Functions**
+
+Question: Except which of the following functions, a formula with a logical function shows the words TRUE or FALSE as a result?
+- [ ] (A) NOT
+- [ ] (B) OR
+- [x] (C) IF
+- [ ] (D) AND
+
+Correct answer: (C) IF
+
+Explanation:
+- `AND()` returns TRUE when all conditions are true.
+- `OR()` returns TRUE when at least one condition is true.
+- `NOT()` reverses a logical value.
+- `IF()` returns one value when a condition is true and another when it is false.
+
+Example:
+```
+=IF(A1>=40,"Pass","Fail")
+```
+This formula returns Pass or Fail, rather than necessarily returning TRUE or FALSE.
+
+---
+
+**Q109. Excel Zoom Percentage**
+
+Question: Which of the following is not a valid zoom percentage in Excel?
+- [ ] (A) 10
+- [ ] (B) 100
+- [ ] (C) 300
+- [x] (D) 500
+
+Correct answer: (D) 500
+
+Explanation: In the Excel versions relevant to this question, the normal zoom range is 10% to 400%. Therefore, 500% is outside the supported range.
+
+---
+
+| Excel, SQL, OOP, Boolean Algebra and PowerPoint |
+|-------------------------------------------------|
+
+---
+
+**Q110. Excel Conditional Formatting**
+
+Question: You can check the conditions against ______ when applying conditional formatting.
+- [ ] (A) Cell Value
+- [ ] (B) Formula
+- [x] (C) Both (A) and (B)
+- [ ] (D) None of these
+
+Correct answer: (C) Both (A) and (B)
+
+Explanation: Conditional formatting changes a cell's appearance when a specified condition is satisfied. The condition can be based on a cell value or a formula.
+
+Example: Highlight marks below 40 in red.
+
+---
+
+**Q111. Primary Key**
+
+Question: Which of the following is a primary key in a student table?
+- [ ] (A) UID number
+- [x] (B) Admission number
+- [ ] (C) Account number
+- [ ] (D) PAN
+
+Correct answer: (B) Admission number
+
+Explanation: A primary key uniquely identifies each record in a table. A student's admission number is a suitable identifier when it is unique and non-null.
+
+Remember: A primary key must be unique and cannot contain `NULL`.
+
+---
+
+**Q112. SQL Command**
+
+Question: Which of the following is a valid SQL command?
+- [ ] (A) cin
+- [ ] (B) cout
+- [ ] (C) tuple
+- [x] (D) SELECT
+
+Correct answer: (D) SELECT
+
+Explanation: `SELECT` retrieves data from database tables.
+
+Example:
+```sql
+SELECT name FROM Student;
+```
+`cin` and `cout` are commonly used for input and output in C++, not SQL commands.
+
+---
+
+**Q113. PowerPoint Slide Transition**
+
+Question: Which PowerPoint option works best for adding a slide transition?
+- [ ] (A) Animations
+- [ ] (B) Chart Wizard
+- [x] (C) Transition Wizard
+- [ ] (D) Auto Content Wizard
+
+Answer indicated in the paper: (C) Transition Wizard
+
+Explanation: This question refers to an older PowerPoint interface. Slide transitions control how one slide changes to the next. In modern PowerPoint, use the Transitions tab.
+
+---
+
+**Q114. Objects in OOP**
+
+Question: Objects are:
+- [ ] (A) Design of function
+- [ ] (B) Creator of data
+- [x] (C) Instances of classes
+- [ ] (D) Program block
+
+Correct answer: (C) Instances of classes
+
+Explanation: A class defines a structure or blueprint, while an object is an instance created from that class.
+
+Example in C++:
+```cpp
+class Student {
+public:
+    int age;
+};
+
+Student s1;  // s1 is an object
+```
+---
+
+**Q115. Editing an Embedded Organization Chart**
+
+Question: You can edit an embedded organization chart object by:
+- [ ] (A) Double-clicking the organization chart object
+- [ ] (B) Clicking Edit Object
+- [x] (C) Right-clicking the chart object, then clicking Edit MS-Organization Chart Object
+- [ ] (D) Both (A) and (C)
+
+Answer indicated in the paper: (C)
+
+Explanation: In the older Microsoft Office environment, an embedded organization chart could be edited through its context menu. Double-clicking an embedded object could also open its editing interface, depending on the version and object type.
+
+---
+
+**Q116. Boolean Algebra**
+
+Question: In Boolean algebra, `A.A` is equal to:
+- [ ] (A) `A`
+- [ ] (B) `2A`
+- [ ] (C) `A^2`
+- [ ] (D) `1`
+
+Correct answer: (A) `A`
+
+Explanation: This is the idempotent law of Boolean algebra: `A.A = A`
+
+Boolean variables have values 0 or 1. Multiplying a Boolean variable by itself does not change its value.
+
+---
+
+**Q117. PowerPoint Slide Sorter**
+
+Question: Slide Sorter can be accessed from which menu?
+- [x] (A) View
+- [ ] (B) Edit
+- [ ] (C) File
+- [ ] (D) Insert
+
+Correct answer: (A) View
+
+Explanation: Slide Sorter displays presentation slides as thumbnails, making it easier to reorder, copy, or delete slides. In older PowerPoint versions, it was available from the View menu.
+
+---
+
+**Q118. Boolean AND Operator**
+
+Question: In Boolean algebra, the function of the AND operator is represented by:
+- [ ] (A) `+`
+- [ ] (B) `-`
+- [ ] (C) `/`
+- [x] (D) `.`
+
+Correct answer: (D) `.`
+
+Explanation: The standard Boolean algebra notation is:
+- `OR`: `A+B`
+- `AND`: `A.B`
+- `NOT`: `inverse A or -A`
+
+The `AND` operation returns 1 only when both inputs are 1.
+| A	| B	| A.B |
+| 0	| 0	| 0   |
+| 0	| 1	| 0   |
+| 1	| 0	| 0   |
+| 1	| 1	| 1   |
+  
+---
+
+**Q119. Pre-formatted PowerPoint Style**
+
+Question: What would you choose to create a pre-formatted style?
+- [ ] (A) Format
+- [x] (B) Slide Layout
+- [ ] (C) Slide Sorter View
+- [ ] (D) None of these
+
+Answer indicated in the paper: (B) Slide Layout
+
+Explanation: A slide layout provides a predefined arrangement of placeholders for titles, text, images, and other content. In modern PowerPoint, themes and slide layouts help maintain consistent presentation formatting.
+
+---
+
+**Q120. Boolean OR Operator**
+
+Question: Which logical operation is represented by the `+` sign in Boolean algebra?
+- [ ] (A) OR
+- [x] (B) NOT
+- [ ] (C) NOR
+- [ ] (D) AND
+
+Correct answer: (A) OR
+
+Explanation: In Boolean algebra, the plus sign represents `OR`: `A+B`
+
+The output is 1 if at least one input is 1.
+| A	| B	| A+B |
+| 0	| 0	| 0   |
+| 0	| 1	| 1   |
+| 1	| 0	| 1   |
+| 1	| 1	| 1   |
+
+Important: Do not confuse Boolean algebra with ordinary arithmetic.
+
+---
+
+**Q121. PowerPoint Motion Path**
+
+Question: To preview a motion-path effect using the Custom Animation task pane, we should:
+- [ ] (A) Double-click the motion path
+- [ ] (B) Click the Show Effect button
+- [x] (C) Click the Play button
+- [ ] (D) None of these
+
+Answer indicated in the paper: (C) Click the Play button
+
+Explanation: In the older Custom Animation task pane, the Play button previews the animation effects on the slide.
+
+---
+
+**Quick revision**
+
+| Topic	                  | Key fact                           |
+|-------------------------|------------------------------------|
+| Conditional formatting	| Can use cell values or formulas    |
+| Primary key	            | Unique, non-null identifier        |
+| SQL	                    | `SELECT` retrieves data            |
+| OOP	                    | Object = instance of a class       |
+| Boolean idempotent law	| `A.A = A`                          |
+| Boolean OR	            | `A+B`                              | 
+| Boolean AND	            | `A.B`                              |
+| Slide Sorter	          | View menu in older PowerPoint      |
+| Motion-path preview	    | Play button in the older task pane |
+
+---
+
+
+| SQL, PowerPoint, C++ and Computer Networks |
+|--------------------------------------------|
+
+---
+
+**Q122. SQL — DCL Command**
+
+Question: Which one is a DCL command in SQL?
+- [ ] (A) UPDATE
+- [ ] (B) SELECT
+- [ ] (C) DELETE
+- [x] (D) GRANT
+
+Correct answer: (D) GRANT
+
+Explanation: DCL stands for Data Control Language. It controls access permissions in a database.
+
+| SQL category	                  | Examples                                  |
+|---------------------------------|-------------------------------------------|
+| DDL — Data Definition Language	| `CREATE`, `ALTER`, `DROP`                 |
+| DML — Data Manipulation Language|	`INSERT`, `UPDATE`, `DELETE`              |
+| DQL — Data Query Language	      | `SELECT` (commonly classified separately) |
+| DCL — Data Control Language	    | `GRANT`, `REVOKE`                         |
+
+---
+
+**Q123. PowerPoint — Dragging**
+
+Question: What is the term used when you press and hold the left mouse key and move the mouse around the slide?
+- [ ] (A) Moving
+- [x] (B) Dragging
+- [ ] (C) Monitoring
+- [ ] (D) Highlighting
+
+Correct answer: (B) Dragging
+
+Explanation: Dragging means holding down a mouse button while moving the pointer. It is commonly used to move objects, resize shapes, or reposition images on a slide.
+
+---
+
+**Q124. SQL — Viewing Data**
+
+Question: Which of the following SQL commands is used to view data?
+- [ ] (A) CREATE
+- [ ] (B) INSERT
+- [x] (C) SELECT
+- [ ] (D) UPDATE
+
+Correct answer: (C) SELECT
+
+Explanation: SELECT retrieves records from a table.
+```sql
+SELECT * FROM Student;
+```
+This query displays all columns from the Student table.
+
+---
+
+**Q125. PowerPoint — Applying Transitions**
+
+Question: Which view is best when setting transition effects for all slides in a presentation?
+- [ ] (A) Slide
+- [ ] (B) Notes Page View
+- [ ] (C) Outline View
+- [x] (D) Slide Sorter View
+
+Correct answer: (D) Slide Sorter View
+
+Explanation: Slide Sorter displays multiple slides as thumbnails, making it convenient to select and manage several slides. This question refers to an older PowerPoint interface.
+
+---
+
+**Q126. C++ — math.h**
+
+Question: `Math.h` is a:
+- [ ] (A) Derived data type
+- [ ] (B) Function
+- [x] (C) Header file
+- [ ] (D) Built-in data type
+
+Correct answer: (C) Header file
+
+Explanation: In C and older C++ code, `math.h` declares mathematical functions such as `sqrt()` and `pow()`.
+
+In modern C++, the preferred header is: `#include <cmath>`
+
+
+Example:
+```c
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << sqrt(25);
+}
+// -----------------------
+// Output: 5
+```
+---
+
+**Q127. PowerPoint — Design Templates**
+
+Question: The selected design template can be applied:
+- [ ] (A) To the current slide only
+- [x] (B) To all the slides
+- [ ] (C) To all the new presentations you create
+- [ ] (D) All of these
+
+Answer indicated in the paper: (B) To all the slides
+
+Explanation: In older PowerPoint versions, a selected design template could be applied to the whole presentation. The interface also allowed different choices depending on the version and workflow.
+
+---
+
+**Q128. Slide Design vs Auto Content Wizard**
+
+Question: The difference between Slide Design and Auto Content Wizard is:
+- [ ] (A) Both are the same
+- [ ] (B) Auto Content Wizard is just the wizard version of Slide Design
+- [x] (C) Slide Design does not provide sample content, but Auto Content Wizard provides sample content too
+- [ ] (D) Slide Design asks your choice in steps, but Auto Content Wizard does not let you make choices
+
+Answer indicated in the paper: (C)
+
+Explanation: In the older PowerPoint versions referenced by this question, Slide Design primarily controlled a presentation’s visual appearance, while Auto Content Wizard helped create a presentation structure and could provide suggested content.
+
+---
+
+**Q129. PowerPoint — Slide Design and Layout**
+
+Question: In which menu can you find features like Slide Design and Slide Layout?
+- [ ] (A) Insert Menu
+- [x] (B) Format Menu
+- [ ] (C) Tools Menu
+- [ ] (D) Slide Show Menu
+
+Answer indicated in the paper: (B) Format Menu
+
+Explanation: This is based on an older PowerPoint menu layout. In current PowerPoint, design themes and layouts are generally accessed through the Design and Home tabs.
+
+---
+
+**Q130. PowerPoint — Animation Options**
+
+Question: Which menu provides options such as Animation Scheme, Custom Animation, and Slide Transition?
+- [ ] (A) Insert Menu
+- [ ] (B) Format Menu
+- [ ] (C) Tools Menu
+- [x] (D) Slide Show Menu
+
+Answer indicated in the paper: (D) Slide Show Menu
+
+Explanation: These options belonged to older PowerPoint versions. Modern PowerPoint generally uses the Animations tab for object animation and the Transitions tab for slide transitions.
+
+---
+
+**Q131. Distributed System**
+
+Question: When a collection of various computers appears to its client as a single coherent system, it is called:
+- [ ] (A) Computer network
+- [x] (B) Distributed system
+- [ ] (C) Both (A) and (B)
+- [ ] (D) None of the mentioned
+
+Correct answer: (B) Distributed system
+
+Explanation: A distributed system consists of multiple computers that cooperate and may present a unified service to users.
+
+A computer network provides communication between devices; a distributed system uses multiple connected computers to work together toward a shared purpose.
+
+---
+
+**Q132. Processes on Networked Devices**
+
+Question: Two devices are in a network if:
+- [x] (A) A process in one device is able to exchange information with a process in another device
+- [ ] (B) A process is running on both devices
+- [ ] (C) PIDs of processes running on different devices are the same
+- [ ] (D) None of these
+
+Correct answer: (A)
+
+Explanation: Network communication allows processes running on different devices to exchange information. The processes do not need to have the same process ID (PID); PIDs are local identifiers managed by operating systems.
+
+---
+
+Q133. Which computer network is built on top of another network?
+- [ ] (A) Prior network
+- [ ] (B) Chief network
+- [ ] (C) Prime network
+- [x] (D) Overlay network
+
+Correct answer: (D) Overlay network
+
+An overlay network is a virtual network built on top of an existing network. Its logical connections are created using the underlying network infrastructure.
+
+---
+
+Q134. In a computer network, nodes are:
+- [ ] (A) The computer that originates the data
+- [ ] (B) The computer that routes the data
+- [ ] (C) The computer that terminates the data
+- [x] (D) All of these
+
+Correct answer: (D) All of these
+
+A network node can be a source, destination, or forwarding device. Nodes are not limited to computers; routers, switches, and other network-connected devices can also be nodes.
+
+---
+
+Q135. The communication channel is shared by all machines on the network in a:
+- [x] (A) Broadcast network
+- [ ] (B) Unicast network
+- [ ] (C) Multicast network
+- [ ] (D) None of these
+
+Correct answer: (A) Broadcast network
+
+In a broadcast network, a shared communication medium allows transmitted data to be available to all connected machines. The intended recipient processes it.
+
+---
+
+Q136. Which device forwards packets between networks by processing the routing information included in packets?
+- [ ] (A) Bridge
+- [ ] (B) Firewall
+- [x] (C) Router
+- [ ] (D) All of these
+
+Correct answer: (C) Router
+
+A router examines network-layer information, such as the destination IP address, and forwards packets toward the appropriate network.
+
+---
+
+Q137. The structure or format of data is called:
+- [x] (A) Syntax
+- [ ] (B) Semantics
+- [ ] (C) Struct
+- [ ] (D) None of these
+
+Correct answer: (A) Syntax
+
+- `Syntax`: Rules governing structure and format.
+- `Semantics`: Meaning of the data or statement.
+
+---
+
+Q138. Communication between a computer and a keyboard involves ______ transmission.
+- [ ] (A) Automatic
+- [ ] (B) Half-duplex
+- [ ] (C) Full-duplex
+- [x] (D) Simplex
+
+Expected answer: (D) Simplex — with a caveat
+
+A keyboard primarily sends input to the computer, which resembles one-way communication. <br/>
+However, this question is technically simplified: actual keyboard interfaces may support bidirectional communication for commands and responses. <br/> 
+The scan appears to have a mark beside (B) Half-duplex, so the paper’s marking and the conceptual answer may differ.
+
+---
+
+Q139. Which of the following is not a network edge device?
+- [ ] (A) PC
+- [ ] (B) Smartphones
+- [ ] (C) Servers
+- [x] (D) Switch
+
+Likely answer: (D) Switch
+
+PCs, smartphones, and servers are end devices. A switch generally connects devices within a network rather than acting as an end device. The exact term “edge device” can vary by context.
+
+---
+
+Q140. Which transmission medium has the highest transmission speed in a network?
+- [ ] (A) Coaxial cable
+- [ ] (B) Twisted pair cable
+- [x] (C) Optical fibre
+- [ ] (D) Electrical cable
+
+Correct answer: (C) Optical fibre
+
+Optical fibre carries data as light and supports very high bandwidth over long distances, making it the best answer among these options.
+
+---
+
+Q141. What is the Internet?
+- [ ] (A) A single network
+- [x] (B) A vast collection of different networks
+- [ ] (C) Interconnection of local area networks
+- [ ] (D) None of these
+
+Correct answer: (B) A vast collection of different networks
+
+The Internet is a global network of interconnected networks. It connects private, public, academic, business, and government networks using common communication protocols.
+
+---
+
+Q142. To join the Internet, a computer has to be connected to a:
+- [ ] (A) Internet Architecture Board
+- [ ] (B) Internet Society
+- [x] (C) Internet Service Provider
+- [ ] (D) None of these
+      
+Correct answer: (C) Internet Service Provider (ISP)
+
+An ISP provides Internet access to users, homes, and organizations.
+
+---
+
+Q143. Internet access by transmitting digital data over the wires of a local telephone network is provided by:
+- [ ] (A) Leased line
+- [x] (B) Digital subscriber line
+- [ ] (C) Digital signal line
+- [ ] (D) None of the mentioned
+
+Correct answer: (B) Digital Subscriber Line (DSL)
+
+DSL provides digital Internet access over traditional telephone copper lines.
+
+---
+
+Q144. ISPs exchange Internet traffic between their networks by:
+- [x] (A) Internet exchange point
+- [ ] (B) Subscriber end point
+- [ ] (C) ISP end point
+- [ ] (D) None of these
+
+Correct answer: (A) Internet exchange point
+
+An Internet Exchange Point (IXP) is a physical infrastructure where different networks connect to exchange Internet traffic.
+
+---
+
+Q145. Which of the following protocols is not used on the Internet?
+- [ ] (A) HTTP
+- [ ] (B) DHCP
+- [ ] (C) DNS
+- [x] (D) None of these
+
+Correct answer: (D) None of these
+
+All three are used on the Internet:
+- HTTP: Transfers web resources.
+- DHCP: Automatically assigns network configuration, such as IP addresses.
+- DNS: Translates domain names into IP addresses.
+
+---
+
+Q146. An IPv6 address has a size of:
+- [ ] (A) 32 bits
+- [ ] (B) 64 bits
+- [x] (C) 128 bits
+- [ ] (D) 265 bits
+  
+Correct answer: (C) 128 bits
+
+IPv4 addresses are 32 bits long, whereas IPv6 addresses are 128 bits long.
+
+---
+
+Q147. The Internet works on:
+- [x] (A) Packet switching
+- [ ] (B) Circuit switching
+- [ ] (C) Both packet switching and circuit switching
+- [ ] (D) None of these
+
+Correct answer: (A) Packet switching
+
+The Internet primarily uses packet switching: data is divided into packets that are routed independently through networks. Circuit switching is associated with traditional telephone systems.
+
+---
+
+Q148. Which of the following is not an application-layer protocol used on the Internet?
+- [ ] (A) Remote Procedure Call
+- [ ] (B) Internet Relay Chat
+- [x] (C) Resource Reservation Protocol
+- [ ] (D) None of these
+
+Correct answer: (C) Resource Reservation Protocol (RSVP)
+
+RSVP is used for resource reservation and traffic-flow signalling, rather than being a typical application-layer protocol. Remote Procedure Call (RPC) and Internet Relay Chat (IRC) are associated with application-level services.
+
+---
+
+Q149. Which protocol assigns an IP address to a client connected to the Internet?
+- [x] (A) DHCP
+- [ ] (B) IP
+- [ ] (C) RPC
+- [ ] (D) None of these
+
+Correct answer: (A) DHCP
+
+Explanation: DHCP stands for Dynamic Host Configuration Protocol. It automatically provides a client with an IP address and other network configuration settings.
+
+---
+
+Q150. Which one of the following is not used in Media Access Control (MAC)?
+- [ ] (A) Ethernet
+- [x] (B) Digital Subscriber Line
+- [ ] (C) Fiber Distributed Data Interface
+- [ ] (D) None of these
+
+Correct answer: (B) Digital Subscriber Line (DSL)
+
+Explanation: Ethernet and FDDI are networking technologies associated with data-link and media-access mechanisms. DSL is a broadband access technology over telephone lines, not a MAC protocol or LAN media-access technology.
 
 ---
 </details>
