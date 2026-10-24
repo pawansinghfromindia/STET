@@ -1768,7 +1768,1674 @@ Understand the difference
 
 ---
 
+**Q32. First Web Browser**
 
+Which among the following was the first web browser?
+- [ ] A. Internet Explorer
+- [x] B. Mosaic
+- [ ] C. Google Chrome
+- [ ] D. Opera
+
+
+**1. History of Web Browser**
+
+The important historical detail is that the first web browser was WorldWideWeb, created by Tim Berners-Lee in 1990 at CERN. It was later renamed Nexus.
+
+**`WorldWideWeb (1990)`**
+- First web browser
+- Created by Tim Berners-Lee.
+- It could browse and edit web pages.
+
+**`Mosaic (1993)`**
+- Popular early graphical browser
+- Helped make the web easier to use and more popular
+
+**`Internet Explorer (1995)`**
+- Released several years after the first browser.
+
+**`Opera`**	
+- Opera appeared in the mid-1990s, after the first browser.
+
+**`Chrome`**
+- Chrome was released in 2008.
+
+<img width="962" height="601" alt="image" src="https://github.com/user-attachments/assets/21926c34-77e0-4fcd-9ba0-f301612ceff0" />
+
+
+Who created the first web browser, WorldWideWeb, in 1990?
+- [ ] A. Bill Gates
+- [x] B. Tim Berners-Lee
+- [ ] C. Marc Andreessen
+- [ ] D. Steve Jobs
+
+Tim Berners-Lee created the first web browser, called WorldWideWeb, in 1990 while working at CERN.
+
+Remember these important facts:
+- 1990: WorldWideWeb - first web browser.
+- 1993: Mosaic - an influential early graphical browser.
+- 1995: Internet Explorer - released by Microsoft.
+- 2008: Google Chrome - released by Google.
+
+---
+
+Q33. Which Search Algorithm Requiring the Least Memory?
+- [ ] A. Optimal Search
+- [x] B. Linear Search
+- [ ] C. DFS
+- [ ] D. BFS
+
+| Algorithm	         | Typical memory consideration                          |
+|--------------------|-------------------------------------------------------|
+| **Linear Search**	 | `O(1)` auxiliary space in an iterative implementation |
+| **DFS**	           | Often less memory than BFS in broad trees             |
+| **BFS**	           | Can use substantial memory for the frontier           |
+| **Optimal Search** | Depends on which algorithm "optimal search" refers to |
+
+**1. Understand memory usage in search algorithms**
+
+**A. Optimal Search** 
+- "Optimal search" is not one specific algorithm with a fixed memory requirement. 
+- In AI, optimal usually means that an algorithm finds a solution with the lowest cost. 
+- For example, Uniform-Cost Search is optimal under suitable conditions, but it can require substantial memory.
+
+**B. Linear Search**
+- Linear search examines elements one by one in a list or array.
+- Example: Find `7` in `[2, 4, 7, 9]`.
+- It checks `2`, then `4`, then `7`.
+- It uses `O(1)` auxiliary space when implemented iteratively.
+
+**C. DFS: Depth-First Search**
+- DFS explores one branch deeply before backtracking.
+- DFS often uses less memory than BFS in a broad search tree because it stores the current path and some unexplored branches. However, its memory usage depends on the search representation and implementation.
+
+<img width="547" height="397" alt="image" src="https://github.com/user-attachments/assets/618dab4e-11b8-40a0-a416-737527857d6e" />
+
+**D. BFS: Breadth-First Search**
+- BFS explores all nearby nodes before moving to deeper levels.
+- It typically stores a large frontier of nodes, so it can use much more memory than DFS.
+
+
+**Exam memory tip**
+- **DFS** -> Go deep first; often memory-efficient compared with BFS.
+- **BFS** -> Explore level by level; often memory-intensive.
+- **Linear Search** -> Check items one by one; iterative version uses `O(1)` auxiliary space.
+- **Optimal** -> Refers to solution quality, not automatically to low memory usage.
+
+In a broad search tree, which algorithm generally requires more memory because it stores many nodes at the current frontier?
+- [ ] A. DFS
+- [x] B. BFS
+- [ ] C. Linear Search
+- [ ] D. None of the above
+
+Correct! Option B. BFS (Breadth-First Search)
+
+**Why is BFS more memory-intensive?**
+- BFS explores a search tree level by level. <br/>
+  It stores the nodes waiting to be explored in a queue.
+
+For example, imagine a tree where every node has several children. <br/>
+BFS must keep many nodes from the current level in memory before moving to the next level.  <br/>
+This can require substantial memory.
+
+DFS, on the other hand, explores one branch deeply before backtracking, so it often uses less memory in a broad search tree.
+
+
+**DFS vs BFS**
+| Feature	                          | DFS	                 | BFS                  |
+|-----------------------------------|----------------------|----------------------|
+| Full form	                        | Depth-First Search	 | Breadth-First Search |
+| Exploration	                      | Deep into one branch |	Level by level      |
+| Main data structure	              | Stack	               | Queue                |
+| Typical memory use in broad trees	| Lower	               | Higher               |
+
+
+Exam memory tip: 
+- **BFS** uses a **`Queue`**; **DFS** uses a **`Stack`**.
+- BFS often requires more memory than DFS when searching broad trees.
+
+---
+
+**Q34. Memory-Mapped I/O in a Microcontroller**
+
+What is the primary role of the memory-mapped I/O technique in a microcontroller?
+- [ ] A. It increases the speed of program execution
+- [ ] B. It provides additional memory space for data storage
+- [x] C. It allows external devices to access the microcontroller's memory
+- [ ] D. It eliminates the need for I/O operations
+
+Correct! Option C
+
+**1. What is memory-mapped I/O?** <br/>
+Memory-mapped I/O (Input/Output) is a technique in which hardware device registers are assigned addresses within the processor's memory address space.
+
+This allows the CPU to communicate with peripherals by reading from or writing to specific addresses, much like it accesses memory.
+
+Examples of peripherals include:
+- Keyboard
+- Timers
+- Sensors
+- Serial communication controllers
+
+**2. How does it work?** <br/>
+Imagine a microcontroller controlling an LED.
+
+<img width="945" height="507" alt="image" src="https://github.com/user-attachments/assets/d658cc29-7aae-4500-a55b-eca5e01e2e8d" />
+
+For example, writing a value to a particular device register can turn an LED on or off. <br/>
+Reading a device register can provide sensor data.
+
+The device registers are not ordinary RAM storage; accessing them triggers device-specific operations.
+
+
+**3. Exam memory tip**
+
+> **Memory-mapped I/O = Peripheral registers assigned memory addresses**.
+
+This lets the CPU use ordinary memory-read and memory-write instructions to communicate with devices.
+
+
+In memory-mapped I/O, where are peripheral device registers mapped?
+- [ ] A. Only in the CPU's cache
+- [x] B. Within the memory address space
+- [ ] C. Only on the hard disk
+- [ ] D. Outside the computer's address system
+
+Correct! Option B. - Within memory address space.
+
+In memory-mapped I/O, the registers of peripheral devices are assigned specific addresses within the microcontroller's memory address space.
+
+This allows the CPU to communicate with devices using ordinary memory read and write instructions.
+
+Example: A microcontroller controls an LED. A particular memory address is assigned to the LED's control register. The CPU writes a value to that address to turn the LED on or off.
+
+---
+
+| Operating Systems |
+|-------------------|
+
+
+Q.35 Context switching in an operating system refers to the process of:
+- [ ] A. Switching between user and kernel modes
+- [x] B. Switching between processes to allow multitasking
+- [ ] C. Switching between different file systems
+- [ ] D. Switching between different operating systems
+
+Correct! Option B - Switching between processes to allow multitasking.
+
+**1. What is context switching?**
+An operating system (OS) allows multiple processes to share the CPU. <br/>
+When the CPU stops working on one process and starts or resumes another, it performs a context switch.
+
+The **`context`** is the information needed to resume a process, such as its **CPU register values, program counter, and other execution state**.
+
+<img width="996" height="317" alt="image" src="https://github.com/user-attachments/assets/8b3f95ba-a296-4096-b80e-24f928668a30" />
+
+**Example**: <br/>
+You're listening to music while typing a document. The operating system switches CPU execution between processes so they can make progress. On a single CPU core, they take turns executing; this creates the impression that multiple tasks are running simultaneously.
+
+**2. Exam memory tip**
+
+Remember these distinctions:
+- **Context switching**: Switching execution between `processes` or `threads`.
+- **Mode switching**: Switching between `user mode` and `kernel mode`.
+- **Multitasking**: Managing execution of multiple tasks over time.
+
+
+Which information must the operating system preserve so that a paused process can resume correctly?
+- [ ] A. Only the process's name
+- [x] B. The process's execution state, including CPU registers and program counter
+- [ ] C. Only the files stored on the hard disk
+- [ ] D. Only the computer's IP address
+
+Correct! Option B - The process's execution state, including CPU registers and program counter.
+
+During a `context switch`, the operating system saves the current process's execution state so it can resume later from where it stopped.
+- **CPU registers**: Hold values used during execution.
+- **Program counter (PC)**: Keeps track of the next instruction to execute.
+- **Process state**: Records whether the process is running, ready, or waiting.
+
+Exam memory tip: 
+> **Context switching = save the current state + restore the next process's state**.
+
+---
+
+**Question 36 - Digital Electronics**
+
+The operating voltage range for TTL logic family?
+- [ ] A. 1.8 V to 3.3 V
+- [ ] B. 3.3 V to 5.0 V
+- [x] C. 5.0 V to 12 V
+- [ ] D. -5.0 V to 5.0 V
+
+
+**TTL logic** <br/>
+TTL stands for **Transistor-Transistor Logic**, a digital logic family traditionally associated with a nominal `5 V` power supply.
+
+**Exam memory tip** <br/>
+- TTL -> traditionally `5 V`. 
+- Don't assume that a range extending to `12 V` is valid just because it includes 5 V.
+
+What does TTL stand for?
+- [x] A. Transistor-Transistor Logic
+- [ ] B. Transfer Timing Logic
+- [ ] C. Transistor Transfer Language
+- [ ] D. Terminal Transmission Logic
+
+Correct! Option A. Transistor-Transistor Logic
+
+TTL is a digital logic technology traditionally associated with a **`5 V` supply voltage**.
+
+- TTL: Transistor-Transistor Logic
+- Traditional supply voltage: `5 V`
+- Used in: Digital logic circuits
+
+Exam memory tip: TTL -> Transistor-Transistor Logic → 5 V.
+
+---
+
+**Computer Networks**
+
+Q.37 Communication over mobile phone is an example of which type of communication mode?
+- [ ] A. Simplex
+- [ ] B. Half-Duplex
+- [x] C. Full-Duplex
+- [ ] D. Double-Duplex
+
+
+**1. What is communication mode?** <br/>
+Communication modes describe the direction in which information travels between two devices or people.
+
+**A. Simplex**
+- Communication occurs in only one direction.
+- Example: `Traditional radio broadcasting` - the station transmits to listeners.
+
+<img width="402" height="287" alt="image" src="https://github.com/user-attachments/assets/90cdcdc7-08e3-45db-9960-503318e452eb" />
+
+**B. Half-Duplex**
+- Both sides can communicate, but not simultaneously.
+- Example: `Walkie-talkies`.
+
+<img width="456" height="257" alt="image" src="https://github.com/user-attachments/assets/8e8c2a5c-697d-4f41-97b4-aca988574128" />
+
+**C. Full-Duplex**
+- Both sides can send and receive information at the same time.
+- Example: A normal `mobile phone call`.
+
+<img width="920" height="760" alt="image" src="https://github.com/user-attachments/assets/3d9cde1d-d793-4a8c-ac6d-39346dbc1c74" />
+
+
+> ~~Double-Duplex~~: This is not the standard communication-mode term.
+
+**2. Why is a mobile phone call full-duplex?** <br/>
+Imagine you're speaking with a friend on the phone. <br/>
+You can hear your friend while speaking, and your friend can hear you at the same time.
+
+That simultaneous, two-way communication is `full-duplex`.
+
+| Mode	          | Direction	             | Example         |
+|-----------------|------------------------|-----------------|
+| **Simplex**	    | One-way only	         | Radio broadcast |
+| **Half-duplex** | Two-way, one at a time | Walkie-talkie   |
+| **Full-duplex**	| Two-way simultaneously | Phone call      |
+
+Two people use walkie-talkies. One person must press a button and speak, then release it so the other person can respond. <br/>
+Which communication mode is this?
+- [ ] A. Simplex
+- [x] B. Half-Duplex
+- [ ] C. Full-Duplex
+- [ ] D. Double-Duplex
+
+---
+
+**Artificial Intelligence**
+
+Q.38 The advantage of using an expert system development tool is ___________?
+- [ ] A. Imposed structure
+- [ ] B. Knowledge engineering assistance
+- [ ] C. Rapid prototyping
+- [x] D. All of the mentioned
+
+Correct! Option D - All of the mentioned.
+
+**1. Expert system development tools** <br/>
+An expert system is an AI program that uses stored knowledge and rules to solve problems in a specific domain, similar to how a human expert would approach them.
+
+For example, a medical expert system might use rules and medical knowledge to help identify possible diseases based on symptoms.
+
+**2. Simple example** <br/>
+Suppose you're building an expert system to identify plant diseases.
+- **Imposed structure**: The tool organizes rules and knowledge in a defined format.
+- **Knowledge engineering assistance**: It helps you encode an expert's knowledge, such as symptoms and disease rules.
+- **Rapid prototyping**: You can quickly build a basic version and test it with sample symptoms.
+These features can make development more organized and efficient.
+
+Which component of an expert system stores facts and rules about a particular domain?
+- [ ] A. User interface
+- [x] B. Knowledge base
+- [ ] C. Keyboard
+- [ ] D. Operating system
+
+Correct! Option B - Knowledge base.
+
+The **knowledge base** stores the facts, rules, and domain-specific knowledge that an expert system uses to solve problems.
+
+For example, a plant-disease expert system might contain this rule:
+> IF a plant has yellow leaves AND wilting, THEN check for possible root problems.
+
+The system uses its knowledge base to help reach a conclusion.
+
+- **Knowledge base**:  `what the system knows`; Stores facts and rules.
+- **Inference engine**: `how the system`; Applies rules to available facts to draw conclusions.
+- **User interface**: Allows users to interact with the system.
+
+---
+
+**Python Programming**
+
+Q.39 Following given below and then choose the correct output from the given options
+```py
+def Change(N):
+    N = N + 10
+    print(N, end='$$ ')
+
+N = 15
+Change(N)  # 25$$ 
+print(N)   # 15
+
+"""
+The variable N outside the function has the value 15.
+"""
+```
+- [x] A. 25$$15
+- [ ] B. 15$$25
+- [ ] C. 25$$25
+- [ ] D. 2525$$
+
+> **Reassigning a local variable inside a function does not reassign the outside variable.**
+
+What will this code print?
+```py
+def update(x):
+    x = x + 5
+    print(x)
+
+a = 10
+update(a)  # 15
+print(a)   # 10
+```
+
+---
+
+Q.40 _________________ is two dimensional data structure in Python with row index and column index.
+- [x] A. DataFrame
+- [ ] B. List
+- [ ] C. Tuple
+- [ ] D. Series
+
+Correct! Option A. - DataFrame.
+
+**1. What is a DataFrame?** <br/>
+A DataFrame is a two-dimensional, tabular data structure in the Python pandas library. <br/>
+It organizes data into rows and columns, with `row` and `column` labels.
+
+For example, imagine storing student marks:
+
+**Student Marks DataFrame**
+| Index	| Name  | Marks |
+|-------|-------|-------|
+| 0	    | Neha  | 85    |
+| 1	    | Rahul | 92    |
+| 2	    | Priya	| 78    |
+
+Rows have indexes; columns have labels such as Name and Marks.
+
+We can create a DataFrame like this:
+```py
+import pandas as pd
+
+data = {
+    "Name": ["Neha", "Rahul", "Priya"],
+    "Marks": [85, 92, 78]
+}
+
+df = pd.DataFrame(data)
+print(df)
+```
+
+| Option	      | Explanation                                       |
+|---------------|---------------------------------------------------|
+| **DataFrame**	| A two-dimensional structure with rows and columns.|
+| **List**	    | A list stores an ordered collection of items. Nested lists can represent rows and columns, but a list itself does not provide the DataFrame's labeled tabular structure. |
+| **Tuple**	    | A tuple is an ordered, immutable collection. It is not the standard pandas two-dimensional tabular structure. |      
+| **Series**	  | A pandas Series is a one-dimensional labeled array. |
+
+**2. Exam memory tip**, Remember the difference:
+- **Series** -> One-dimensional
+- **DataFrame** -> Two-dimensional
+- **Tuple** -> Ordered, immutable collection
+- **List** -> Ordered, mutable collection
+
+
+In pandas, which data structure is one-dimensional and contains labeled data?
+- [ ] A. DataFrame
+- [x] B. Series
+- [ ] C. Dictionary
+- [ ] D. Matrix
+
+Correct! Option B. - Series
+
+A **pandas Series** is a one-dimensional labeled data structure. <br/>
+It stores values with an associated index.
+
+Example:
+```py
+import pandas as pd
+
+marks = pd.Series([85, 92, 78])
+print(marks)
+
+# OUTPUT
+"""
+0    85
+1    92
+2    78
+
+Here, 0, 1, and 2 are the index labels, and 85, 92, and 78 are the values.
+"""
+```
+
+**Quick revision**
+| Structure	| Dimension	| Example use                        |
+|-----------|-----------|------------------------------------|
+| Series	  | 1D	      | Marks in one subject               |
+| DataFrame	| 2D	      | Student names and marks in a table |
+
+---
+
+Q.41 What is the output of the following expression?
+```py
+Sports = "Paralympic Games"
+print(Sports.split("m"))
+```
+- [ ] A. `[ ' Paraly ' , 'm' , 'pic Ga', 'm', ' es']`
+- [ ] B. `('Paraly', 'm', 'pic Games')`
+- [ ] C. `('Paraly', 'pic Ga', 'es')`
+- [x] D. `[ 'Paraly', 'pic Ga', 'es']`
+
+Python `splits` the string wherever the lowercase letter "m" occurs. <br/>
+It removes the separator from the resulting pieces.
+
+Exam memory tip
+- `string.split("m")` -> splits at lowercase m.
+- The separator is removed.
+- `split()` returns a list.
+- Python is case-sensitive: `.split()` works; `.Split()` does not.
+
+What is the output of this code?
+```py
+word = "banana"
+print(word.split("a"))
+```
+- [x] A. `['b', 'n', 'n']`
+- [ ] B. `['b', 'n', 'n', '']`
+- [ ] C. `['ba', 'na', 'na']`
+- [ ] D. `['banana']`
+  
+---
+
+**Question 42 - Theory of Computation**
+
+
+---
+
+**Computer Fundamentals**
+
+Q.43 A photograph is an analog image and a ___ can convert it into a digital image.
+- [ ] A. Printer
+- [x] B. Scanner
+- [ ] C. Webcam
+- [ ] D. Camera
+
+Correct: Option B. Scanner
+
+A **photograph** is an analog image when it exists as a physical printed picture.
+
+A **scanner** converts that printed photograph into a digital image that can be stored on a computer.
+
+<img width="997" height="382" alt="image" src="https://github.com/user-attachments/assets/17742915-4b44-48b5-b440-0f3b55792aa5" />
+
+A scanner captures the image and converts it into digital data, allowing you to save it as a file such as `JPEG` or `PNG`.
+
+| Device	    | Why it is?                                                                           |
+|-------------|--------------------------------------------------------------------------------------|
+| **Printer**	| Produces a physical copy from digital content.                                       |
+| **Scanner** | Converts a printed photograph into a digital file.                                   |
+| **Webcam**	| Captures live images or video, usually of people or surroundings.                    |
+| **Camera**	| Captures photographs directly, rather than scanning an existing printed photograph.  |
+
+Exam memory tip: **Scanner = paper to digital; Printer = digital to paper**.
+
+Which device is commonly used to convert a handwritten page into a digital image on a computer?
+- [ ] A. Printer
+- [x] B. Scanner
+- [ ] C. Speaker
+- [ ] D. Projector
+
+Correct! Option B. Scanner
+
+A scanner converts a handwritten page or printed document into a digital image that can be stored on a computer.
+
+Remember:
+- **Scanner**: Paper -> Digital
+- **Printer**: Digital -> Paper
+
+---
+
+Q 44. Complexity Theory - NP(Nondeterministic Polynomial Time)
+
+Question: A problem is said to be in NP if:
+- [ ] A. Its solution can be verified in polynomial time
+- [x] B. It can be solved using a non-deterministic algorithm
+- [ ] C. It is not solvable
+- [ ] D. It has exponential complexity
+
+
+**What is NP?** <br/>
+NP stands for **Nondeterministic Polynomial** Time.
+
+In computational complexity, NP is the class of decision problems for which a proposed solution can be verified in polynomial time.
+
+Think of it this way: <br/>
+Suppose someone gives you a completed Sudoku puzzle. Checking whether the solution follows the rules is relatively easy compared with solving the puzzle from scratch.
+- **Finding a solution**: May require substantial work.
+- **Verifying a proposed solution**: Can be done efficiently.
+That is the central idea behind the verification characterization of NP.
+
+
+Exam memory tip
+- **P**: Solutions can be found in polynomial time by a deterministic algorithm.
+- **NP**: Solutions can be verified in polynomial time.
+- **NP-hard**: At least as hard as every problem in NP.
+- **NP-complete**: Both in NP and NP-hard.
+
+
+Which of the following is the best description of P in computational complexity?
+- [ ] A. Problems that cannot be solved by computers
+- [x] B. Problems solvable in polynomial time by a deterministic algorithm
+- [ ] C. Problems that always require exponential time
+- [ ] D. Problems whose solutions cannot be verified
+
+Correct! Otion B. Problems solvable in polynomial time by a deterministic algorithm.
+
+Class P contains decision problems that can be solved in polynomial time using a deterministic algorithm.
+
+For example, checking whether a number appears in a sorted array using binary search takes `O(log n)` time, which is polynomial time.
+
+Remember for the exam:
+- **P**: Efficiently solvable.
+- **NP**: Proposed solutions are efficiently verifiable.
+  
+---
+
+**Q45. Computer Networks - Email Protocols**
+
+Which protocol is used to send e-mails is _________?
+- [ ] A. HTTP
+- [ ] B. POP
+- [x] C. SMTP
+- [ ] D. FTP
+
+**What is SMTP?** <br>
+SMTP stands for **Simple Mail Transfer Protocol**.
+
+It is used to send outgoing emails from an email client to a mail server and to transfer emails between mail servers.
+
+For example, when you compose an email in Gmail and click Send, SMTP is involved in sending that message.
+
+<img width="966" height="467" alt="image" src="https://github.com/user-attachments/assets/92528b76-3b6e-425b-af7e-8fab3fb2d1db" />
+
+|       | Full form/purpose	            | Why                                                          |
+|-------|-------------------------------|--------------------------------------------------------------|
+| HTTP	| Hypertext                     | Transfer Protocol	Transfers web resources, such as webpages. |
+| POP	  | Post Office Protocol          | Retrieves or downloads emails from a mail server.            |
+| SMTP	| Simple Mail Transfer Protocol | Used to send emails.                                         |
+| FTP	  | File Transfer Protocol	      | Transfers files between computers.                           |
+
+Exam memory tip, Remember this simple distinction:
+- **SMTP** -> Send email
+- **POP3** -> Retrieve/download email
+- **HTTP/HTTPS** -> Access web resources
+- **FTP** -> Transfer files
+
+Which protocol is commonly used to retrieve emails from a mail server?
+- [ ] A. SMTP
+- [x] B. POP3
+- [ ] C. FTP
+- [ ] D. HTTP
+
+Correct! Option B. POP3.
+
+- **SMTP** sends outgoing emails.
+- **POP3** retrieves emails from a mail server, often by downloading them to your device.
+
+For example, when you send an email, SMTP helps send it. When your email application downloads messages from a mail server using POP3, POP3 handles retrieval.
+
+---
+
+**Q46. Object-Oriented Programming - Method Overloading**
+
+Question: In OOP, what is method overloading?
+- [ ] A. Creating multiple constructors
+- [ ] B. Using multiple inheritance
+- [x] C. Defining multiple methods with the same name but different parameters
+- [ ] D. Inheriting multiple methods from a parent class
+
+**1. What is method overloading?** <br/>
+Method overloading is an OOP concept in which multiple methods have the same name but different parameter lists.
+
+The methods can differ in their:
+- Number of parameters
+- Types of parameters
+- Order of parameter types
+
+For example, imagine a calculator that adds numbers.
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+```
+Here, all three methods are named `add`, but their parameters differ.
+- `add(2, 3)` `returns 5`.
+- `add(2, 3, 4)` `returns 9`.
+- `add(2.5, 3.5)` `returns 6.0`.
+The compiler selects the appropriate method based on the arguments. <br/>
+This is called **compile-time polymorphism** in Java.
+
+- Creating multiple constructors: 	This is related to constructor overloading, a specific kind of overloading, but it does not define method overloading generally.
+
+- Using multiple inheritance:	This refers to inheriting from multiple parent classes, not defining methods with the same name and different parameters.
+
+- Inheriting multiple methods from a parent class: This describes inheritance, not method overloading.
+
+Exam memory tip
+- **Overloading**: Same name, different parameters.
+- **Overriding**: A subclass provides a new implementation of an inherited method with a compatible signature.
+
+> Remember: Overloading = different parameter lists.
+
+Which example demonstrates method overloading in Java?
+- [ ] A. Two methods named `show()` with identical parameters but different return types only.
+- [x] B. Two methods named `display(int x)` and `display(String x)`.
+- [ ] C. A subclass inherits a method without changing it.
+- [ ] D. A class creates an object using `new`.
+
+Correct! B. Two methods named `display(int x)` and `display(String x)`
+
+Both methods have the same name, `display()`, but accept different parameter types
+```java
+void display(int x) {
+    System.out.println(x);
+}
+
+void display(String x) {
+    System.out.println(x);
+}
+```
+The compiler can distinguish them based on the argument supplied.
+- `display(10)` calls the integer version.
+- `display("Hello")` calls the string version.
+That is **method overloading**.
+
+---
+
+**Q47. Cryptography**
+
+Question: Private Key cryptography is also known as ____________ cryptography.
+- [ ] A. Private key
+- [ ] B. Public key
+- [x] C. Symmetric key
+- [ ] D. Asymmetric key
+
+Correct answer: C. Symmetric key
+
+**1. What is private-key cryptography?** <br/>
+**Private-key cryptography** is another name for **symmetric-key cryptography**.
+
+In symmetric encryption, the sender and receiver use the same secret key to encrypt and decrypt information.
+
+<img width="881" height="725" alt="image" src="https://github.com/user-attachments/assets/375af78b-87b3-4e09-bcc6-b5856cfe8a5b" />
+
+Examples of symmetric encryption algorithms include `AES` and `DES`.
+
+
+**2. Symmetric(Private) vs. asymmetric(Public) cryptography**
+
+| Feature	                  | Symmetric key	        | Asymmetric key                                      |
+|---------------------------|-----------------------|-----------------------------------------------------|
+| Keys used	                | One shared secret key	| Public and private key pair                         |
+| Encryption and decryption	| Same key	            | Different keys, depending on the operation          |
+| Key                       | sharing	Secret key must be shared securely | Public key can be shared openly|
+| Examples	                | AES, DES	            | RSA, ECC                                            |
+
+Exam memory tip: 
+- **Symmetric = same key**
+- **Asymmetric = two related keys**.
+
+Alice encrypts a message using a secret key and shares that key securely with Bob. Bob uses the same key to decrypt the message. Which type of cryptography is this?
+- [ ] A. Asymmetric cryptography
+- [x] B. Symmetric cryptography
+- [ ] C. Hashing
+- [ ] D. Digital signatures
+
+Correct! Option B. Symmetric cryptography.
+
+- **Symmetric**: Same shared secret key.
+
+- **Asymmetric**: Public key and private key pair.
+
+- **Hashing**: Produces a hash value; it is not ordinary reversible encryption.
+
+- **Digital signatures**: Help verify authenticity and integrity.
+
+---
+
+**Q48. Software Maintenance**
+
+Question: Process model focuses on fixing defects as they are identified?
+- [ ] A. Waterfall Model
+- [x] B. Corrective Maintenance
+- [ ] C. Perfective Maintenance
+- [ ] D. Adaptive Maintenance
+
+Correct! Option B. Corrective Maintenance
+
+**1. What is corrective maintenance?** <br/>
+**Corrective maintenance** means _modifying software to fix defects, bugs, or errors discovered after the software_ has been delivered or put into use.
+
+Example <br/>
+Imagine a school management system where the fee calculator incorrectly adds ₹500 instead of ₹5,000.
+
+A developer identifies the bug and fixes the calculation. This is corrective maintenance.
+
+| Term                       | Meaning	                                                     | Example          |
+|----------------------------|---------------------------------------------------------------|------------------|
+| **Waterfall Model**        | A sequential software development model with distinct phases. | Requirements -> Design -> Coding -> Testing |
+| **Corrective Maintenance** | Fixes existing defects or bugs.	| Fixing an incorrect fee calculation. |
+| **Perfective Maintenance** | Improves performance, usability, or functionality.	 | Making a report load faster.|
+| **Adaptive Maintenance**	 | Modifies software to work in a changed environment. | Updating software to support a new operating system. |
+
+**3. Exam memory tip**
+Remember the three major types of software maintenance:
+- **Corrective** = Correct a bug
+- **Perfective** = Improve the software
+- **Adaptive** = Adapt to changes in the environment
+
+One useful distinction: c**orrective maintenance addresses defects**, while **perfective maintenance improves software that is already functioning**.
+
+A company updates its software so that it works correctly with a newly released version of Windows. Which type of maintenance is this?
+- [ ] A. Corrective maintenance
+- [ ] B. Perfective maintenance
+- [x] C. Adaptive maintenance
+- [ ] D. Preventive maintenance
+
+Correct! Option C. Adaptive maintenance.
+
+The software is being modified to work with a new version of Windows, which is a change in its operating environment.
+
+Quick revision:
+- **Corrective**: Fix a bug.
+- **Perfective**: Improve performance or add enhancements.
+- **Adaptive**: Adjust to a changed environment.
+- **Preventive**: Reduce the likelihood of future problems.
+
+> Exam memory tip: **New environment -> Adaptive maintenance**.
+
+---
+
+**Q49. HTML Attributes**
+
+Question: Which of the following attributes is not a valid attribute of the tag in HTML?
+- [ ] A. face
+- [ ] B. type
+- [ ] C. size
+- [x] D. colour
+
+**1. Understanding HTML attributes** <br/>
+**HTML attributes** provide additional information about an HTML element. 
+
+For example:
+```html
+<font face="Arial">Hello</font>
+<input type="text">
+<input size="20">
+```
+
+- `face` was a valid attribute of the older `<font>` tag.
+- `type` is a valid attribute of elements such as `<input>`.
+- `size` is valid for elements such as `<input>` and `<select>`.
+- `colour` is not a standard HTML attribute. Color is usually specified through CSS, for example, `color: red;`. Not a standard HTML attribute; CSS uses the property `color`
+
+Which of the following is a valid CSS property for changing text color?
+- [ ] A. `font-color`
+- [ ] B. `text-colour`
+- [x] C. `color`
+- [ ] D. `text-style-color`
+
+Correct! Option C. `color`
+
+In CSS, the `color` property changes the color of text.
+Example:
+```html
+p {
+    color: red;
+}
+```
+This makes the paragraph text red.
+
+Remember the distinction:
+- `color` -> CSS property for text color.
+- `background-color` -> CSS property for background color.
+- `colour` -> Not the standard CSS property spelling.
+
+Exam memory tip: CSS uses American spelling: `color`, not `colour`.
+
+---
+
+**Question 50: Image Processing**
+
+Q50. Which of the following is the first and foremost step in Image Processing?
+- [x] B. Segmentation
+- [ ] C. Image enhancement
+- [ ] D. Image restoration
+
+Correct! A. Image acquisition
+
+**Image Processing** <br/>
+`Image processing` means using a computer to perform operations on an image **to improve it, extract useful information, or analyze its contents**.
+
+The first step is generally image acquisition - obtaining the image and converting it into a digital form that a computer can process.
+
+For example, imagine you want a computer to identify cats in photographs.
+
+**Step 1: Image acquisition** <br/>
+Capture the photograph using a camera or scanner.
+
+**Step 2: Image enhancement** <br/>
+Improve brightness, contrast, or image quality if needed.
+
+**Step 3: Image segmentation** <br/>
+Separate the cat from the background.
+
+**Image restoration** may also be performed to reduce blur, noise, or other image degradation. 
+
+The exact order of later operations depends on the application, but acquisition is the starting point in the standard introductory workflow.
+
+<img width="976" height="472" alt="image" src="https://github.com/user-attachments/assets/2c7dbca4-487f-435c-ab55-0436ea07089f" />
+
+| Term                  | Meaning	                                             | Why                            |
+|-----------------------|------------------------------------------------------|--------------------------------|
+| **Segmentation**	    | Dividing an image into meaningful regions or objects | Usually performed after the image has been acquired. |
+| **Image enhancement**	| Improving the visual quality of an image	| Requires an image to work on first. |
+| **Image restoration**	| Recovering an image degraded by blur, noise, or distortion | Also operates on an already acquired image. |
+
+**Exam memory tip, Remember this distinction:**
+- **Acquisition** = Get the image.
+- **Enhancement** = Improve the image.
+- **Restoration** = Recover degraded image quality.
+- **Segmentation** = Separate objects or regions.
+
+A computer receives a photograph and needs to separate a person from the background. Which image-processing operation is most directly responsible?
+- [ ] A. Image acquisition
+- [ ] B. Image restoration
+- [x] C. Image segmentation
+- [ ] D. Image compression
+
+Correct! C. Image segmentation
+
+**Image segmentation** divides an image into meaningful regions or objects. 
+For example, it can separate a person from the background in a photograph.
+- **Image acquisition**: Captures or obtains the image.
+- **Image restoration**: Reduces degradation such as blur or noise.
+- **Image segmentation**: Separates the person from the background.
+- **Image compression**: Reduces the amount of storage needed for an image.
+
+Exam memory tip: **Segmentation = separating objects or regions**.
+
+---
+
+Q51. Full form of TCP in TCP/IP?
+- [x] A. Transmission Control Protocol
+- [ ] B. Transmission Central Protocol
+- [ ] C. Transfer Control Protocol
+- [ ] D. Transport Central Protocol
+
+Correct! A. Transmission Control Protocol
+
+**1. Understand TCP/IP** <br/>
+TCP stands for **Transmission Control Protocol**.
+
+TCP/IP is a collection of communication protocols that computers use to communicate over networks, including the internet.
+
+Think of sending a message from your computer to another computer. TCP helps ensure that data arrives reliably and in the correct order.
+
+For example, when a message is divided into multiple pieces during transmission, TCP helps the receiving computer reassemble those pieces in the correct order and detect missing data so it can be retransmitted when necessary.
+
+**2. Important exam concepts**
+- **TCP**: Transmission Control Protocol - reliable, connection-oriented communication.
+
+- **IP**: Internet Protocol - addressing and routing packets between networks.
+
+- **UDP**: User Datagram Protocol - connectionless communication with lower overhead, but without TCP's built-in delivery guarantees.
+
+Which statement about TCP is correct?
+- [ ] A. TCP is used only to assign IP addresses.
+- [x] B. TCP provides reliable, ordered delivery of data.
+- [ ] C. TCP is a programming language.
+- [ ] D. TCP is used only for transferring files.
+
+Correct! B. TCP provides reliable, ordered delivery of data.
+
+TCP tracks transmitted data, detects missing segments, supports retransmission, and reassembles data in the correct order at the receiving end.
+- **IP addressing** is associated with the Internet Protocol, not TCP alone.
+- **TCP** is a communication protocol, not a programming language.
+- **TCP** supports many applications, including web browsing, email, and file transfers; it isn't limited to file transfers.
+
+> Exam memory tip: **TCP = reliable delivery;** **IP = addressing and routing**.
+
+---
+
+Question 52: **Operating Systems**
+
+Q52. The kernel operates in a privileged mode, also known as:
+- [ ] A. User mode
+- [ ] B. Debug mode
+- [x] C. Supervisor mode
+- [ ] D. Interrupt mode
+
+Correct! C. Supervisor mode
+
+**1. Kernel** <br/>
+The `kernel` is the core part of an operating system. <br/>
+It manages hardware resources, memory, processes, and communication between software and hardware.
+
+To protect the computer, operating systems commonly use two privilege levels:
+- **`User mode`**: Applications run with restricted permissions.
+- **`Kernel mode/Supervisor mode`**: The operating system kernel can execute privileged operations, such as controlling hardware and managing memory.
+  
+For example, when a music player needs to read a file from storage, it requests the operating system to perform the operation. The kernel handles the request using its privileged access.
+
+<img width="982" height="352" alt="image" src="https://github.com/user-attachments/assets/e9529390-7359-4ecb-a034-e13dfbafce37" />
+
+
+| Term                | Explanation                                                                                |
+|---------------------|--------------------------------------------------------------------------------------------|
+| **User mode**	      | Restricted mode intended for ordinary applications.                                        |
+| **Debug mode**	    | A mode or facility used for debugging; not the standard name for kernel's privileged mode. |
+| **Supervisor mode**	| A common name for the privileged execution mode i.e. Kernel mode.                          |
+| **Interrupt mode**	| Not the standard name for the kernel's privileged mode. Interrupts are events that may cause the CPU to transfer control to a handler. |
+
+
+> Exam memory tip: **Kernel = privileged access; applications = restricted access**.
+
+What is the primary purpose of user mode in an operating system?
+- [ ] A. To allow every application unrestricted hardware access
+- [x] B. To protect the system by restricting application privileges
+- [ ] C. To replace the operating system kernel
+- [ ] D. To disable memory management
+
+Correct! B. To protect the system by restricting application privileges.
+
+User mode limits what ordinary applications can do directly. When an application needs a privileged operation, such as accessing hardware, it requests the operating system kernel to perform it.
+
+- Unrestricted hardware access would compromise system security.
+- restricted privileges help protect the operating system and other applications.
+- User mode does not replace the kernel.
+- Memory management remains an important operating-system responsibility.
+
+---
+
+Question 53 - Inode in a Unix-like File System
+
+Q.53 The "inode" in a Unix-like file system is used to:
+- [ ] A. Store the contents of the file
+- [ ] B. Store the file's name and location
+- [x] C. Store the attributes and metadata of the file
+- [ ] D. Store the directory structure of the file system
+
+**1. What an inode is?** <br/>
+In a Unix-like operating system, an `inode` is a data structure that stores information about a file, rather than the file's actual contents.
+
+An inode typically stores:
+- File type and permissions
+- Owner and group IDs
+- File size
+- Timestamps
+- Pointers or references to the blocks containing the file's data
+
+For example, imagine a file called `notes.txt`.
+| Information    	            | Where it is generally stored |
+|-----------------------------|------------------------------|
+| File name: `notes.txt`      |	Directory entry              |
+| File size: 2 KB	            | Inode metadata               |
+| File permissions            | Inode metadata               |
+| Actual text inside the file	| Data blocks                  |
+
+Important distinction: 
+> The directory entry associates the filename with an inode number. The inode itself generally does not store the filename.
+
+- The actual contents are stored in data blocks, not directly inside the inode.
+- The filename is stored in a directory entry. The inode identifies metadata and references to data blocks.
+- **Store the attributes and metadata** This includes permissions, ownership, size, and timestamps.
+- Directories contain entries mapping names to inode numbers. The overall directory structure is not the inode's primary purpose.
+
+**Exam memory tip, Remember this distinction:**
+- **Inode** -> Information about the file
+- **Directory entry** -> Filename and inode number
+- **Data blocks** -> Actual file contents
+
+A file has the name `report.pdf`, a size of `5 MB`, and read-only permissions. Which information is typically stored in its inode?
+- [ ] A. Only the filename
+- [ ] B. The PDF's actual contents
+- [x] C. The file size and permissions
+- [ ] D. The entire directory tree
+
+Correct! C. The file size and permissions.
+
+The inode stores metadata such as file size, permissions, ownership, and timestamps. 
+
+The actual PDF contents are stored in data blocks, while the filename is generally stored in a directory entry.
+
+> Remember: **Inode = file information, not file contents**.
+
+---
+
+Question 54 - File Operations in an Operating System
+
+Operations in an operating system include:
+- [ ] A. Allocating memory to files
+- [ ] B. Assigning file names to processes
+- [ ] C. Loading files into CPU registers
+- [x] D. Reading, writing, and modifying file content
+
+**1. Concept: File operations in an operating system** <br/>
+An operating system (OS) manages files and provides operations that let programs and users work with them.
+
+Common file operations include:
+- `Read`: Retrieve data from a file.
+- `Write`: Store data in a file.
+- `Create`: Make a new file.
+- `Delete`: Remove a file.
+- `Modify`: Change existing file content.
+
+For example, when you open a text file, type a new sentence, and save it, the operating system helps perform these file operations.
+
+**CRUD** for four fundamental data operations:
+- **C - Create**
+- **R - Read**
+- **U - Update**
+- **D - Delete**
+These are also widely used in databases and applications.
+
+Which operating system operation retrieves existing data from a file without changing its contents?
+- [ ] A. Write
+- [x] B. Read
+- [ ] C. Delete
+- [ ] D. Rename
+
+Correct! B. Read
+
+The read operation retrieves existing data from a file without changing its contents.
+- **Read**: Retrieves data.
+- **Write**: Stores or changes data.
+- **Delete**: Removes a file.
+- **Rename**: Changes a file's name.
+
+> Remember: **Read = get data; Write = save data**.
+
+---
+
+Question 55 - HTTP
+
+The term HTTP stands for:
+- [ ] A. Hyper Terminal Tracing Program
+- [ ] B. Hypertext Tracing Program
+- [x] C. Hypertext Transfer Protocol
+- [ ] D. Hypertext Tracing Protocol
+
+Correct! Option C. - Hypertext Transfer Protocol.
+
+`HTTP` stands for Hypertext Transfer Protocol. <br/>
+It is a protocol used for communication between a web browser (client) and a web server.
+
+For example, when you open a website in your browser, HTTP defines how the browser requests web resources and how the server responds.
+
+- **`HTTP`** - transfers web resources such as HTML pages.
+- **`HTTPS`** - HTTP secured using encryption, typically through TLS.
+
+Which protocol is the secure version of HTTP?
+- [ ] A. FTP
+- [x] B. HTTPS
+- [ ] C. SMTP
+- [ ] D. POP3
+
+Correct! Option B - HTTPS.
+
+**HTTPS** <br/>
+- HTTPS stands for Hypertext Transfer Protocol Secure. 
+- It is the secure version of HTTP and uses TLS encryption to protect data exchanged between your browser and a website.
+
+For example, when you enter your password on a website using HTTPS, encryption helps protect it while it travels across the network.
+
+| Protocol	| Main purpose                               |
+|-----------|--------------------------------------------|
+| HTTP	    | Transfers web resources                    |
+| HTTPS	    | Transfers web resources securely using TLS |
+| FTP	      | Transfers files                            |
+| SMTP	    | Sends emails                               |
+| POP3	    | Retrieves emails                           |
+
+---
+
+Question 56 - Secure Remote Login
+
+Which of the following protocols is used for secure remote login?
+- [ ] A. FTP
+- [ ] B. HTTPS
+- [ ] C. TELNET
+- [ ] D. HTTP
+- [x] E. SSH
+
+
+**SSH = Secure Shell**
+- When you want to log in to another computer over a network and control it remotely, `SSH` is the standard protocol.
+- It encrypts the communication between your computer and the remote computer.
+
+| Protocol   | Main purpose                                    |
+| **FTP**	   | Transfers files                                 |
+| **HTTPS**	 | Secure communication with websites              |
+| **TELNET** | Remote login, but without encryption by default |
+| **HTTP**	 | Transfers web resources                         |
+
+
+- **SSH** -> Secure remote login
+- **TELNET** -> Unencrypted remote login
+- **HTTPS** -> Secure web browsing
+- **FTP** -> File transfer
+
+Which protocol is specifically designed for secure remote access to another computer's command line?
+- [ ] A. HTTP
+- [x] B. SSH
+- [ ] C. FTP
+- [ ] D. TELNET
+
+Correct! Option B - SSH (Secure Shell).
+
+**SSH** <br/>
+**SSH (Secure Shell)** is a network protocol that lets you securely access and control a remote computer through a command-line interface.
+
+For example, if you connect to a remote Linux server to run commands, you commonly use SSH:
+```
+ssh username@server_ip
+```
+
+> **SSH encrypts the communication, helping protect login credentials and data from interception.**
+
+> **SSH = Secure Shell = Secure remote login**
+
+| Protocol	| Main purpose	            | Security                 |
+|-----------|---------------------------|--------------------------|
+| SSH	      | Secure remote login	      | Encrypted                |
+| TELNET	  | Remote login	            | Unencrypted by default   |
+| HTTPS	    | Secure web communication	| Encrypted using TLS      |
+| FTP	      | File transfer	            | Not encrypted by default |
+
+---
+
+Question 57 - Software Development Life Cycle
+
+Which software life cycle model is based on iterative prototyping?
+- [ ] A. Waterfall Model
+- [ ] B. Spiral Model
+- [ ] C. Agile Model
+- [x] D. Prototype Model
+
+**1. Understand the Prototype Model**
+
+A prototype is an early, working or illustrative version of software created to understand what users need.
+
+Imagine you're building a school website:
+1. Create a basic sample website.
+2. Show it to teachers and students.
+3. Collect their feedback.
+4. Improve the design and features.
+5. Repeat until the requirements are clear.
+
+<img width="897" height="422" alt="image" src="https://github.com/user-attachments/assets/2dc7918e-5396-4eea-b2de-fa692b4d004f" />
+
+| Model	        | Key idea                                                         |
+|---------------|------------------------------------------------------------------|
+| **Waterfall**	| Sequential phases, generally completed one after another         |
+| **Spiral**	  | Repeated development cycles with a strong focus on risk analysis |
+| **Agile**	    | Iterative, incremental development with frequent feedback        |
+| **Prototype**	| Build and refine an early version to clarify requirements        |
+
+Exam memory tip:
+- **Prototype** -> Build a sample and get feedback.
+- **Spiral** -> Focus on risk analysis in repeated cycles.
+- **Waterfall** -> Follow sequential phases.
+- **Agile** -> Deliver software incrementally.
+
+A software team builds a sample application screen, shows it to the client, and repeatedly changes it based on feedback before developing the final system. Which model does this best describe?
+- [ ] A. Waterfall Model
+- [x] B. Prototype Model
+- [ ] C. Spiral Model
+- [ ] D. V-Model
+
+Correct! Option B. - Prototype Model.
+
+The Prototype Model involves creating an early version of the software, collecting feedback from users, and improving the prototype until the requirements are understood.
+
+Example: A team creates a sample school website, shows it to teachers, changes the layout based on their feedback, and repeats the process before developing the final website.
+
+> **If the question emphasizes building a sample, showing it to users, and refining it, think Prototype Model**.
+
+---
+
+**Question 58 - Secure Software Development**
+
+What is the primary purpose of Software Requirements Specification (SRS) documents?
+- [ ] A. To list the programming languages used
+- [ ] B. To describe the user interface design
+- [x] C. To define the software’s functional and non-functional requirements
+- [ ] D. To specify the hardware components required
+
+Correct! C. - To define the software’s functional and non-functional requirements.
+
+**1. What is an SRS document?**
+
+- SRS stands for **Software Requirements Specification**.
+
+- It is a document that describes what a software system must do and the conditions under which it must operate.
+
+Think of it as a blueprint for software development. Before developers build an application, they need to understand what the client expects.
+
+Example: **School Management System** <br/>
+Suppose you're developing a school management system.
+| Requirement type	          | Example                                          |
+|-----------------------------|--------------------------------------------------|
+| Functional requirement	    | Teachers can enter students' marks.              |
+| Functional requirement	    | Students can view their results.                 |
+| Non-functional requirement	| Results should load within two seconds.          |
+| Non-functional requirement	| Only authorized users can access student records.|
+
+`Functional requirements` describe **what the system does**. <br/>
+`Non-functional requirements` describe **qualities or constraints, such as performance, security, and reliability**.
+
+> **SRS = What the software must do and how well it must do it.**
+
+
+A school application must allow students to check their marks and load each result page within two seconds. <br/>
+Which option correctly identifies these requirements?
+- [ ] A. Both are functional requirements.
+- [ ] B. Both are non-functional requirements.
+- [x] C. Checking marks is functional; the two-second limit is non-functional.
+- [ ] D. Checking marks is non-functional; the two-second limit is functional.
+
+Correct! C.
+- Checking marks is a functional requirement because it describes an action the application must perform.
+- Loading results within two seconds is a non-functional requirement because it specifies a performance standard the application must meet.
+
+| Functional	                   | Non-functional                                     |
+|--------------------------------|----------------------------------------------------|
+| What the system does	         | How well the system works                          |
+| Students can log in. 	         | Login completes within two seconds.                |
+| Teachers can enter marks.	     | The system supports 1,000 concurrent users.        |
+| Students can download results. | Student data is protected from unauthorized access.|
+
+Ask yourself:
+> **"What does it do?” -> Functional**. 
+
+> **"How well or under what constraints does it work?" -> Non-functional**.
+
+---
+
+**Question 59 — Object-Oriented Programming (OOP)**
+
+What is encapsulation in OOP?
+- [ ] A. The ability to inherit properties from multiple classes
+- [ ] B. The process of creating objects
+- [x] C. The bundling of data and methods that operate on the data
+- [ ] D. The use of abstract classes only
+
+Correct! Option C. - The bundling of data and methods that operate on the data
+
+**1. What is encapsulation?** <br/>
+
+**Encapsulation** is an OOP concept that combines data (variables) and the methods (functions) that work on that data into a single unit, usually a class.  <br/>
+It also helps control access to an object's internal data.
+
+Think of a bank account. You can deposit or withdraw money, but you shouldn't be able to change the balance directly without following the bank's rules.
+
+Example in Java
+```java
+class BankAccount {
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+Let's understand the important parts:
+- `balance` stores the account's data.
+- `private` restricts direct access to `balance` from outside the class.
+- `deposit()` provides a controlled way to modify the balance.
+- `getBalance()` allows the balance to be read.
+This Encapsulation protects the data from invalid changes.
+
+
+| Term                                      | Concept	    | Explanation                             |
+|-------------------------------------------|-------------|-----------------------------------------|
+| Inherit properties from multiple classes	| **Inheritance**	| Inheritance allows a class to acquire features from another class. |
+| Process of creating objects	              | **Object creation**	| Creating an instance of a class is called instantiation. |
+| Bundling data and methods	                | **Encapsulation** | It combines data and related methods while controlling access.
+| Use of abstract classes only	            | **Abstraction**	 | Abstraction focuses on exposing essential features while hiding implementation details. <br/> It doesn't require abstract classes exclusively. |
+
+Remember these four OOP concepts:
+- **Encapsulation** -> Bundle and protect data.
+- **Inheritance** -> Reuse features from another class.
+- **Polymorphism** -> One interface, different behaviors.
+- **Abstraction** -> Hide implementation details.
+
+In the Java example above, why is `balance` declared private?
+- [ ] A. To allow every class to change it directly
+- [x] B. To prevent direct access from outside the class
+- [ ] C. To make the variable constant forever
+- [ ] D. To create multiple objects automatically
+
+Correct! B. To prevent direct access from outside the class.
+
+In Java, the private access modifier restricts access to a field or method from outside the class where it is declared.
+```java
+class BankAccount {
+    private double balance = 1000;
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+- `balance` cannot be accessed directly from an unrelated external class.
+- `getBalance()` provides a controlled way to read the balance.
+- A `deposit` or `withdrawal` method can validate changes before updating the balance.
+
+Important: `private` does not make a variable constant. Its value can still change through methods inside the class.
+
+| Keyword	     | Meaning                                      |
+|--------------|----------------------------------------------|
+| `private`	   | Accessible within the declaring class        |
+| `public`	   | Accessible wherever other access rules permit|
+| `protected`	 | Accessible within the package and by subclasses, subject to Java's access rules|
+
+> **Encapsulation = bundle data and methods + control access to internal data**
+
+---
+
+Q.58 — Program Analysis Tools
+
+Question: Program Analysis Tools are used for:
+- [ ] A. Designing software architecture
+- [ ] B. Measuring software reliability
+- [ ] C. Automatically generating test cases
+- [x] D. Analysing code for errors and performance bottlenecks
+
+Correct! Option D. Analysing code for errors and performance bottlenecks.
+
+**1. What are Program Analysis Tools?** <br/>
+**Program analysis** tools help developers examine source code to identify potential errors, understand program behaviour, and find performance problems.
+
+Think of them as inspectors for your code. They help you find problems before those problems affect users.
+
+For example, consider this Python code:
+```py
+def calculate_total(price, quantity):
+    total = price * quantity
+    return total
+
+print(calculate_total(100, 5))  # 500
+```
+A program analysis tool can inspect the code to help identify potential bugs, suspicious patterns, or inefficient operations.
+
+Two important types
+1. **Static analysis**:
+- Examines code without executing it.
+- It can detect some errors, unused variables, and coding-standard violations.
+```py
+x = 10
+y = "hello"
+print(x + y)
+```
+  
+2. **Dynamic analysis**:
+- Examines a program while it runs.
+- It can help identify runtime errors, memory problems, and performance bottlenecks.
+```py
+x = 10
+y = 0
+print(x / y)
+```
+
+A **performance bottleneck** is a part of a program that slows down the entire application.
+
+**Remember**:
+- **Program analysis** -> Inspect code for problems.
+- **Testing** -> Execute or check software to find failures.
+- **Test-case generation** -> Create inputs to test software.
+- **Software architecture** -> Plan the system's structure.
+
+Which tool category is primarily used to identify coding errors without executing the program?
+- [x] A. Static analysis tools
+- [ ] B. Performance monitoring tools
+- [ ] C. Test execution tools
+- [ ] D. Code-generation tools
+
+Correct! Static analysis tools. 
+
+**Static analysis** examines source code without running the program. It can identify potential problems before execution.
+
+| Term                         | Explanation                                                                      |
+|------------------------------|----------------------------------------------------------------------------------|
+| Static analysis tools	       | Inspect code without executing it.                                               |
+| Performance monitoring tools | Usually measure execution time, resource usage, and other runtime behaviour.     |
+| Test execution tools	       | Run tests to check whether the software behaves as expected.                     |
+| Code-generation tools	       | Automatically produce source code from specifications, templates, or other inputs.|
+
+
+Remember for the exam
+- **Static analysis** -> Examine code without running it.
+- **Dynamic analysis** -> Examine behaviour while the program runs.
+- **Performance monitoring** -> Measure speed and resource usage.
+- **Code generation** -> Produce code automatically.
+
+---
+
+**Q.59 — Method Signature in OOP**
+
+Question: In OOP, what does the term "method signature" refer to?
+- [ ] A. The name of the method
+- [ ] B. The return type of the method
+- [ ] C. The parameters of the method
+- [x] D. The combination of method name and parameter types
+
+Correct! D. The combination of method name and parameter types.
+
+**1. What is a method signature?** <br/>
+A method signature identifies a method using its name and the parameters that define how it can be called.
+
+Consider this Java example:
+```java
+void display(int number) {
+    System.out.println(number);
+}
+
+void display(String name) {
+    System.out.println(name);
+}
+```
+Both methods have the same name, `display`, but different parameter types:
+- `display(int)` accepts an integer.
+- `display(String)` accepts a string.
+Their signatures distinguish the two methods, allowing **method overloading**.
+
+In Java, a method signature includes the method name and parameter types. <br/>
+The `return type` alone is not part of the signature, and you cannot overload methods merely by changing their return types. <br/>
+Other programming languages may define signatures differently.
+
+Remember:
+> **Method signature = method name + parameter list**
+
+Example: `calculate(int, int)` and `calculate(double, double)` have different signatures in Java.
+
+Can two Java methods have the same name and identical parameter types but different return types only?
+- [ ] A. Yes, always
+- [x] B. No, Java does not allow this as method overloading
+- [ ] C. Yes, if both methods are public
+- [ ] D. Yes, if one method returns an integer
+
+Correct! B. **No, Java does not allow this as method overloading**.
+
+In Java, We cannot define two methods in the same class with the same name and identical parameter types just by changing their return types.
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(int a, int b) {
+        return a + b;
+    }
+}
+```
+**compilation error** because both methods have the same name `add` and the same parameter types `(int, int)`. <br/> 
+Changing the return type from int to double does not make them different method signatures.
+
+However, this is valid method overloading:
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+Here, the parameter lists differ: one method takes two integers, and the other takes three.
+
+| Change between methods	  | Valid overloading? |
+|---------------------------|--------------------|
+| Different parameter count	| Yes                |
+| Different parameter types	| Yes                |
+| Different parameter order	| Yes, if the resulting parameter types differ by position |
+| Different return type only|	No                 |
+
+> Memory tip: **Method overloading depends on the parameter list, not the return type alone.**
+
+---
+
+**Q.60 — Software Testing**
+
+Which of the following involves testing individual components or units of code?
+- [ ] A. Integration Testing
+- [ ] B. System Testing
+- [x] C. Unit Testing
+- [ ] D. Acceptance Testing
+
+Correct! C. Unit Testing
+
+**1. Unit Testing** <br/>
+Unit testing is the process of testing individual, small parts of a program, such as a function, method, or class, to verify that each works correctly.
+
+Imagine we are developing a school management application with these functions:
+- `calculateTotal()` - calculates total marks.
+- `calculatePercentage()` - calculates percentage.
+- `checkResult()` - determines whether a student passed.
+Before testing the entire application, we test each function separately.
+
+<img width="980" height="322" alt="image" src="https://github.com/user-attachments/assets/34c0afe5-b299-4b92-b00f-cb16b1849e30" />
+
+
+For example, if `calculateTotal(40, 50)` should return `90`, a unit test checks whether the actual result matches the expected result.
+
+**Different Terms**
+
+|  Term                   | Meaning	                                          | Example                     |
+|-------------------------|---------------------------------------------------|-----------------------------|
+| **Integration Testing**	| Tests whether multiple components work together.	| Checking whether marks calculation connects correctly to result generation.
+| **System Testing**	    | Tests the complete, integrated application.	| Testing the entire school management application. |
+| **Unit Testing**	      | Tests an individual component or unit of code.	| Testing `calculateTotal()` by itself.|
+| **Acceptance Testing**	| Checks whether the software meets user or business requirements. | A school verifies that the application meets its needs before accepting it. |
+
+
+**Remember the testing sequence:**
+> **Unit -> Integration -> System -> Acceptance**
+
+- **Unit**: One component.
+- **Integration**: Components working together.
+- **System**: The complete application.
+- **Acceptance**: Does it meet the user's requirements?
+This is a common conceptual sequence for exams, although actual development workflows may vary.
+
+A developer tests whether the login module and the database module communicate correctly with each other. Which type of testing is being performed?
+- [ ] A. Unit Testing
+- [x] B. Integration Testing
+- [ ] C. Acceptance Testing
+- [ ] D. System Testing
+
+Correct! Integration Testing
+
+The developer tests whether the login module and database module communicate correctly with each other. <br/>
+The key phrase is with each other.
+- The login module is one component.
+- The database module is another component.
+- Testing their interaction checks whether the two components work together correctly.
+That is **Integration Testing**.
+
+<img width="1000" height="352" alt="image" src="https://github.com/user-attachments/assets/64a8fdc7-88d4-4e41-9a64-d2529ed54198" />
+
+**Memory tip**
+- **One component** -> Unit testing
+- **Components together** -> Integration testing
+- **Whole application** -> System testing
+- **User requirements** -> Acceptance testing
+
+A developer tests the calculatePercentage() function by itself to confirm that it returns the correct percentage. <br/>
+Which testing type is this?
+- [ ] A. Integration Testing
+- [ ] B. System Testing
+- [x] C. Unit Testing
+- [ ] D. Acceptance Testing
+
+Correct! C. Unit Testing  
+
+A unit test checks whether this individual function produces the expected result.
 
 ---
 
@@ -1779,6 +3446,9 @@ Understand the difference
 
 
 ---
+
+
+
 
 
 ---
