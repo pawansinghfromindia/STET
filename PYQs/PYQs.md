@@ -2904,7 +2904,7 @@ The read operation retrieves existing data from a file without changing its cont
 
 ---
 
-Question 55 - HTTP
+**Question 55 - HTTP**
 
 The term HTTP stands for:
 - [ ] A. Hyper Terminal Tracing Program
@@ -3001,7 +3001,7 @@ ssh username@server_ip
 
 ---
 
-Question 57 - Software Development Life Cycle
+Question 57 - **Software Development Life Cycle**
 
 Which software life cycle model is based on iterative prototyping?
 - [ ] A. Waterfall Model
@@ -3109,7 +3109,7 @@ Ask yourself:
 
 ---
 
-**Question 59 — Object-Oriented Programming (OOP)**
+**Question 59 - Object-Oriented Programming (OOP)**
 
 What is encapsulation in OOP?
 - [ ] A. The ability to inherit properties from multiple classes
@@ -3197,7 +3197,7 @@ Important: `private` does not make a variable constant. Its value can still chan
 
 ---
 
-Q.58 — Program Analysis Tools
+Q.58 - **Program Analysis Tools**
 
 Question: Program Analysis Tools are used for:
 - [ ] A. Designing software architecture
@@ -3275,7 +3275,7 @@ Remember for the exam
 
 ---
 
-**Q.59 — Method Signature in OOP**
+**Q.59 - Method Signature in OOP**
 
 Question: In OOP, what does the term "method signature" refer to?
 - [ ] A. The name of the method
@@ -3360,7 +3360,7 @@ Here, the parameter lists differ: one method takes two integers, and the other t
 
 ---
 
-**Q.60 — Software Testing**
+**Q.60 - Software Testing**
 
 Which of the following involves testing individual components or units of code?
 - [ ] A. Integration Testing
@@ -3439,15 +3439,2204 @@ A unit test checks whether this individual function produces the expected result
 
 ---
 
+**Q.61 - Row-Major Order in a 2-D Array**
+
+Question: For a 2-D array represented in row-major order, the index formula to access the element at row i and column j using the base address B is:
+- [x] A. Index = `B + (i * n + j)`
+- [ ] B. Index = `B + (j * n + i)`
+- [ ] C. Index = `B + (i + j)`
+- [ ] D. Index = `B + (i * m + j)`
+
+Correct! Index = `B + (i * n + j)`
+
+**row-major order** stores the elements of each row consecutively in memory.
+
+For example, a `2 × 3` array is stored in this order:
+
+<img width="985" height="207" alt="image" src="https://github.com/user-attachments/assets/e087cdb1-0183-4cd2-bb9c-cb560999be8b" />
+
+Here, `n` commonly represents the number of columns, and `B` is the base address. <br/>
+In a byte-addressed memory, the complete address formula also includes the size of each element.
+
+**Formula** <br/>
+The row-major index formula is: **`Index = B + (i x n + j)`** where: <br/>
+- `B` = base address (or base index)
+- `i` = row index
+- `j` = column index
+- `n` = number of columns
+
+**How does row-major order work?** <br/>
+In row-major order, a computer stores all elements of the first row, then all elements of the second row, and so on.
+
+For example, consider this `2x3` array:
+```
+[ 10 & 20 & 30]
+[ 40 & 50 & 60]
+```
+The elements are stored in this order: `10 -> 20 -> 30 -> 40 -> 50 -> 60`
+
+Suppose we want the element at row `i=1`, column `j=2`, using zero-based indexing.
+```
+There are `n=3` columns.
+Index offset = `i x n + j`
+              = 1 x 3 + 2 = 5
+```
+So, the element is at offset `5` from the base element. It is `60`.
+
+One important detail: if **`B` is a byte address**, the full address formula must also multiply the offset by the size of each element, `w`: **`Address = B + ( (i x n) + j ) x w`**
+
+
+A 2-D array has 4 columns and uses zero-based indexing. What is the index offset of the element at row `i=2`, column `j=1`, using row-major order?
+- [ ] A. 6
+- [ ] B. 8
+- [ ] C. 9
+- [ ] D. 12
+
+```
+Let's calculate it step by step.
+
+Formula:  "Index offset = (ixn)+j"
+
+Given:
+- Row index i=2
+- Number of columns n=4
+- Column index j=1
+
+By formula:
+Index offset = (ixn)+j
+             = 2 * 4 + 1
+             = 8 + 1
+             = 9 
+```
+
+---
+
+**Question 62 - File System**
+
+Which of the following is NOT a limitation of a file system?
+- [ ] A. Data Redundancy
+- [ ] B. Data Inconsistency
+- [ ] C. Data Dependence
+- [x] D. Storing Space
+
+Correct! Storing Space
+
+**1. File System** <br/>
+A traditional file-processing system stores data in separate files managed by individual applications. <br/>
+This can create several problems that a Database Management System (DBMS) helps address.
+- **Data redundancy**: The same information is stored in multiple places.
+- **Data inconsistency**: Copies of the same information have different values.
+- **Data dependence**: Programs depend on how data is organized or stored, making changes harder.
+- **Storage space**: Storing data is a normal requirement, not inherently a limitation of file systems.
+
+|       Option & Explanation                                                                            |
+|-------------------------------------------------------------------------------------------------------|
+| A. Data Redundancy, A limitation because duplicate data wastes space and can cause update problems.   |
+| B. Data Inconsistency, A limitation because duplicate copies may disagree.                            |
+| C. Data Dependence,	A limitation because changing the file structure may require program changes.     |
+| D. Storing space,	The intended answer: storing data is a necessary function, not itself a limitation. |
+
+Exam memory tip: **Traditional file-system limitations often include redundancy, inconsistency, and program–data dependence.**
+
+Which problem occurs when the same student's address is stored in two files, but one file is updated and the other is not?
+- [ ] A. Data redundancy
+- [x] B. Data inconsistency
+- [ ] C. Data independence
+- [ ] D. Data security
+
+Correct! B. - Data Inconsistency
+
+The student's address differs between the two files because one was updated and the other was not. The same data now has conflicting values, which is data inconsistency.
+
+> **Redundancy = duplicate data exists**. <br/>
+> **Inconsistency = copies of data disagree**.
+
+---
+
+**Question 63 - ARP (Address Resolution Protocol)**
+
+Question 63. ARP (Address Resolution Protocol)
+- [ ] A. To assign IP addresses to devices
+- [ ] B. To resolve domain names to IP addresses
+- [x] C. To map MAC addresses to IP addresses
+- [ ] D. To manage network congestion
+
+ARP resolves an **IPv4 address to its corresponding MAC address** on a local network.
+
+
+**1. ARP**
+
+ARP stands for **Address Resolution Protocol**.
+
+Imagine your computer wants to send data to another device on the same local network. <br/>
+It knows the destination device's IPv4 address, but it needs the device's MAC address to deliver the Ethernet frame.
+
+ARP helps find that MAC address.
+
+<img width="352" height="382" alt="image" src="https://github.com/user-attachments/assets/b8477fb2-9466-49e6-b239-ac7d9fb33dbd" />
+
+- **DHCP** typically assigns IP addresses automatically.
+- **DNS** translates names such as `example.com` into IP addresses.
+- **ARP** maps an IPv4 address to a MAC address.
+
+Exam memory tip:
+- **ARP**: IP address → MAC address
+- **DNS**: Domain name → IP address
+- **DHCP**: Assigns IP configuration
+
+Which protocol translates a domain name such as google.com into an IP address?
+- [ ] A. ARP
+- [x] B. DNS
+- [ ] C. DHCP
+- [ ] D. FTP
+
+DNS stands for Domain Name System. It translates human-readable domain names, such as `google.com`, into IP addresses that computers use to communicate.
+
+**How it works**
+
+<img width="297" height="370" alt="image" src="https://github.com/user-attachments/assets/b306b469-d114-4074-b2f5-72c4229f8540" />
+
+| Protocol | Main purpose                                                  |
+|----------|---------------------------------------------------------------|
+| **ARP**	 | Resolves an IPv4 address to a MAC address on a local network. |
+| **DNS**	 | Converts domain names into IP addresses.                      |
+| **DHCP** | Automatically assigns IP configuration to devices.            |
+| **FTP**	 | Transfers files between computers.                            |
+
+---
+
+Q64. Which of the following is not a Web Service?
+- [ ] A. Using Diksha learning portal
+- [ ] B. Sending and receiving email
+- [x] C. File transfer over Bluetooth
+- [ ] D. Using a banking portal for online transaction
+
+**1. Web Service** <br/>
+A web service is a service or functionality accessed over a network, commonly using web technologies and protocols, to exchange data or perform tasks.
+
+Think of it this way: when you use an online portal or send an email over the internet, you are using a network-based service. <br/>
+**Bluetooth** file transfer, however, typically communicates directly between nearby devices over a short-range wireless connection.
+
+
+**2. Terminologies** <br/>
+**DIKSHA learning portal**:	An online educational portal accessed over the internet. It is a web-based service.
+
+**Sending and receiving email**:	Email is a network-based service. Webmail services are accessed through browsers, though email can also use dedicated applications.
+
+**File transfer over Bluetooth**: Bluetooth transfers files directly between nearby devices and does not inherently require a web service or internet connection.
+
+**Using a banking portal for online transaction**:	An online banking service accessed through a website or application over a network.
+
+
+Important nuance: **Bluetooth file transfer is not a web service** in the usual context here, **although Bluetooth-connected devices can also use internet-based services**.
+
+**3. Exam memory tip, Remember the distinction:**
+- **Web service**: Online functionality delivered through network/web technologies.
+- **Bluetooth file transfer**: Short-range, device-to-device communication.
+
+Which of the following is an example of a web-based service?
+- [ ] A. Transferring a file between two phones using Bluetooth
+- [x] B. Accessing your bank account through its website
+- [ ] C. Connecting wireless headphones to a laptop
+- [ ] D. Copying a file from one USB drive to another
+  
+---
+
+Q65. What is a NoSQL database?
+- [x] A. A NoSQL database is a database that does not use the relational model.
+- [ ] B. A No SQL database is a database that is not managed by a DBMS.
+- [ ] C. A No SQL database is a database that is not stored on a physical device.
+- [ ] D. All of the above.
+
+Correct! Option A. A NoSQL database is a database that does not use the relational model.
+
+**Concept: What is a NoSQL database?** <br/>
+A **NoSQL database** is a type of database designed to store and manage data using models other than the traditional relational-table model. 
+
+`NoSQL` is commonly expanded as **"Not Only SQL"**.
+
+For example, imagine a school database storing student details.
+- **Relational database (SQL)**: Data is typically organized into tables with rows and columns.
+- **NoSQL database**: Data may be stored as `documents`, `key-value pairs`, `wide-column records`, or `graphs`.
+
+**SQL database** <br/>
+Example: `MySQL`. Student information is organized in tables with rows and columns.
+
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/8deeb171-746b-4ad1-b83c-464345272b47" />
+
+**NoSQL database** <br/>
+Example: `MongoDB`. A student record can be stored as a document containing fields such as name and marks.
+
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/1cc68593-f5f1-4eb9-8808-0bc79f99dc5b" />
+
+
+NoSQL databases are managed by database management software.
+NoSQL data is stored on physical storage, such as SSDs or hard drives, even when hosted in the cloud.
+
+> **NoSQL does not mean "no database" or "no DBMS"**. <br/>
+> Remember: **NoSQL = non-relational database model**
+
+Which of the following is a NoSQL database?
+- [ ] A. MySQL
+- [x] B. MongoDB
+- [ ] C. Microsoft SQL Server
+- [ ] D. PostgreSQL
+
+Correct!. B - MongoDB. 
+
+**Why is MongoDB a NoSQL database?** <br/>
+MongoDB stores data as documents, commonly represented in a `JSON-like` format called `BSON`, rather than requiring all data to follow a traditional relational-table structure.
+
+For example, a student record might look like this:
+```json
+{
+  "name": "Aman",
+  "class": 11,
+  "marks": 85
+}
+```
+
+| Database	           | Type                      |
+|----------------------|---------------------------|
+| MySQL	               | Relational (SQL)          |
+| MongoDB	             | Document-oriented (NoSQL) |
+| Microsoft SQL Server | Relational (SQL)          |
+| PostgreSQL	         | Relational (SQL)          |
 
 
 ---
 
+**Q67. Python Identity Operator**
+
+Question: Which of the following operators evaluates to `True` if the variables on either side of the operator point towards the same memory location, and `False` otherwise?
+- [x] A. `is`
+- [ ] B. `is not`
+- [ ] C. `and`
+- [ ] D. `or`
+
+Correct! A. `is`
+
+Python `is` operator checks **object identity** - whether two variables refer to the same object in memory.
+```py
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)  # True
+print(a is c)  # False
+```
+`a is b` -> `True`, because both variables refer to the same list object.
+`a is c` -> `False`, because `c` refers to a different list, even though its contents are identical.
+
+| Operator	| Meaning                                                |
+|-----------|--------------------------------------------------------|
+| `is`	    | `True` when two references point to same objects.      |
+| `is not`	| `True` when two references point to different objects. |
+| `and`	    | `True` when both conditions are true.                  |
+| `or`	    | `True` when at least one condition is true.            |
+
+> **`is` checks identity;**
+
+> **`==` checks equality of values.**
+
+What will this Python code print?
+```py
+x = [10, 20]
+y = [10, 20]
+
+print(x == y, x is y)
+```
+- [ ] A. True True
+- [ ] B. False False
+- [x] C. True False
+- [ ] D. False True
+
+- `x == y` -> `True`, because both lists contain the same values.
+- `x is y` -> `False`, because they are two separate list objects in memory.
+
+---
+
+Q.68 In 3G and 4G mobile technologies, the character ‘G’ stands for:
+- [x] A. Generation
+- [ ] B. GPRS
+- [ ] C. Grid
+- [ ] D. Google
+
+Correct! A - Generation
+
+In mobile communication, **G stands for Generation**. Each generation represents an evolution in mobile network technology.
+
+| Technology	| Meaning	          | Key idea                                                |
+|-------------|-------------------|---------------------------------------------------------|
+| 1G          | First Generation  | Analog voice calls                                      |
+| 2G	        | Second Generation	| Digital voice calls and SMS                             |
+| 3G	        | Third Generation	| Mobile internet and video calling                       |
+| 4G	        | Fourth Generation	| Faster internet and video streaming                     |
+| 5G	        | Fifth Generation	| Higher capacity, lower latency, and faster connectivity |
+
+> **The number tells you which generation; G = Generation**.
+
+Which technology is primarily associated with digital voice calls and SMS?
+- [ ] A. 1G
+- [x] B. 2G
+- [ ] C. 3G
+- [ ] D. 4G
+
+Correct! Option B. - 2G
+
+Why? 2G introduced digital cellular communication, enabling digital voice calls and SMS messaging.
+- 1G: Analog voice calls
+- 2G: Digital voice calls and SMS
+- 3G: Mobile internet and video calling
+- 4G: High-speed mobile internet and streaming
+
+---
+
+**Master In Slave Out (MISO)**
+
+MISO is a signal line in the SPI (Serial Peripheral Interface) communication protocol. <br/>
+It carries data from the SPI slave device to the master device.
+
+For example, if a microcontroller communicates with an RFID reader using SPI, MISO can carry data from the RFID module back to the microcontroller.
+
+| SPI signal | Full form	                | Purpose                    |
+|------------|----------------------------|----------------------------|
+| MOSI	     | Master Out Slave In	      | Master sends data to slave |
+| MISO	     | Master In Slave Out	      | Slave sends data to master |
+| SCLK	     | Serial Clock	              | Synchronizes communication |
+| SS/CS	     | Slave Select / Chip Select	| Selects the slave device   |
+
+> **MISO = data comes into the master**;
+
+> **MOSI = data goes out from the master**.
+
+In SPI communication, which signal carries data from the master to the slave?
+- [ ] A. MISO
+- [x] B. MOSI
+- [ ] C. SCLK
+- [ ] D. SS/CS
+
+Remember, SPI communication has two main data directions:
+- MOSI: Master -> Slave
+- MISO: Slave -> Master
+
+---
+
+Q.70 Halting states of a Turing machine are:
+- [ ] A. Start and stop
+- [x] B. Accept and reject
+- [ ] C. Start and reject
+- [ ] D. Reject and allow
+
+Correct! B - Accept and reject
+
+A **Turing machine's** computation halts when it reaches a designated halting state. <br/>
+In the standard accept/reject model, these are:
+- **Accept state**: The input is accepted by the machine.
+- **Reject state**: The input is rejected by the machine.
+The machine stops computing when it enters either state.
+
+> **Accept = Yes; Reject = No**. The start state is where computation begins, not a halting state.
+
+What happens if a Turing machine enters an infinite loop and never reaches a halting state?
+- [ ] A. It automatically accepts the input.
+- [ ] B. It automatically rejects the input.
+- [x] C. It continues computing without halting.
+- [ ] D. It returns to the start state.
+
+Correct! Option C. - It continues computing without halting.
+
+If a Turing machine enters an infinite loop, it keeps executing transitions and never reaches an accept or reject state. This is called **non-termination**.
+
+Exam memory tip:
+- **Accept state** -> halts and accepts.
+- **Reject state** -> halts and rejects.
+- **Infinite loop** -> never halts.
+
+---
+
+Q.71 _________ are used to overcome the challenges of managing the resources of the IoT.
+- [ ] A. Clustering
+- [ ] B. Software agents
+- [ ] C. Synchronization techniques
+- [x] D. Cluster, Software agent, and Synchronization techniques
+
+Correct! D - Cluster, Software agents, and Synchronization techniques
+
+| Technique	          | Purpose                                                                                  |
+|---------------------|------------------------------------------------------------------------------------------|
+| **Clustering**	    | Groups IoT devices or nodes to manage them more efficiently and coordinate resources.    |
+| **Software agents**	| Can automate tasks, make decisions, and manage resources on behalf of devices or systems.|
+| **Synchronization techniques** | Coordinate timing and activities so devices or processes work together correctly.|
+
+Example: <br/>
+In a smart building, clustering can organize sensors into groups, software agents can manage tasks automatically, and synchronization can coordinate sensor readings.
+
+What is the primary purpose of clustering in an IoT network?
+- [ ] A. To convert analog signals into digital signals
+- [x] B. To group devices or nodes for more efficient management
+- [ ] C. To encrypt every message automatically
+- [ ] D. To replace all sensors with one central computer
+
+Correct! Option B
+
+**Why is clustering useful in IoT?** <br/>
+Clustering groups nearby or related IoT devices into smaller groups.  <br/>
+Often, one device acts as a cluster head, helping coordinate communication and resource usage within the group.
+
+Example: In a smart farm, soil-moisture sensors can be grouped into clusters so their data can be collected and managed more efficiently.
+
+> **Clustering = Grouping devices to improve network management and efficiency.**
+
+---
+
+Question 72 - Boolean Algebra <br/>
+What is the minimized form of the Boolean expression: `F(A,B,C) = Pi(1,2,4,6)?`
+- [x] A. `(A + B + C')(A + B'+ C)(A' + B + C)`
+- [ ] B. `(A'+ B + C) (A'+ B + C)`
+- [ ] C. `(A'+ B + C')(A + B + C')(A' + B+ C)`
+- [ ] D. `(A + B'+ C) (A + B'+ C)(A'+ B + C)`
+
+
+**1. What does π `Pi` mean?** <br/>
+In Boolean algebra, π `Pi` denotes the **product of maxterms**.
+
+The expression: `F(A,B,C) = Pi(1,2,4,6) ` <br/>
+means that `F=0` for input combinations numbered 1, 2, 4, and 6.
+
+**2. Convert the indices into maxterms** <br/>
+Using the three-bit binary representation of each index:
+
+| Index	| Binary (ABC) | Corresponding maxterm |
+|-------|--------------|-----------------------|
+| 1	    | 001	         |  `A+B+C'`             |
+| 2	    | 010	         |  `A+B'+C`             |
+| 4	    | 100	         |  `A'+B+C`             |
+| 6	    | 110	         |  `A'+B'+C`            |
+
+Therefore, the full product-of-maxterms expression is: `F= (A+B+C') (A+B'+C) (A'+B+C) (A'+B'+C)`
+
+
+For a three-variable Boolean function, what does `Σ(1,3,5,7)` represent?
+- [ ] A. The indices where the function is 0
+- [x] B. The indices where the function is 1
+- [ ] C. The number of variables
+- [ ] D. The number of maxterms
+
+Correct B. The indices where the function is 1.
+
+Why?
+- `Σ` (Sigma) represents the sum of minterms - the input combinations where the Boolean function outputs 1.
+- `π` (Pi) represents the product of maxterms - the input combinations where the Boolean function outputs 0.
+
+For Σ(1,3,5,7), the function equals 1 at indices 1, 3, 5, and 7.
+
+> **Σ -> output 1; π -> output 0**.
+
+---
+
+**Question 73 - HTML**
+
+Which attribute is used to specify the location of an image file?
+- [ ] A. `alt`
+- [x] B. `src`
+- [ ] C. `align`
+- [ ] D. `name`
+
+Correct! B. `src`
+
+In HTML, the `src` attribute specifies the **path or URL of an image file** that the browser should display.
+```html
+<img src="apple.jpg" alt="A red apple">
+```
+- `src` - specifies the image file location.
+- `alt` - provides alternative text if the image cannot be displayed and supports accessibility.
+- `align` - an obsolete HTML attribute historically used to align elements.
+- `name` - identifies an element in certain HTML contexts; it does not specify an image's file location.
+
+Remember these two attributes:
+- `src` = Where is the image?
+- `alt` = What does the image show?
+
+Which HTML tag is used to create a hyperlink?
+- [ ] A. `<img>`
+- [x] B. `<a>`
+- [ ] C. `<link>`
+- [ ] D. `<href>`
+
+The HTML anchor tag `<a>` creates a hyperlink to another webpage, file, or location.
+```html
+<a href="https://www.example.com">Visit Website</a>
+```
+- `<a>` creates the hyperlink.
+- `href` specifies the destination URL.
+- `<img>` displays an image.
+- `<link>` connects external resources, commonly a CSS file.
+- `<href>` is not a valid HTML tag.
+
+> **`<a>` = anchor (link), and `href` = hyperlink reference (destination).**
+
+---
+
+**Question 74 - Automata Theory** 
+
+If an NFA has 5 states excluding the initial state and is converted into a DFA, what is the maximum possible number of states in the DFA?
+- [x] A. 64
+- [ ] B. 32
+- [ ] C. 128
+- [ ] D. 187
+
+Correct! Option A. 64
+
+When converting an NFA (Nondeterministic Finite Automaton) into a DFA (Deterministic Finite Automaton), we use the subset construction method.
+
+If an NFA has `n` states, the maximum possible number of DFA states is: `2^n`
+
+Here, the question says there are 5 states excluding the initial state. <br/>
+Therefore, the total number of NFA states is: `n = 5 + 1 = 6` <br/>
+the maximum possible number of DFA states is: `2^n = 2^6 = 64`
+
+| NFA states | Maximum DFA states|
+|------------|-------------------|
+| 3	         | `2^3=8`           |
+| 4	         | `2^4=16`          |
+| 5	         | `2^5=32`          |
+| 6	         | `2^6=64`          |
+
+> **DFA maximum states = `2^n`, where `n` is the total number of NFA states.**
+
+
+An NFA has 4 states in total. What is the maximum possible number of states in its equivalent DFA?
+- [ ] A. 4
+- [ ] B. 8
+- [x] C. 16
+- [ ] D. 32
+
+Correct! C. 16
+```
+The NFA has 4 states in total, so n=4.
+
+Using the formula:
+maximum possible number of DFA states = 2^n
+                                      = 2^4
+                                      = 2x2x2x2
+                                      = 16
+```
+
+---
+
+**Question 75 - Software Project Management**
+
+What is the purpose of staffing level estimation in software project management?
+- [ ] A. To determine the number of hardware components required
+- [ ] B. To identify potential risks in the project
+- [x] C. To allocate appropriate resources to the project
+- [ ] D. To estimate the maintenance costs of the software
+
+Correct! Option C. To allocate appropriate resources to the project.
+
+**Staffing Level Estimation** <br/>
+Staffing level estimation means estimating how many people, and what types of skills, are needed at different stages of a software project.
+
+For example, when developing a school management system, a project manager might estimate the need for:
+- 2 software developers
+- 1 UI/UX designer
+- 1 tester
+- 1 project manager
+The team size may change as the project moves from design to development and testing.
+
+- **Hardware components**:	Concerns hardware planning, not staffing.
+- **Potential risks**:	This is part of risk identification and management.
+- **Appropriate resources**: staffing estimation helps plan the people and skills required.
+- **Maintenance costs**:	This concerns cost estimation, not staffing levels specifically.
+
+> **Staffing estimation = people + skills + project stages**
+
+In software project management, which activity identifies possible problems that could affect a project's success?
+- [x] A. Risk identification
+- [ ] B. Code compilation
+- [ ] C. Unit testing
+- [ ] D. Database normalization
+
+Correct! Option A. Risk identification.
+
+**Risk identification** is the process of finding potential problems that may affect a software project's cost, schedule, quality, or success.
+
+Examples:
+- A developer may leave the project.
+- The project may exceed its budget.
+- Requirements may change unexpectedly.
+- A technical issue may delay delivery.
+
+> **Risk identification = What could go wrong?**
+
+---
+
+**Question 76 - Database Management Systems (DBMS)**
+
+What is DBMS?
+- [ ] A. DBMS is a collection of queries.
+- [ ] B. DBMS is a high-level language.
+- [ ] C. DBMS is a programming language.
+- [x] D. DBMS stores, modifies, and retrieves data.
+
+Correct! Option D. DBMS stores, modifies, and retrieves data.
+
+
+**DBMS (Database Management System)** is software that allows users to create, store, organize, retrieve, and modify data in a database.
+
+For example, a school DBMS can manage student names, roll numbers, marks, and attendance.
+
+Common examples include:
+- `MySQL` - relational database management system.
+- `PostgreSQL` - relational database management system.
+- `MongoDB` - NoSQL database management system.
+
+- **Queries** are commands used to interact with a database, not a DBMS itself.
+- A **DBMS is software**, not a programming language.
+- Languages such as `Python` and `Java` are used to write programs; a DBMS manages databases.
+
+> **DBMS = Create + Store + Retrieve + Update + Manage data**.
+
+Which SQL command is used to retrieve data from a database table?
+- [ ] A. `INSERT`
+- [ ] B. `UPDATE`
+- [x] C. `SELECT`
+- [ ] D. `DELETE`
+
+Correct! Option C. `SELECT`
+
+The SQL `SELECT` command retrieves data from one or more database tables.
+```sql
+SELECT * FROM Students;
+
+-- This retrieves all columns and rows from the Students table.
+```
+
+| SQL command	| Purpose                 |
+|-------------|-------------------------|
+| `SELECT`	  | Retrieve data           |
+| `INSERT`	  | Add new records         |
+| `UPDATE`	  | Modify existing records |
+| `DELETE`	  | Remove records          |
+
+> **CRUD: Create, Read, Update, Delete**. <br/>
+>  In SQL, these commonly correspond to `INSERT`, `SELECT`, `UPDATE`, and `DELETE`.
+
+---
+
+**Question 77 - Python Programming**
+
+Which of the following is a valid identifier in Python?
+- [ ] A. global
+- [x] B. Break
+- [ ] C. def
+- [ ] D. with
+
+Correct! B. Break, bcuz rest all like `global`, `def` and `with` are the keywords in python. `break` is also a keyword but since python is case sensitive so `Break` is allowed.
+
+In Python, an **identifier** is a name used for a variable, function, class, or other program element.
+
+Python identifiers:
+- Can contain letters, digits, and underscores.
+- Cannot begin with a digit.
+- Cannot be a Python keyword.
+- Are case-sensitive.
+
+- `global` is a Python keyword.
+- `def` is used to define functions.
+- `with` is a Python keyword used with context managers.
+- Python keywords are case-sensitive; `Break` is different from the keyword `break`.
+  
+Python is case-sensitive:
+- `break` -> keyword
+- `Break` -> valid identifier
+- `BREAK` -> also a valid identifier
+
+Which of the following is a valid Python variable name?
+- [ ] A. `2marks`
+- [x] B. `student_name`
+- [ ] C. `class`
+- [ ] D. `total-marks`
+
+Correct! Option B. `student_name`
+
+`student_name` is a valid Python variable name because it starts with a letter and contains only letters and an underscore.
+
+- `2marks`: invalid because an identifier cannot begin with a digit.
+- `student_name`: valid; underscores are allowed.
+- `class`: invalid because class is a Python keyword.
+- `total-marks`: invalid because hyphens (`-`) are not allowed in identifiers.
+
+> **Python identifiers can use letters, digits, and underscores, but cannot start with a digit or be a keyword.**
+
+---
+
+**Question 78 - Algorithms**
+
+What is the time complexity of the Divide and Conquer algorithm for finding the maximum and minimum elements in an array of size `n`?
+- [x] A.`O(n)`
+- [ ] B.`O(log n)`
+- [ ] C. `O(nlog n)`
+- [ ] D. `O(n^2)`
+
+Correct! A. `O(n)`
+
+To find both the maximum and minimum elements using Divide and Conquer, we divide the array into smaller parts, find the minimum and maximum in each part, and combine the results.
+
+For example, consider this array: `[8, 3, 12, 5, 1, 9]`
+- Divide the array into smaller parts.
+- Find the minimum and maximum in each part.
+- Compare the results to obtain the overall minimum (1) and maximum (12).
+Although the array is divided recursively, the total work across all levels is proportional to `n`
+
+**The recurrence is: T(n) = 2T(n/2)+O(1)**
+
+Using the **Master Theorem: T(n)=O(n)**
+
+| Complexity	| Explanation                                                               |
+|-------------|---------------------------------------------------------------------------|
+| `O(n)`	    | Every element must be considered.                                         |
+| `O(log n)`  | Typical of binary search, not finding both extrema in an arbitrary array. |
+| `O(nlog n)` | Typical of merge sort.                                                    |
+| `O(n^2)`	  | Typical of simple nested-loop algorithms.                                 |
+
+> Finding both minimum and maximum in an unsorted array takes linear time, `O(n)`. <br/>
+> Divide and Conquer does not automatically mean `O(log n)`.
+
+What is the time complexity of Binary Search on a sorted array of \(n\) elements?
+- [ ] A. `O(1)`
+- [x] B. `O(log n)`
+- [ ] C. `O(n)`
+- [ ] D. `O(n^2)`
+
+Correct! Option B. `O(log n)`
+
+**Binary Search** repeatedly divides a sorted array into two halves.
+
+For example, if an array has 16 elements, it takes at most about 4 halvings to narrow the search to one element: `16 -> 8 -> 4 -> 2 -> 1`
+
+Since the search space is halved each time, its time complexity is `O(log n)`.
+
+> Binary Search -> `O(log n)` <br/>
+> Linear Search -> `O(n)` <br/>
+> Merge Sort -> `O(n log n)`
+
+---
+
+**Question 79 - Computer Networks**
+
+Which of the following protocols is used for secure remote login?
+- [ ] A. FTP
+- [ ] B. HTTPS
+- [ ] C. TELNET
+- [ ] D. HTTP
+- [x] E. SSH
+
+The standard protocol for secure remote login is SSH
+
+| Protocol	 | Purpose                                                                  |
+|------------|--------------------------------------------------------------------------|
+| **FTP**    | Transfers files between computers.                                       |
+| **HTTPS**  | Provides secure communication with websites.                             |
+| **TELNET** | Enables remote login, but sends data without encryption.                 |
+| **HTTP**	 | Transfers web pages and other web resources without built-in encryption. |
+
+- **SSH** -> Secure remote login
+- **TELNET** -> Remote login without encryption
+- **HTTPS** -> Secure web browsing
+- **FTP** -> File transfer
+
+Which protocol is commonly used to transfer files securely over an SSH connection?
+- [ ] A. HTTP
+- [ ] B. SFTP
+- [ ] C. TELNET
+- [ ] D. POP3
+
+Correct! B. SFTP
+
+**SFTP (SSH File Transfer Protocol)** securely transfers files between computers over an SSH connection. <br/>
+It protects data using encryption.
+
+| Protocol | Main purpose                        |
+|----------|-------------------------------------|
+| HTTP	   | Transfers web resources             |
+| SFTP	   | Secure file transfer                |
+| TELNET	 | Remote login without encryption     |
+| POP3	   | Retrieves emails from a mail server |
+
+---
+
+Question 80 - Dynamic Programming
+
+Which property of dynamic programming is particularly useful for solving Optimal Binary Search Tree problems?
+- [x] A. Optimal substructure
+- [ ] B. Greedy choice property
+- [ ] C. Divide and Conquer
+- [ ] D. Linear programming
+
+Correct! A. Optimal substructure
+
+
+**Optimal substructure** means that an optimal solution to a larger problem can be constructed using optimal solutions to its smaller subproblems.
+
+An **Optimal Binary Search Tree (OBST)** arranges keys in a binary search tree to minimize the expected search cost, taking into account how frequently keys are searched.
+
+For example, if some words are searched much more often than others, we can arrange the tree so frequently searched words are generally closer to the root, reducing the expected number of comparisons.
+
+Dynamic programming solves smaller subproblems and combines their results to find the optimal tree.
+
+- Greedy methods make a locally best choice at each step; this does not generally guarantee an optimal binary search tree.
+- Divide and Conquer: This splits a problem into smaller parts, but does not by itself capture the optimal-substructure property used by dynamic programming.
+
+> **Dynamic programming commonly relies on optimal substructure and overlapping subproblems**.
+
+Which two properties are commonly associated with dynamic programming?
+- [ ] A. Greedy choice and sorting
+- [x] B. Optimal substructure and overlapping subproblems
+- [ ] C. Linear programming and hashing
+- [ ] D. Randomization and backtracking
+
+Correct! B. Optimal substructure and overlapping subproblems
+
+- **Optimal substructure**: The optimal solution to a larger problem can be built from optimal solutions to smaller subproblems.
+  
+- **Overlapping subproblems**: The same smaller problems occur repeatedly, so we can store their results and reuse them instead of recalculating them.
+
+Example - **Fibonacci numbers**
+
+To calculate `F(5)`, we need `F(4)` and `F(3)`.  <br/>
+Calculating `F(4)` also requires `F(3)`, so the same subproblem is repeated.  <br/>
+Dynamic programming can store the result of  `F(3)` and reuse it.
+
+> **Dynamic programming = optimal substructure + overlapping subproblems.**
+
+---
+
+**Question 81 - Internet of Things (IoT)**
+
+Which of the following are the limiting factors of IoT?
+- [ ] A. Low power
+- [ ] B. Low processing power
+- [ ] C. Low memory
+- [x] D. All of the above
+
+Correct! D. All of the above
+
+**IoT (Internet of Things)** connects physical devices - such as smart watches, sensors, cameras, and home appliances-to networks so they can collect and exchange data.
+
+Many IoT devices have limited resources, which creates these challenges:
+
+- **Low power	Battery**: powered sensors must conserve energy to operate for long periods.
+- **Low processing power**:	Small processors may struggle with complex computations or large workloads.
+- **Low memory**:	Devices may have limited RAM and storage for data and programs.
+
+Example: A smart farming sensor must measure soil moisture, process readings, and transmit data while using little battery power and memory.
+
+> **IoT limitations often include power, processing, memory, bandwidth, and security.**
+
+
+A battery-powered IoT sensor sends readings every few minutes. Which design choice helps it operate longer without replacing the battery?
+- [ ] A. Keep the processor running continuously at full power
+- [x] B. Use sleep mode between measurements
+- [ ] C. Increase the amount of data transmitted unnecessarily
+- [ ] D. Store every reading repeatedly in memory
+
+Correct! Option B - Use sleep mode between measurements.
+
+**Battery-powered IoT sensors** have limited energy. If a sensor keeps its processor running continuously, it consumes more power and drains its battery faster.
+
+Using sleep mode helps the sensor conserve energy:
+1. The sensor wakes up at the scheduled time.
+2. It measures and records the required data.
+3. It transmits the reading if needed.
+4. It returns to sleep mode until the next measurement.
+
+- Keeping the processor running at full power wastes energy.
+- Transmitting unnecessary data increases power consumption.
+- Repeatedly storing readings wastes memory and may increase energy use.
+
+> IoT devices often have limited power, processing capacity, and memory. Low-power techniques such as sleep mode help extend battery life.
+  
+---
+
+**Q82. Dynamic Programming - Memoization**
+
+In the context of dynamic programming for solving multistage graph problems, what is memoization used for?
+- [ ] A. Dividing the graph into stages
+- [ ] B. Sorting the vertices in the graph
+- [x] C. Storing solutions to overlapping subproblems
+- [ ] D. Finding the shortest path
+
+**Memoization** is a technique in dynamic programming that stores the results of previously solved subproblems so they don't need to be calculated again.
+
+Imagine you're solving a multistage graph problem to find the shortest path. <br/>
+If you repeatedly need the minimum cost from the same vertex to the destination, memoization lets you save that cost and reuse it.
+
+> **Memoization = remember previous results**. It avoids repeated calculations and can improve efficiency.
+
+a. Dividing the graph into stages: Organizes the graph; it is not memoization.
+b. Sorting the vertices:	Arranges vertices in an order; not memoization itself.
+c. Storing solutions to overlapping subproblems: Saves results for reuse.
+d. Finding the shortest path:	This may be the overall goal, not the purpose of memoization.
+
+Suppose a recursive Fibonacci program calculates `fib(5)` multiple times. What does memoization do?
+- [ ] A. Recalculates every Fibonacci value from scratch
+- [x] B. Stores calculated Fibonacci values and reuses them
+- [ ] C. Sorts the Fibonacci values
+- [ ] D. Converts recursion into a loop automatically
+
+Correct! Option B - Stores calculated Fibonacci values and reuses them.
+
+Without memoization, a recursive Fibonacci function may calculate the same value many times.
+
+For example, to calculate `fib(5)`, the program needs `fib(4)` and `fib(3)`. <br/>
+While calculating `fib(4)`, it also calculates `fib(3)`.  <br/>
+So fib`(3)` is calculated repeatedly.
+
+With memoization, the program saves a result the first time it calculates it.  <br/>
+The next time it needs that value, it retrieves the saved result instead of recalculating it.
+
+> **Memoization stores results; overlapping subproblems are repeated calculations**
+
+---
+
+**Q83. Computer Architecture - Data Bus Width**
+
+How is the width of the data bus typically measured in a microcomputer system?
+- [ ] A. In kilobytes (KB)
+- [ ] B. In megahertz (MHz)
+- [x] C. In bits
+- [ ] D. In address lines
+
+Correct! C. In bits.
+
+**Data Bus** <br/>
+A **data bus** is a group of communication lines that transfers data between the CPU, memory, and other components.
+
+Its width tells us how many bits can be transferred simultaneously.
+
+For example:
+- 8-bit data bus: transfers 8 bits at a time.
+- 16-bit data bus: transfers 16 bits at a time.
+- 32-bit data bus: transfers 32 bits at a time.
+
+- Kilobytes (KB),	Measures data storage size.
+- Megahertz (MHz),	Measures frequency.
+- Bits, Measures data bus width.
+- Address lines,	Used to specify memory or device addresses.
+
+
+> Data bus -> Bits <br/>
+> Bus speed/clock frequency -> Hertz (Hz) <br/>
+> Memory capacity -> Bytes <br/>
+
+A computer has a 16-bit data bus. How many bits can it transfer simultaneously?
+- [ ] A. 8 bits
+- [ ] B. 16 bits
+- [x] C. 16 bytes
+- [ ] D. 32 bits
+
+Correct! Option B - 16 bits.
+
+A 16-bit data bus can transfer 16 bits of data simultaneously in one bus transfer.
+
+Remember:
+- 8 bits = 1 byte
+- 16 bits = 2 bytes
+- 32 bits = 4 bytes
+
+> **Data bus width tells you how many bits can be transferred at once, not how much data the computer stores overall.**
+
+---
+
+**Q85. Divide and Conquer - Finding Maximum and Minimum**
+
+When using a divide-and-conquer algorithm to find the maximum and minimum elements in an array, how are the results from the two halves combined?
+- [ ] A. Calculate the average of the two halves.
+- [x] B. Compare the maximums of both halves and the minimums of both halves.
+- [ ] C. Add the maximum of the left half to the minimum of the right half.
+- [ ] D. Multiply the maximum of the left half by the minimum of the right half.
+
+Correct! Option B
+
+The divide-and-conquer approach splits an array into smaller parts, solves each part, and combines the results.
+
+Suppose the array is: `[8, 3, 12, 5, 2, 10]` <br/>
+**1. Divide**: Split it into `[8, 3, 12]` and `[5, 2, 10]`. <br/>
+**2. Conquer**: Find the maximum and minimum of each half. <br/>
+- Left half: maximum = 12, minimum = 3
+- Right half: maximum = 10, minimum = 2
+**3. Combine**:
+- Overall maximum = `max(12, 10)` = 12
+- Overall minimum = `min(3, 2)` = 2
+
+An array is split into two halves:
+- Left half: minimum = 4, maximum = 15
+- Right half: minimum = 2, maximum = 11
+What are the overall minimum and maximum?
+- [ ] A. Minimum = 4, maximum = 15
+- [x] B. Minimum = 2, maximum = 15
+- [ ] C. Minimum = 2, maximum = 11
+- [ ] D. Minimum = 4, maximum = 11
 
 
 ---
 
+**Q86. Theory of Computation - Context-Free Grammars**
 
+The class of Context-Free Languages (CFLs) is not closed under which operation?
+- [ ] A. Concatenation
+- [x] B. Intersection
+- [ ] C. Union
+- [ ] D. Repeated concatenation (Kleene star)
+
+**A Context-Free Grammar (CFG)** generates a Context-Free Language (CFL). <br/>
+A language is closed under an operation if applying that operation to languages in the class always produces another language in the same class.
+
+Context-Free Languages are closed under:
+- `Concatenation`: Joining strings from two languages.
+- `Union`: Combining strings from either language.
+- `Kleene star (repeated concatenation)`: Repeating strings from a language zero or more times.
+However, Context-Free Languages are not closed under `intersection`. <br/>
+Intersecting two CFLs does not always produce another CFL.
+
+> **CFLs are closed under union, concatenation, and Kleene star, but not generally under intersection or complement.**
+
+Which operation is Context-Free Languages (CFLs) closed under?
+- [ ] A. Intersection
+- [ ] B. Complement
+- [x] C. Union
+- [ ] D. None of the above
+
+---
+
+**Q87. Computer Networks - Network Topologies**
+
+Which of the following is NOT a network topology?
+- [ ] A. Star
+- [ ] B. Ring
+- [x] C. Disk
+- [ ] D. Mesh
+
+**Network topology** <br/>
+A **network topology** describes how computers and other devices are arranged and connected in a network.
+
+**1. Star**
+> All devices connect to a central hub or switch.
+
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/09572dbc-d26a-44f7-9741-e9d92f8984cf" />
+
+**2. Ring**
+> Each device connects to neighboring devices in a circular arrangement.
+
+<img width="362" height="241" alt="image" src="https://github.com/user-attachments/assets/357a261d-f726-4022-ae9f-ced9ab28f120" />
+
+**Mesh**
+> Devices have multiple interconnections, improving redundancy.
+
+<img width="355" height="297" alt="image" src="https://github.com/user-attachments/assets/daebeca0-b77c-44dd-85d8-52caa8e99c60" />
+
+
+> **Common network topologies include Star, Bus, Ring, Mesh, and Tree.**
+
+In which network topology are all devices connected to a single central switch or hub?
+- [ ] A. Ring
+- [ ] B. Mesh
+- [x] C. Star
+- [ ] D. Bus
+
+Correct! Option C. Star topology.
+
+In a star topology, every device connects to one central device, such as a switch or hub. <br/>
+All communication between connected devices passes through that central device.
+
+- **Ring**: Devices connect in a circular arrangement.
+- **Mesh**: Devices have multiple interconnections.
+- **Bus**: Devices share a common communication cable.
+
+---
+
+**Question 88 - Stack implementation**
+
+Which implementation of a stack requires a fixed amount of memory allocated for a fixed number of elements?
+- [x] A. Array implementation
+- [ ] B. Linked implementation
+- [ ] C. Dynamic implementation
+- [ ] D. Static implementation
+
+Correct! Option A. Array implementation.
+
+An array-based stack is commonly created with a fixed capacity. <br/>
+For example, if we allocate an array of 100 elements, it can hold at most 100 elements unless we create a larger array.
+```py
+stack = [None] * 100
+```
+
+- Array implementation: A fixed-size array reserves space for a set number of elements.
+- Linked implementation: A linked stack allocates nodes as needed, so its size can grow dynamically.
+- Dynamic implementation: This generally refers to an implementation that can adjust its capacity as needed.
+- Static implementation: This can describe fixed allocation in general, but the question is asking which stack implementation uses a fixed-size storage structure.
+
+> **Array stack = fixed capacity; linked stack = grows node by node.**
+
+Which data structure follows the LIFO principle (Last In, First Out)?
+- [ ] A. Queue
+- [x] B. Stack
+- [ ] C. Tree
+- [ ] D. Graph
+
+Correct! B. Stack
+
+A stack follows LIFO - Last In, First Out. The last element added is the first one removed.
+
+Example: Imagine a stack of plates. The last plate you put on top is the first plate you take off.
+
+> Queue: Follows FIFO (First In, First Out).
+
+> Stack: Follows LIFO.
+
+> Tree: Organizes data hierarchically.
+
+> Graph: Represents connections between nodes.
+
+---
+
+**Question 89 - Memory management**
+
+The data structure used to represent the allocation status of main memory is known as:
+- [ ] A. Page table
+- [ ] B. File Allocation Table (FAT)
+- [x] C. Memory map
+- [ ] D. Memory Management Unit (MMU)
+
+Correct! C. Memory map.
+
+A **memory map** represents how memory is organized and which regions are allocated or available.
+
+|   Term           | Meaning	         | Why?           |
+|------------------|-------------------|----------------|
+| **Page table**	 | Maps virtual pages to physical memory frames	| Used in virtual memory address translation, not to represent overall memory allocation status. |
+| **File Allocation Table (FAT)**	| Tracks disk clusters assigned to files	| Used for file-system storage, not main memory. |
+| **Memory map**	            | Represents memory regions and their allocation status |  |
+| **Memory Management Unit (MMU)** | Hardware that manages memory-related operations, including address translation	| A hardware component, not the data structure asked for. |
+
+
+> **Page table -> virtual memory mapping;** <br/>
+>  **FAT -> disk files;** <br/>
+>  **memory map -> memory regions.**
+
+Which component translates virtual addresses into physical addresses in a system using paging?
+- [ ] A. File Allocation Table (FAT)
+- [ ] B. Memory Management Unit (MMU)
+- [ ] C. Stack pointer
+- [x] D. Program counter
+
+Correct B. Memory Management Unit (MMU).
+
+The **MMU** translates virtual addresses into physical addresses, allowing programs to use virtual memory.
+
+- **FAT**: Tracks disk space allocated to files.
+- **MMU**: Performs address translation and supports memory protection.
+- **Stack pointer**: Points to the current top of the stack.
+- **Program counter**: Holds the address of the next instruction to execute.
+
+> **MMU -> memory addresses; <br/> PC -> next instruction; <br/> SP -> stack**.
+
+---
+
+**Question 90 - Web development**
+
+Which of the following is present in web development?
+- [ ] A. Database of Objects and Models
+- [ ] B. Document Oriented Middleware
+- [ ] C. Data Object Model
+- [x] D. Document Object Model
+
+Correct! D. Document Object Model (DOM)
+
+The **DOM** represents an HTML document as a tree of objects. <br/>
+JavaScript can use the DOM to access and modify a webpage's content, structure, and styles.
+
+For example, consider this HTML:
+```html
+<h1 id="title">Hello!</h1>
+```
+
+JavaScript can change the heading using the DOM:
+```js
+document.getElementById("title").textContent = "Welcome!";
+```
+The heading on the webpage changes from Hello! to Welcome!
+
+> **HTML provides structure, CSS provides styling, and JavaScript can use the DOM to change webpage elements.**
+
+Which HTML element is used to create a hyperlink?
+- [ ] A. `<img>`
+- [x] B. `<a>`
+- [ ] C. `<link>`
+- [ ] D. `<p>`
+
+Correct! Option B. `<a>`
+
+- `<img>` - Displays an image on a webpage.
+- `<a>` - Correct: Creates a hyperlink to another page, website, or location.
+- `<link>` - Commonly links external resources, such as a CSS stylesheet, in the document's <head>.
+- `<p>` - Defines a paragraph.
+
+```html
+<a href="https://www.google.com">Visit Google</a>
+```
+Here,  `href` specifies the destination of the hyperlink.
+
+> **`<a>` = anchor = hyperlink; <br/> `<img>` = image.**
+
+---
+
+**Question 91 - Theory of Computation**
+
+The complement of a language will only be defined when and only when the __________ over the language is defined.
+- [x] A. Alphabet
+- [ ] B. Word
+- [ ] C. String
+- [ ] D. Grammar
+
+Correct A. Alphabet.
+
+In Theory of Computation, the complement of a language consists of all strings over a given alphabet that are not in that language.
+
+Suppose the alphabet is: `Σ = {0, 1}` <br/>
+All possible finite strings over this alphabet form `Σ*`, including the empty string `ϵ`epsilon.
+
+If a language is `L = {0, 1}` then its complement is `L' = Σ* - L`
+
+The complement contains every string over `{0,1}` that is not in `L`, such as `00`, `01`, `10`, `11`, and the empty string.
+
+- **Alphabet** : It defines the set of symbols from which the strings are formed.
+- **Word**: A word is a finite string of symbols.
+- **String**: Strings are the elements included in or excluded from a language.
+- **Grammar**: A grammar describes how strings in a language can be generated; it does not define the universe used for the complement.
+
+> **Complement = all strings in `Σ*` that are not in `L`. Always identify the alphabet first.**
+
+If `Σ = {a,b}`, what does `Σ*` represent?
+- [ ] A. Only the strings `a` and `b`
+- [x] B. All finite strings formed using `a` and `b`, including the empty string
+- [ ] C. Only strings containing both `a` and `b`
+- [ ] D. All infinite strings formed using `a` and `b`
+
+Correct! B. All finite strings formed using a and b, including the empty string.
+
+`Σ*` is called the Kleene star of the alphabet `Σ`. 
+It contains every possible finite string that can be formed using the symbols in the alphabet, including the empty string `ϵ`.
+
+If `Σ = {a,b}`, then: `Σ* = {ϵ,a,b,aa,ab,ba,bb}`
+
+> Exam Tips:
+> - `Σ` = alphabet (set of symbols)
+> - `Σ*` = all finite strings, including `ϵ`
+> - `Σ+` = all non-empty finite strings
+
+---
+
+**Question 92 - Computer Organization**
+
+Which addressing mode involves specifying a value within the instruction itself, rather than referencing a memory location?
+- [ ] A. Direct addressing
+- [x] B. Immediate addressing
+- [ ] C. Indirect addressing
+- [ ] D. Indexed addressing
+
+Correct  B. Immediate addressing.
+
+In **immediate addressing**, the actual data value is included directly inside the instruction. <br/>
+The CPU doesn't need to fetch that value from a separate memory location.
+
+Example
+```asm
+MOV R1, #25
+```
+Here, `25` is the actual value supplied directly in the instruction, so this is immediate addressing.
+
+| Addressing mode	| How it works                                                                  |
+|-----------------|-------------------------------------------------------------------------------|
+| **Direct**	    | The instruction specifies the memory address containing the data.             |
+| **Immediate**   | The instruction contains the actual data value.                               |
+| **Indirect**    | The instruction points to a location that holds the data's address.           |
+| **Indexed**	    | An address is calculated using an index value and a base or reference address.|
+
+> - Immediate = value is inside the instruction.
+> - Direct = address is inside the instruction.
+> - Indirect = address points to another address.
+
+Consider the instruction:
+```asm
+LOAD R1, [500]
+```
+Assume `[500]` means "load the value stored at memory address 500." Which addressing mode is being used?
+- [ ] A. Immediate addressing
+- [x] B. Direct addressing
+- [ ] C. Indirect addressing
+- [ ] D. Indexed addressing
+
+Correct! B. Direct addressing.
+
+`LOAD R1, [500]` tells the CPU to fetch the value stored at memory address `500` and load it into register R1.
+
+> Remember: **Direct addressing specifies the memory address; immediate addressing supplies the actual value**.
+
+---
+
+**Q.94 - HTML**
+
+Which attribute of the <body> tag is used to set the background color of a web page?
+- [ ] A. `text`
+- [x] B. `bgcolor`
+- [ ] C. `background`
+- [ ] D. `color`
+
+Correct! B. `bgcolor`
+
+In older HTML, the `bgcolor` attribute was used on the  `<body>` tag to set the background color of a web page.
+```html
+<body bgcolor="yellow">
+    <h1>Welcome!</h1>
+</body>
+```
+This makes the page background yellow.
+
+`bgcolor` is a legacy HTML attribute and is obsolete in modern HTML. Today, CSS is the recommended approach:
+```html
+<body style="background-color: yellow;">
+```
+
+| Attribute	    | Purpose                                                           |
+|---------------|-------------------------------------------------------------------|
+| `text`	      | Sets the text color in legacy HTML                                |
+| `bgcolor`	    | Sets the background color in legacy HTML                          |
+| `background`	| Historically used to specify a background image                   |
+| `color`	      | Not the standard <body> attribute for setting the page background |
+
+Which CSS property is used to set a web page's background color in modern HTML?
+- [ ] A. `text-color`
+- [ ] B. `background`
+- [x] C. `background-color`
+- [ ] D. `bgcolor`
+
+Correct! C. `background-color`
+
+CSS uses the `background-color` property to set an element's background color.
+```css
+body {
+    background-color: lightblue;
+}
+```
+Remember for the exam:
+- Legacy HTML: `bgcolor`
+- Modern CSS: `background-color`
+
+---
+
+**Q.95 - Industry 4.0**
+
+The Internet of Things (IoT), access to real-time data, and the introduction of cyber-physical systems mark the big changes for this era.
+- [ ] A. Industrial Revolution
+- [ ] B. 3rd Industrial Revolution
+- [x] C. Industry 4.0
+- [ ] D. Manufacturing automation
+
+Correct! C. Industry 4.0
+
+**Industry 4.0** <br/>
+**Industry 4.0** refers to the Fourth Industrial Revolution, where industries use smart technologies to connect machines, computers, and people.
+
+Key technologies include:
+- **IoT (Internet of Things)**: Devices and machines connected through the internet.
+- **Real-time data**: Information collected and processed as events happen.
+- **Cyber-physical systems**: Systems that connect physical machines with software and computing.
+- **Artificial Intelligence (AI)**: Helps analyze data and automate decisions.
+
+Example: In a smart factory, sensors monitor a machine's temperature and send real-time data to a computer. The system can detect overheating and alert workers before the machine fails.
+
+Exam memory tip
+- **`Industry 1.0`** -> Steam and mechanical power
+- **`Industry 2.0`** -> Electricity and mass production
+- **`Industry 3.0`** -> Computers and automation
+- **`Industry 4.0`** -> IoT, smart systems, and real-time data
+
+Which industrial revolution is most closely associated with the introduction of computers and electronic automation in manufacturing?
+- [ ] A. Industry 1.0
+- [ ] B. Industry 2.0
+- [x] C. Industry 3.0
+- [ ] D. Industry 4.0
+
+Correct! C. Industry 3.0
+
+**Industry 3.0** introduced computers, electronics, and automation into manufacturing.
+
+- `Industry 2.0`: Electricity and mass production.
+- `Industry 3.0`: Computers and electronic automation.
+- `Industry 4.0`: IoT, connected machines, and real-time data.
+
+> Industry 3.0 = computers and automation; Industry 4.0 = smart, connected industry.
+
+---
+
+**Q.96 - SQL and DBMS**
+
+Which language provides the ability to query information from a database and insert, delete, and modify tuples (rows) in the database?
+- [x] A. DML (Data Manipulation Language)
+- [ ] B. DDL (Data Definition Language)
+- [ ] C. Query
+- [ ] D. Relational Schema
+
+Correct! A. DML (Data Manipulation Language)
+
+
+**DML** is the part of SQL used to retrieve and modify data stored in database tables.
+
+Common DML commands:
+| Command	  | Purpose	             | Example                                           |
+|-----------|----------------------|---------------------------------------------------|
+| `SELECT`  | Retrieve data	       | `SELECT * FROM Students;`                         |
+| `INSERT`  | Add new rows	       | `INSERT INTO Students VALUES (1, 'Aman');`        |
+| `UPDATE`  | Modify existing rows | `UPDATE Students SET name = 'Ravi' WHERE id = 1;` |
+| `DELETE`  | Remove rows	         | `DELETE FROM Students WHERE id = 1;`              |
+
+A **tuple** simply means a **row** in a relational database table.
+
+
+**DDL**: Defines or changes database structures, such as tables, using commands like `CREATE`, `ALTER`, and `DROP`.
+
+**Query**: A general term for a request made to a database; i
+
+**Relational Schema**: Describes the structure of a relational database, including tables and their attributes.
+
+> **DML = data; DDL = database structure.**
+
+Some textbooks classify `SELECT` separately as **DQL (Data Query Language)**, while others include it under **DML (Data Manipulation Languaage)**.
+
+Which SQL command is used to change an existing student's name in a database table?
+- [ ] A. `INSERT`
+- [x] B. `UPDATE`
+- [ ] C. `CREATE`
+- [ ] D. `DROP`
+
+Correct!  B. `UPDATE`
+
+The SQL `UPDATE` command modifies existing records in a database table.
+```sql
+UPDATE Students
+SET name = 'Aman'
+WHERE student_id = 101;
+```
+- `UPDATE Students` - selects the table to modify.
+- `SET name = 'Aman'` - changes the student's name.
+- `WHERE student_id = 101` - identifies the specific student.
+
+Important: Without a `WHERE` clause, the command updates the name for every row in the table.
+
+| SQL command	| Purpose                  |
+|-------------|--------------------------|
+| `INSERT`	  | Add new records          |
+| `UPDATE`	  | Modify existing records  |
+| `CREATE`	  | Create a database object |
+| `DROP`	    | Remove a database object |
+
+> **`INSERT` = Add, `UPDATE` = Change, `DELETE` = Remove.**
+
+---
+
+**Question 97 - ZigBee**
+
+Which ZigBee device is used to transfer data between ZigBee devices?
+- [ ] A. ZigBee Coordinator device
+- [x] B. ZigBee Router
+- [ ] C. ZigBee Start device
+- [ ] D. ZigBee End device
+
+Correct! B. ZigBee Router.
+
+**ZigBee** is a wireless communication technology commonly used in IoT devices, such as smart lights, sensors, and home automation systems.
+
+A ZigBee Router forwards data between devices in a ZigBee network and can help extend the network's coverage.
+
+| Device	            | Main function                                  |
+|---------------------|------------------------------------------------|
+| ZigBee Coordinator	| Creates the network and manages its formation  |
+| ZigBee Router	      | Forwards data and can extend network coverage  |
+| ZigBee End Device	  | Sends or receives data through its parent device; typically does not route other devices' traffic |
+| ZigBee Start Device	| Not a standard ZigBee device role              |
+
+> **Coordinator = creates, Router = routes, End Device = communicates**.
+
+In a ZigBee network, which device is primarily responsible for creating the network?
+- [ ] A. ZigBee Router
+- [x] B. ZigBee Coordinator
+- [ ] C. ZigBee End Device
+- [ ] D. None of these
+
+Correct! B. ZigBee Coordinator.
+
+The ZigBee Coordinator establishes the network and manages its formation. <br/>
+A ZigBee network has one coordinator, while routers and end devices join the network to communicate.
+
+---
+
+**Question 98 - Recursion**
+
+Which of the following is the base case for a recursive factorial function?
+- [x] A. n == 0
+- [x] B. n == 1
+- [ ] C. n < 0
+- [ ] D. n > 0
+
+Correct! B. `n == 1` is a valid base case.
+
+However, A. `n == 0` is also a valid base case for a factorial function, because `0! = 1`. <br/>
+So this question has two mathematically valid answers, depending on how the function is defined.
+
+**What is a base case?** <br/>
+A base case is the condition that stops recursion. Without it, a recursive function may keep calling itself indefinitely.
+
+Factorial means multiplying a positive integer by all the positive integers below it.
+
+For example: `4! = 4 x 3 x 2 x 1 = 24`
+
+A recursive definition can use either base case:
+```
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+```
+Here, `n == 0` stops the recursion. A version using `n == 1` can also work for positive integers.
+
+> **Base case = stopping condition; recursive case = function calls itself.**
+
+What is the value of factorial(5)?
+- [ ] A. 25
+- [ ] B. 60
+- [x] C. 120
+- [ ] D. 720
+
+`5! = 5 x 4 x 3 x 2 x 1 = 120`
+
+---
+
+Question 99. Which of the following operations in an operating system include reading, writing, and modifying file content?
+- [ ] A. Allocating memory to files
+- [ ] B. Assigning file names to processes
+- [ ] C. Loading files into CPU registers
+- [x] D. Reading, writing, and modifying file content
+
+Correct D. Reading, writing, and modifying file content.
+
+An **operating system** manages files and provides operations that allow programs to work with their contents.
+
+For example, when you open a text file, change some words, and save it, you're performing file operations.
+
+- Memory allocation is a different task from reading or modifying file contents.
+- CPU registers hold small amounts of data used during processing, not entire files as a normal file operation.
+- Files and processes are different OS concepts;
+
+Which operation retrieves existing data from a file without changing its contents?
+- [ ] A. Write
+- [x] B. Read
+- [ ] C. Delete
+- [ ] D. Rename
+
+
+---
+
+Question 100 What does the letter “I” stand for in the CIA triad of information security?
+- [ ] A. Indian
+- [ ] B. Individual
+- [ ] C. Income
+- [x] D. Integrity
+
+Correct! D. Integrity.
+
+**CIA Triad** <br/>
+The **CIA Triad** is a fundamental model in information security. It has three principles:
+
+| Principle	              | Meaning	                                       | Example                          |
+|-------------------------|------------------------------------------------|----------------------------------|
+| **C - Confidentiality**	| Only authorized people can access information. | A password protects your account.|
+| **I - Integrity**	      | Information remains accurate and is not changed without authorization. | Student marks cannot be secretly altered. |
+| **A - Availability**	  | Information and systems are accessible when needed.	| A school website remains available when students check results. |
+
+> **CIA = Confidentiality, Integrity, Availability**.
+- Confidentiality -> Keep data secret.
+- Integrity -> Keep data accurate.
+- Availability -> Keep data accessible.
+
+A hacker changes a student's marks in a database without permission. Which CIA principle has been violated?
+- [ ] A. Confidentiality
+- [x] B. Integrity
+- [ ] C. Availability
+- [ ] D. Authentication
+
+Correct! B. Integrity
+
+Changing a student's marks without authorization violates Integrity because the data is no longer accurate and trustworthy.
+
+- **Confidentiality**: Prevent unauthorized access.
+- **Integrity**: Prevent unauthorized changes.
+- **Availability**: Ensure authorized users can access information when needed.
+
+---
+
+Question 101. The category of Audio-Visual Aids is:
+- [ ] A. Tape-recorder
+- [ ] B. Television
+- [ ] C. Radio
+- [x] D. All of these
+
+Correct! D. All of these.
+
+**Audio-Visual Aids** <br/>
+Audio-visual and audiovisual teaching aids help teachers communicate information through sound, images, or both. The question uses the category broadly.
+
+|                   | Explanation                                   |
+|-------------------|-----------------------------------------------|
+| **Tape-recorder**	| Plays recorded audio, such as spoken lessons. |
+| **Television**	  | Combines moving images and sound.             |
+| **Radio**	        | Provides audio lessons and spoken information.|
+
+All three can be used as teaching aids, although radio and tape-recorders are strictly audio aids rather than audiovisual aids.
+
+Which teaching aid presents information using both moving pictures and sound?
+- [ ] A. Radio
+- [x] B. Television
+- [ ] C. Tape-recorder
+- [ ] D. Audio recording
+
+Correct! B. Television
+
+A television provides both visual information (pictures and videos) and audio information (speech and sound).
+
+Remember:
+- Radio -> Audio
+- Tape-recorder -> Audio
+- Television -> Audio + Visual
+
+---
+
+Question 102. The purpose of an integrated curriculum is:
+- [ ] A. Increase in number of books
+- [ ] B. Decrease in number of books
+- [ ] C. Increase in student enrolment
+- [x] D. Decrease in dropout rate
+
+Correct! D. Decrease in dropout rate.
+
+**Integrated curriculum** <br/>
+An **integrated curriculum** connects related topics or subjects instead of teaching each subject in complete isolation.
+
+For example, while learning about plants, students might study:
+- **Science**: How plants grow.
+- **Mathematics**: Measuring plant height.
+- **Language**: Writing about plants.
+This can make learning more meaningful and engaging, helping students stay interested in school.
+
+> **Integrated curriculum = connecting subjects to make learning meaningful.**
+
+Which example best represents an integrated curriculum?
+- [ ] A. Teaching science without relating it to any other subject
+- [x] B. Teaching mathematics, science, and language through a shared project about plants
+- [ ] C. Increasing the number of textbooks
+- [ ] D. Teaching every subject only through memorization
+
+Correct! Option B - Teaching mathematics, science, and language through a shared project about plants.
+
+This is an example of an integrated curriculum because it connects different subjects around one common topic.
+
+---
+
+units from a population to estimate characteristics of the
+population is called
+- [ ] A. analyzing
+- [ ] B. inference
+- [ ] C. research
+- [x] D. sampling
+
+Correct D. Sampling. ✅
+
+**Sampling** is the process of selecting a subset of units from a population to study and estimate the characteristics of the entire population.
+
+Example: A school has 1,000 students. Instead of asking every student about their favourite subject, a researcher selects 100 students and uses their responses to estimate the preferences of all 1,000 students.
+
+|               | Meaning                                                     |
+|---------------|-------------------------------------------------------------|
+| **Analyzing**	| Examining data to identify patterns or draw conclusions     |
+| **Inference**	| Drawing conclusions about a population based on sample data |
+| **Research**	| A systematic investigation to answer questions              |
+| **Sampling**	| Selecting units from a population for study                 |
+
+> Sampling = selecting a subset. <br/>
+> Inference = drawing conclusions about the population from the sample.
+
+A researcher selects 50 households from a town of 2,000 households to study their electricity usage. What are the 50 selected households called?
+- [ ] A. Population
+- [x] B. Sample
+- [ ] C. Inference
+- [ ] D. Census
+
+Correct! Option B. Sample.
+
+The 50 selected households are the **sample**, while all 2,000 households form the **population**.
+
+The difference:
+- **Population**: The entire group being studied.
+- **Sample**: A subset selected from that group.
+- **Sampling**: The process of selecting that subset.
+- **Inference**: Drawing conclusions about the population using sample data.
+
+Exam tip: If a question mentions selecting units from a population, think sampling. If it mentions drawing conclusions about the population, think inference.
+
+**Question - Research Methodology** <br/>
+Which of the following refers to drawing conclusions about a population based on information collected from a sample?
+- [ ] A. Analyzing
+- [x] B. Inference
+- [ ] C. Research
+- [ ] D. Sampling
+
+Correct! Option B. Inference.
+
+**Inference** means drawing conclusions about an entire population using information collected from a sample.
+
+Example <br/>
+A town has 2,000 households. A researcher surveys 50 households to estimate the town's average electricity usage.
+- **Population**: All 2,000 households.
+- **Sample**: The 50 selected households.
+- **Sampling**: Selecting those 50 households.
+- **Inference**: Using their data to estimate electricity usage across all 2,000 households.
+
+A researcher surveys 100 students and concludes that most students in the entire school prefer online learning. What is the researcher doing?
+- [ ] A. Sampling
+- [x] B. Inference
+- [ ] C. Data collection only
+- [ ] D. Census
+
+Correct! Option B. Inference.
+
+The researcher uses information from 100 students to draw a conclusion about the entire school. That is statistical inference.
+
+Remember:
+- **Sampling**: Select a group.
+- **Data collection**: Gather information.
+- **Inference**: Draw conclusions about the population.
+- **Census**: Collect data from every member of the population.
+
+---
+
+Q.103 The importance of curriculum in the system of education is just like a:
+- [ ] A. Preparation of students for service
+- [ ] B. Constitution in a country
+- [x] C. Provision of latest knowledge
+- [ ] D. None of these
+
+Correct! B. Constitution in a country
+
+A **curriculum** is like the **Constitution of a country** because both provide a framework that guides how a system operates.
+- **Curriculum**: Guides educational objectives, content, teaching methods, and learning experiences.
+- **Constitution**: Establishes the fundamental principles and rules governing a country.
+
+Which of the following best describes the main role of a curriculum?
+- [ ] A. To provide only textbooks to students
+- [x] B. To guide teaching and learning toward educational objectives
+- [ ] C. To conduct examinations only
+- [ ] D. To increase the number of subjects
+
+Correct! B. To guide teaching and learning toward educational objectives
+
+A curriculum provides a structured framework for what students should learn and how teaching and learning should be organized.
+
+> **Curriculum** guides the overall teaching-learning process and helps achieve educational objectives.
+
+---
+
+Q.104 Which of the following statements about progressive education explains "Education is life itself"?
+- [ ] A. School education should continue as long as possible.
+- [ ] B. Schools are not required; children can learn from their life experiences.
+- [ ] C. Education in schools should reflect the social and natural world.
+- [x] D. Life is the true educator.
+
+Correct! D. Life is the true educator.
+
+The statement "Education is life itself" is associated with John Dewey, an influential educational philosopher.
+
+Dewey believed that education is not merely preparation for future life; it is part of life itself. Children learn through real-life experiences, activities, and interactions with others.
+- C relates to connecting school education with society and the natural world.
+- D best matches the idea that life itself provides educational experiences.
+
+According to John Dewey, learning takes place most effectively through:
+- [ ] A. Memorizing textbooks only
+- [ ] B. Listening to lectures only
+- [x] C. Learning by doing and experiencing
+- [ ] D. Repeating examinations
+
+Correct! C. Learning by doing and experiencing
+
+John Dewey emphasized learning by doing. Students understand concepts better when they actively participate in activities, solve problems, experiment, and learn from real-life experiences.
+
+Exam tip:
+- John Dewey -> Learning by doing; education is life itself.
+- Education is not merely preparation for life -> It is part of life itself.
+
+---
+
+Q.105 Which of the following is a major characteristic of progressive education?
+- [ ] A. Emphasis on rote memorization
+- [ ] B. Strict reliance on textbooks
+- [x] C. Learning through experience and active participation
+- [ ] D. Teacher-centred instruction only
+
+Correct! C. Learning through experience and active participation
+
+Progressive education emphasizes learning by doing, problem-solving, collaboration, and real-life experiences rather than simply memorizing facts.
+
+Key points:
+- John Dewey -> Learning by doing.
+- Learner-centred education -> Students actively participate in learning.
+- Experiential learning -> Learning through experience and reflection.
+- Traditional approach -> Often emphasizes memorization and teacher-directed instruction.
+
+Which philosopher is most closely associated with the idea of "learning by doing"?
+- [x] A. John Dewey
+- [ ] B. Plato
+- [ ] C. Aristotle
+- [ ] D. Socrates
+
+Correct! A. John Dewey
+
+John Dewey is closely associated with "learning by doing" and progressive education. He believed students learn effectively through practical activities, experience, and problem-solving.
+
+> Remember: **John Dewey -> Progressive education -> Learning by doing**.
+
+Q.106 Effective teaching includes - 
+- [ ] A. Teacher is active, but students may or may not be active.
+- [ ] B. Teacher may be active or inactive, but students are active.
+- [x] C. Teacher is active and students are active.
+- [ ] D. All the above
+
+Correct! C. Teacher is active and students are active.
+
+**Effective teaching** involves active participation from both the teacher and the students.
+- **Teacher**: Explains concepts, guides learning, asks questions, and provides feedback.
+- **Students**: Listen, ask questions, participate in activities, solve problems, and apply what they learn.
+
+> **Effective teaching is not just about delivering information**; it also involves engaging students in the learning process.
+
+Which teaching method generally encourages students to participate actively in learning?
+- [ ] A. Rote memorization only
+- [ ] B. Dictation throughout the class
+- [x] C. Activity-based learning
+- [ ] D. One-way lecturing without interaction
+
+Correct! C. Activity-based learning
+
+Activity-based learning encourages students to learn by doing, exploring, discussing, and solving problems.
+
+> **Effective teaching promotes active participation, interaction, and meaningful learning**.
+
+---
+
+Q.107 The method for the acquisition of teaching skill is:
+- [ ] A. Inquiry learning
+- [ ] B. Team teaching
+- [ ] C. Discovery learning
+- [x] D. Micro teaching
+
+Correct D. Micro teaching
+
+**Micro Teaching** <br/>
+**Micro Teaching** is a teacher-training technique used to develop and improve specific teaching skills in a controlled setting.
+
+It typically involves:
+- Teaching a short lesson to a small group of students.
+- Practising one specific skill, such as questioning or explaining.
+- Receiving feedback from observers.
+- Re-teaching the lesson to improve performance.
+
+**Inquiry learning** <br/>
+**Inquiry learning** is a teaching approach in which students investigate questions and discover information. <br/>
+It is not primarily a method for acquiring teaching skills.
+
+Which sequence best describes the microteaching cycle?
+- [ ] A. Lecture -> Examination -> Result
+- [x] B. Plan -> Teach -> Feedback -> Re-plan -> Re-teach
+- [ ] C. Read -> Memorize -> Write
+- [ ] D. Explain -> Assign homework -> Finish
+
+Correct! B. Plan -> Teach -> Feedback -> Re-plan -> Re-teach
+
+This is the typical microteaching cycle:
+1. **Plan** - Prepare a short lesson.
+2. **Teach** - Teach the lesson to a small group.
+3. **Feedback** - Receive suggestions about your teaching.
+4. **Re-plan** - Improve the lesson.
+5. **Re-teach** - Teach it again using the improvements.
+
+> Microteaching helps teachers practise and improve specific teaching skills.
+
+---
+
+Q.108 Which of the following is the correct sequence of steps in an effective lesson plan?
+- [ ] A. Essential questions, activity, prior knowledge, teaching, summarizing and assessment
+- [ ] B. Elements questions, activity, prior knowledge, teaching and summarizing
+- [x] C. Experiential questions, activity, prior knowledge, teaching, summarizing and assessment
+- [ ] D. Essential questions, activity, prior knowledge, teaching and summarizing
+
+Correct! C. Experiential questions, activity, prior knowledge, teaching, summarizing and assessment
+
+A well-structured lesson plan generally includes:
+1. **Introduction/essential questions** - Introduce the topic and engage students.
+2. **Prior knowledge** - Connect the topic to what students already know.
+3. **Learning activities and teaching** - Explain concepts and involve students.
+4. **Summarizing** - Review the key points.
+5. **Assessment** - Check whether students achieved the learning objectives.
+
+What is the main purpose of assessment at the end of a lesson?
+- [ ] A. To keep students busy
+- [x] B. To check students' understanding and learning outcomes
+- [ ] C. To replace the lesson objectives
+- [ ] D. To increase the length of the lesson
+
+Correct! B. To check students' understanding and learning outcomes.
+
+Assessment helps a teacher determine whether students have understood the lesson objectives and achieved the expected learning outcomes. It also helps identify areas where students need more support.
+
+> **Assessment checks learning; it doesn't replace teaching or lesson objectives**.
+
+---
+
+Q.104 Project-based activities is an example of:
+- [ ] A. Explore
+- [ ] B. Engage
+- [ ] C. Explain
+- [x] D. Elaborate
+
+Correct answer: D. Elaborate
+
+The **5E instructional model** has five phases:
+| Phase	        | Purpose                                                          |
+|---------------|------------------------------------------------------------------|
+| **Engage**	  | Capture students' interest and activate prior knowledge.         |
+| **Explore**	  | Let students investigate and discover ideas.                     |
+| **Explain**	  | Help students explain concepts and clarify misunderstandings.    |
+| **Elaborate**	| Apply knowledge through new situations, projects, and activities.|
+| **Evaluate**	| Assess students' understanding and learning.                     |
+
+> Project-based activities generally fit Elaborate because students apply what they have learned to complete a project.
+
+In the 5E model, students perform an experiment to investigate a scientific concept before the teacher formally explains it. Which phase is this?
+- [ ] A. Engage
+- [x] B. Explore
+- [ ] C. Explain
+- [ ] D. Evaluate
+
+Correct! B. Explore
+
+In the **Explore phase**, students investigate a concept through experiments, observations, and hands-on activities before the teacher formally explains it.
+- **Engage**: Arouse curiosity and connect with prior knowledge.
+- **Explore**: Investigate through experiments and activities.
+- **Explain**: Describe and clarify the concept.
+- **Evaluate**: Assess understanding.
+
+> **Explore = Experiment and investigate**.
+
+---
+
+Question - Q.105 Creativity is thought to be related to the concept of:
+- [ ] A. Fluid intelligence
+- [ ] B. Crystallized intelligence
+- [ ] C. Convergent thinking
+- [x] D. Divergent thinking
+
+Correct D. Divergent thinking
+
+**Divergent thinking** means generating multiple possible ideas or solutions to a problem. <br/>
+It is strongly associated with creativity.
+
+For example, if a teacher asks students to think of as many uses as possible for a cardboard box, students are using divergent thinking.
+
+Remember the difference:
+- **Fluid intelligence**: Solving new problems using reasoning.
+- **Crystallized intelligence**: Using knowledge and skills gained through experience.
+- **Convergent thinking**: Finding one best or correct answer.
+- **Divergent thinking**: Generating many possible ideas.
+
+A student finds several different ways to solve the same problem. Which type of thinking is being demonstrated?
+- [ ] A. Convergent thinking
+- [x] B. Divergent thinking
+- [ ] C. Rote learning
+- [ ] D. Crystallized intelligence
+
+Correct! B. Divergent thinking
+
+Why? <br/>
+**Divergent thinking** involves generating multiple ideas or solutions to a problem. <br/>
+It is closely associated with creativity.
+
+Exam tip:
+> - **Divergent** = Many possible answers
+> - **Convergent** = One best answer
+
+---
+
+Q.106 A child performing well in the class must be:
+- [ ] A. Praised
+- [ ] B. Given a reward
+- [ ] C. Recognised
+- [x] D. All of these
+
+Correct! D. All of these
+
+When a child performs well in class, the teacher should provide positive reinforcement.
+- **Praise**: Encourages the child to continue doing well.
+- **Reward**: Can motivate the child when used appropriately.
+- **Recognition**: Helps the child feel that their effort and achievement are valued.
+
+> **Positive reinforcement** encourages desirable behaviour and motivates students to learn.
+
+Which of the following is an example of positive reinforcement in the classroom?
+- [ ] A. Ignoring a student's improvement
+- [x] B. Praising a student for completing work on time
+- [ ] C. Punishing a student for asking questions
+- [ ] D. Giving the same criticism to every student
+
+---
+
+Q.107. Which of the following is an example of effective teaching?
+- [ ] A. The teacher speaks throughout the lesson.
+- [ ] B. Students passively listen without participating.
+- [x] C. The teacher and students actively participate in learning.
+- [ ] D. Students memorize everything without understanding.
+
+Correct! C. The teacher and students actively participate in learning.
+
+**Effective teaching** involves active participation from both the teacher and students. Students learn better when they ask questions, discuss ideas, solve problems, and engage in activities.
+
+A teacher asks students to discuss a problem in groups and share their solutions. Which teaching approach does this demonstrate?
+- [ ] A. Passive learning
+- [x] B. Active learning
+- [ ] C. Rote memorization
+- [ ] D. Teacher-centred learning
+
+Correct! B. Active learning
+
+In **active learning**, students participate directly through discussions, problem-solving, group activities, and sharing ideas rather than simply listening.
+
+**Question 108: Teaching Skills**
+
+The method for the acquisition of teaching skills is:
+- [ ] A. Inquiry learning
+- [ ] B. Team teaching
+- [ ] C. Discovery learning
+- [x] D. Microteaching
+
+Correct! D. Microteaching
+
+**Microteaching** is a teacher-training technique in which a teacher practises a specific teaching skill in a short lesson, often with a small group of learners, and receives feedback to improve.
+
+> **Microteaching = Practise -> Feedback -> Improve**.
+
+A trainee teacher gives a 5-minute lesson to a small group and receives feedback on their questioning skills. This is an example of:
+- [ ] A. Team teaching
+- [x] B. Microteaching
+- [ ] C. Discovery learning
+- [ ] D. Lecture method
+
+Correct! B. Microteaching.
+
+Why? <br/>
+The teacher practises a short lesson, focuses on a specific skill (questioning), and receives feedback. These are the key features of microteaching.
+
+- **Team teaching**: Two or more teachers collaborate to teach.
+- **Microteaching**: A teacher practises a specific skill in a short lesson.
+- **Discovery learning**: Students discover concepts through exploration.
+- **Lecture method**: The teacher primarily explains information to students.
+
+---
+
+Question 109: Microteaching
+
+Is microteaching real teaching?
+- [x] A. Yes
+- [ ] B. No
+- [ ] C. Both yes and no, from different perspectives
+- [ ] D. Cannot say anything
+
+Correct! A. Yes.
+
+**Microteaching** is considered real teaching because the teacher teaches actual learners and practises teaching skills. However, it takes place in a simplified setting with a short lesson, a small group, and a limited teaching objective.
+
+> Remember: **Microteaching is real teaching on a smaller scale**.
+
+Which is a key feature of microteaching?
+- [ ] A. Teaching a large class for several hours
+- [x] B. Practising one teaching skill in a short lesson
+- [ ] C. Teaching without receiving feedback
+- [ ] D. Covering the entire syllabus in one session
+
+Correct! B. Practising one teaching skill in a short lesson.
+
+**Microteaching** focuses on practising a specific teaching skill, such as questioning, explaining, or using reinforcement. Feedback helps the teacher improve that skill.
+
+---
+
+Question 110: Teaching Methods
+
+Storytelling enables the teacher to make lessons:
+- [ ] A. Boring
+- [ ] B. Complicated
+- [ ] C. A burden for students
+- [x] D. Lively and interesting to the pupils
+
+Correct! D. Lively and interesting to the pupils.
+
+**Storytelling** makes lessons more engaging by connecting ideas with characters, events, and emotions. It can help students understand concepts, remember information, and develop imagination.
+
+Which teaching method is especially useful for developing students’ imagination and listening skills?
+- [ ] A. Dictation only
+- [x] B. Storytelling
+- [ ] C. Repeated copying
+- [ ] D. Silent reading only
+
+Correct! B. Storytelling.
+
+**Storytelling** helps students develop their imagination, listening skills, vocabulary, and understanding. It also makes lessons more lively and interesting.
+
+---
+
+Question 111 - Teaching Methods
+
+Who said, "The assignment method is an important step in the teaching and learning process"?
+- [ ] A. Douglas
+- [x] B. Dewey
+- [ ] C. Piaget
+- [ ] D. S. Morris
+
+Correct B. Dewey.
+
+John Dewey emphasized learning through experience and active participation. The assignment method helps students learn by working on tasks independently and applying their knowledge.
+
+Which educational approach is most closely associated with John Dewey?
+- [x] A. Learning through experience
+- [ ] B. Learning only through memorization
+- [ ] C. Learning through strict punishment
+- [ ] D. Learning only through lectures
+
+Correct! A. Learning through experience.
+
+John Dewey emphasized learning by doing-students learn by participating in activities, solving problems, and reflecting on their experiences.
+
+---
+
+
+---
 
 
 
