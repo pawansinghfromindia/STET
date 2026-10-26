@@ -7,7 +7,7 @@
 
 Q.1 If a robot is able to change its own trajectory as per the external conditions, then the
 robot is considered as the_
-- [ ] A. Intelligent
+- [x] A. Intelligent
 - [ ] B.Open loop
 - [ ] C.Mobile
 - [ ] D.Non-servo
@@ -15,23 +15,88 @@ robot is considered as the_
 <details>
   <summary> Solution </summary>
 
+Correct!  A. Intelligent
+
+An intelligent robot can sense external conditions, process information, and adjust its trajectory or actions according to changes in its environment.
+
+An intelligent robot can sense changes in its environment and adjust its actions accordingly.
+
+For example, if a robot detects an obstacle in its path, it can change its trajectory to avoid the obstacle.
+
+Quick revision:
+- **Intelligent robot**: Adapts its actions to changing conditions.
+- **Open-loop robot**: Operates without feedback to correct its actions.
+- **Mobile robot**: Can move from one place to another.
+- **Non-servo robot**: Typically operates without servo-based feedback control.
+
+Which type of control system uses feedback to adjust its output?
+- [ ] A. Open-loop system
+- [x] B. Closed-loop system
+- [ ] C. Manual system
+- [ ] D. Non-servo system
+    
+- **Open-loop system**: Does not use feedback to adjust its output.
+- **Closed-loop system**: Uses feedback to compare the actual output with the desired output and make corrections.
+- **Manual system**: Depends on human operation; this does not specifically mean feedback-based automatic control.
+- **Non-servo system**: Does not specifically identify a feedback-based control system.
 
 </details>
+
+---
 
 Q.2 Convert the Boolean function `F(A, B, C) = Π(0, 2, 4, 5, 7)` to its simplified POS form
 - [ ] A. `A + B + C`
 - [ ] B. `A + B' + C`
 - [ ] C. `A'B'C'`
-- [ ] D. `(A + B)(A + C')(B + C`
+- [ ] D. `(A + B)(A + C')(B + C)`
+- [x] E. `(A+B+C)(A+B'+C)(A'+B+C)(A'+B+C')(A'+B'+C')`
 
 <details>
   <summary> Solution </summary>
 
+**Step 1: Understand the notation: `F(A,B,C) = Π(0,2,4,5,7)`**
+
+The symbol `Π` represents the product of maxterms. <br/>
+These indices are the input combinations for which `F=0`.
+
+| Index	| A	| B	| C |
+|-------|---|---|---|
+| 0	    | 0	| 0	| 0 |
+| 2	    | 0	| 1	| 0 |
+| 4	    | 1	| 0	| 0 |
+| 5	    | 1	| 0	| 1 |
+| 7	    | 1	| 1	| 1 |
+
+**Step 2: Form the maxterms**
+
+For a maxterm, use:
+- Variable value 0 -> normal variable, e.g. `A`
+- Variable value 1 -> complemented variable, e.g. `A'`
+
+Therefore, **`F = (A+B+C)(A+B'+C)(A'+B+C)(A'+B+C')(A'+B'+C')`**
+
+For a Boolean function `F(A,B,C) = Π(1,3)`, what does the notation tell us?
+- [ ] A. `F=1` at indices 1 and 3
+- [x] B. `F=0` at indices 1 and 3
+- [ ] C. `F=0` at every index
+- [ ] D. `F=1` at every index except 1 and 3
+
+
+Remember:
+-  (sum of minterms) lists the indices where `F=1`.
+-  (product of maxterms) lists the indices where `F=0`.
+For `F(A,B,C) = Π(1,3)`, the output is zero at indices 1 and 3.
+
+Quick revision
+- `Σ` -> output 1
+- `Π` -> output 0
 
 </details>
 
+---
+
 Q.3 Which keyword is used to define an abstract method within an abstract class?
-- [ ] A. abstract
+- [x] A. abstract
 - [ ] B. virtual
 - [ ] C. override
 - [ ] D. implement
@@ -39,8 +104,55 @@ Q.3 Which keyword is used to define an abstract method within an abstract class?
 <details>
   <summary> Solution </summary>
 
+The `abstract` keyword is used in languages such as Java and C# to declare an abstract method within an abstract class.
+
+An abstract method is declared without a method body and is intended to be implemented by a concrete subclass.
+
+Example in Java:
+```java
+abstract class Animal {
+    abstract void sound();
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+Here:
+- `abstract` declares the method without a body.
+- `@Override` indicates that the subclass method overrides or implements an inherited method.
+- `virtual` allows overriding in languages such as C#; it does not itself declare an abstract method.
+- `implement` is not a Java or C# keyword for declaring an abstract method.
+
+In Java, which keyword is used when a subclass provides an implementation of an inherited abstract method?
+- [ ] A. `abstract`
+- [ ] B. `extends`
+- [ ] C. `implements`
+- [x] D. `override`
+
+Correct D. `override`
+
+In Java, a subclass provides the implementation of an inherited abstract method by defining a method with the same signature. <br/>
+The `@Override` annotation indicates that the method overrides an inherited method.
+
+- `abstract` - declares a method without an implementation.
+- `extends` - establishes class inheritance.
+- `implements` - is used when a class implements an interface, not when overriding an abstract class's method.
+- `override` - the intended option, but note that Java uses the `@Override` annotation, not an `override` keyword. C# does use override as a keyword.
+
+| Concept	                    | Java         |
+|-----------------------------|--------------|
+| Declare an abstract method	| `abstract`   |
+| Inherit a class	            | `extends`    |
+| Implement an interface	    | `implements` |
+| Mark a method as overriding	| `@Override`  |
 
 </details>
+
+---
 
 Q.4 The Floyd-Warshall algorithm is a popular method for solving the All-Pair Shortest
 Paths problem. What is the time complexity of the Floyd-Warshall algorithm for a graph
@@ -48,84 +160,245 @@ with "n" vertices?
 - [ ] A. `O(n)`
 - [ ] B. `O(n log n)`
 - [ ] C. `O(n^2)`
-- [ ] D. `O(n^3)`
+- [x] D. `O(n^3)`
 
 <details>
   <summary> Solution </summary>
 
+Correct! D. `O(n^3)`
+
+The Floyd–Warshall algorithm uses three nested loops to examine all possible intermediate vertices for every pair of vertices.
+
+<img width="617" height="392" alt="image" src="https://github.com/user-attachments/assets/18928205-903f-4734-b238-091763938b90" />
+
+- First loop: selects the intermediate vertex `k`.
+- Second loop: selects the source vertex `i`.
+- Third loop: selects the destination vertex `j`.
+Each loop runs up to `n` times, so the total time complexity is `n x n x n` = `O(n^3)`.
+
+> **Floyd–Warshall -> three nested loops -> `O(n^3)`.**
+
+Remember:
+- **Binary Search** -> `O(\log n)`
+- **Linear Search** -> `O(n)`
+- **Bubble Sort** (average/worst case) -> `O(n^2)`
+- **Floyd-Warshall** -> `O(n^3)`
 
 </details>
+
+---
 
 Q.5 Which of the following applications include in the Strategic Computing Program?
 - [ ] A. Battle Management
 - [ ] B. Autonomous systems
 - [ ] C. Pilot’s associate
-- [ ] D. All of the above
+- [x] D. All of the above
 
 <details>
   <summary> Solution </summary>
 
+Correct! D. All of the above.
+
+The **Strategic Computing Program** was a **US Defense Advanced Research Projects Agency (DARPA)** initiative launched in the 1980s to advance artificial intelligence for military applications.
+
+Its major application areas included:
+- **Battle Management**: Using AI to support military planning and decision-making.
+- **Autonomous systems**: Developing systems capable of operating with reduced human intervention.
+- **Pilot’s Associate**: An AI-based assistant intended to help military pilots manage information and cockpit tasks.
+
+> Remember these three applications together: Battle Management + Autonomous Systems + Pilot's Associate 
+
+Which organization launched the Strategic Computing Program?
+- [ ] A. NASA
+- [x] B. DARPA
+- [ ] C. UNESCO
+- [ ] D. WHO
+
+Correct! B. DARPA (Defense Advanced Research Projects Agency).
+
+DARPA launched the Strategic Computing Program in the 1980s to advance artificial intelligence and computing technologies for defense applications.
+
+> **DARPA -> Strategic Computing Program**.
 
 </details>
+
+---
 
 Q.6 Turing machine can be represented using:
 - [ ] A. Transition table
 - [ ] B. Transition diagram
 - [ ] C. Instantaneous description
-- [ ] D. All of these
+- [x] D. All of these
 
 <details>
   <summary> Solution </summary>
 
+Correct! D. All of these.
+
+A **Turing machine** can be represented in several ways:
+- A. **Transition table**: Shows the transitions in tabular form.
+- B. **Transition diagram**: Represents states and transitions graphically.
+- C. **Instantaneous description (ID)**: Represents the machine’s current configuration, including its state, tape contents, and head position.
+
+Which component of a Turing machine stores the input and symbols being processed?
+- [ ] A. Finite control
+- [x] B. Tape
+- [ ] C. Transition function
+- [ ] D. State diagram
+
+Correct! B. Tape.
+
+- **Tape**: Stores the input and the symbols being processed by the Turing machine.
+- **Finite control**: Keeps track of the machine's current state.
+- **Transition function**: Determines the next state, the symbol to write, and the direction to move.
+- **State diagram**: Visually represents the machine's transitions.
+
+> Remember: **Tape = stores data; finite control = tracks state**.
 
 </details>
 
+---
 
 Q.7 All of the following are considered biometrics, except:
 - [ ] A. Fingerprint
-- [ ] B. Password
+- [x] B. Password
 - [ ] C. Voice
 - [ ] D. Retina
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Password.
+
+- **Fingerprint**: A physical biometric characteristic.
+- **Voice**: A behavioral/physical characteristic used for biometric recognition.
+- **Retina**: A physical biometric characteristic based on the eye.
+- **Password**: Something you know, not a biometric characteristic.
+
+Which of the following is an example of behavioral biometrics?
+- [ ] A. Fingerprint
+- [ ] B. Retina scan
+- [x] C. Typing rhythm
+- [ ] D. Iris pattern
+
+Correct! C. Typing rhythm.
+
+**Behavioral biometrics** identify people through patterns in their actions or behavior.
+- **Typing rhythm**: Behavioral biometric — analyzes typing speed and keystroke patterns.
+- **Fingerprint**: Physiological biometric.
+- **Retina scan**: Physiological biometric.
+- **Iris pattern**: Physiological biometric.
+
+Quick recap
+> Physiological = body characteristics; <br/>
+> Behavioral = patterns in how you act.
 
 </details>
 
+---
+
 Q.8 To which of the following the term "DBA" referred?
 - [ ] A. Data Bank Administrator
-- [ ] B. Database Administrator
+- [x] B. Database Administrator
 - [ ] C. Data Administrator
 - [ ] D. None of the above
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Database Administrator.
+
+A **Database Administrator (DBA)** manages and maintains databases. <br/>
+Typical responsibilities include:
+- Managing database access and user permissions.
+- Maintaining data security and backups.
+- Monitoring database performance.
+- Recovering data when failures occur.
+
+Which SQL command is commonly used to grant privileges to a database user?
+- [x] A. `GRANT`
+- [ ] B. `UPDATE`
+- [ ] C. `SELECT`
+- [ ] D. `INSERT`
+
+The SQL `GRANT` command gives database users specific privileges, such as permission to read or modify data.
+- `GRANT` - gives privileges.
+- `UPDATE` - modifies existing records.
+- `SELECT` - retrieves data.
+- `INSERT` - adds new records.
 
 </details>
 
+---
+
 Q.9 The default baud rate of Modbus RTU is?
 - [ ] A. 19600
-- [ ] B. 19200
+- [x] B. 19200
 - [ ] C. 38400
 - [ ] D. 57600
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. 19200 baud.
+
+**Baud rate** refers to the signaling rate used for serial communication. <br/>
+Modbus RTU commonly uses baud rates such as 9600 and 19200, depending on the configuration.
+
+For this MCQ, remember 19200 as the expected answer.
+
+What does baud rate measure in serial communication?
+- [ ] A. Number of data packets per second
+- [x] B. Number of signal symbols per second
+- [ ] C. Number of bytes stored in memory
+- [ ] D. Number of devices connected to a network
+
+Correct! B. Number of signal symbols per second.
+
+**Baud rate** measures the number of signal symbols transmitted per second in a communication channel. <br/>
+One symbol can represent one or more bits, so baud rate is not always the same as bits per second.
+
+Quick recap
+- **Baud rate = symbols per second**.
+- **Bit rate = bits per second**.
 
 </details>
+
+---
 
 Q. 10 The goal of synchronization mechanisms in parallel programming is to:
 - [ ] A. Speed up the execution of processes
 - [ ] B. Eliminate parallelism
-- [ ] C. Avoid deadlock situations
+- [x] C. Avoid deadlock situations
 - [ ] D. Increase the number of race conditions
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. Avoid deadlock situations.
+
+**Synchronization mechanisms** coordinate processes or threads that access shared resources. They help prevent race conditions and can help avoid deadlocks when designed carefully.
+
+- A. Speed up execution: Synchronization can add overhead rather than directly speed up execution.
+- B. Eliminate parallelism: Incorrect; parallel execution can continue.
+- C. Avoid deadlock situations: The closest option, though synchronization does not automatically prevent every deadlock.
+- D. Increase race conditions: Incorrect; synchronization helps prevent race conditions.
+
+What is a race condition?
+- [x] A. Two or more threads access shared data, and the result depends on execution order.
+- [ ] B. A program always executes threads in a fixed order.
+- [ ] C. A process finishes before it starts.
+- [ ] D. A thread permanently releases all resources.
+
+Correct! A.
+
+A **race condition** occurs when two or more threads access shared data and the final result depends on the order or timing of their execution.
+
+Example: Two threads try to increase the same counter simultaneously. Without proper synchronization, one update may be lost.
+
+Quick recap
+- **Race condition** -> result depends on execution timing.
+- **Synchronization** -> coordinates access to shared resources.
 
 </details>
 
@@ -138,11 +411,37 @@ Q.11 Which of the following IP addresses is valid
 <details>
   <summary> Solution </summary>
 
+Correct! A. `122.94.96.212`
+
+A valid **IPv4 address** has four numbers (octets) separated by dots. <br/> 
+Each octet must be between `0` and `255`. <br/>
+IPv4 address has four octets.
+
+- A. `122.94.96.212` - Valid; four octets, all within range.
+- B. `212.254.258.210` - Invalid; 258 exceeds 255.
+- C. `210.10.12.156.209` - Invalid; it has five octets instead of four.
+- D. `122.294.56.68` - Invalid; 294 exceeds 255.
+
+Which of these is a valid IPv4 address?
+- [ ] A. 192.168.1.256
+- [x] B. 10.0.0.25
+- [ ] C. 172.16.300.1
+- [ ] D. 192.168.1
+
+Correct! B. `10.0.0.25`
+
+All four octets are within the valid range of 0–255, and the address contains exactly four octets.
+
+Quick recap
+- IPv4 = 4 octets
+- Each octet = 0–255
 
 </details>
 
+---
+
 Q.12 ___________ plot is used to show the spread and centers of a dataset.
-- [ ] A. box
+- [x] A. box
 - [ ] B. line
 - [ ] C. bar
 - [ ] D. histogram
@@ -150,23 +449,87 @@ Q.12 ___________ plot is used to show the spread and centers of a dataset.
 <details>
   <summary> Solution </summary>
 
+Correct! A. Box plot.
+
+A **box plot** shows the center and spread of a dataset using the five-number summary:
+- Minimum
+- First quartile (Q1)
+- Median (Q2)
+- Third quartile (Q3)
+- Maximum
+
+**Histogram** <br/>
+A histogram shows the frequency distribution of data using bars, but a box plot is specifically used to summarize the center and spread.
+
+Which value represents the middle of a dataset in a box plot?
+- [ ] A. Mean
+- [x] B. Median
+- [ ] C. Range
+- [ ] D. Mode
+
+Correct! B. Median.
+
+The median is the middle value of an ordered dataset. <br/>
+In a box plot, it is represented by the line inside the box.
+
+Quick recap
+- **Median**: Middle value.
+- **Range**: Maximum - minimum.
+- **Mean**: Average of all values.
+- **Mode**: Most frequently occurring value.
 
 </details>
 
+---
+
 Q.13 How can you establish a connection between PHP and MySQL?
-- [ ] A. Using the "connect()" function in PHP
+- [x] A. Using the "`connect()`" function in PHP
 - [ ] B. By including a PHP library
 - [ ] C. By embedding MySQL queries directly in PHP code
-- [ ] D. By using the "mysqli_connect()" function in PHP
+- [ ] D. By using the "`mysqli_connect()`" function in PHP
 
 <details>
   <summary> Solution </summary>
 
+Correct D. By using the `mysqli_connect()` function in PHP.
+
+The `mysqli_connect()` function establishes a connection between PHP and a MySQL database.
+
+```php
+$conn = mysqli_connect("localhost", "username", "password", "database");
+```
+- `localhost` - MySQL server address.
+- `username` - Database username.
+- `password` - Database password.
+- `database` - Name of the database to connect to.
+
+`connect()` by itself is not the standard procedural function used to establish a MySQL connection in PHP. <br/.
+MySQLi also supports the object-oriented approach using new `mysqli(...)`.
+
+Which PHP function is used to execute an SQL query using the procedural MySQLi approach?
+- [x] A. `mysqli_query()`
+- [ ] B. `mysqli_connect()`
+- [ ] C. `mysqli_fetch_assoc()`
+- [ ] D. `mysqli_close()`
+
+Correct! A. `mysqli_query()`
+
+The `mysqli_query()` function executes an SQL query using the procedural MySQLi approach.
+
+Quick comparison:
+- `mysqli_query()` - Executes an SQL query.
+- `mysqli_connect()` - Establishes a database connection.
+- `mysqli_fetch_assoc()` -  Fetches a row as an associative array.
+- `mysqli_close()` - Closes the database connection.
+
+> **Connect -> Query -> Fetch results -> Close connection**
 
 </details>
 
+---
+
 Q.14 Which one is not a physical threat
-- [ ] A. Hacking
+- [x] A. Hacking
 - [ ] B. Storm
 - [ ] C. Fire
 - [ ] D. Flood
@@ -174,11 +537,34 @@ Q.14 Which one is not a physical threat
 <details>
   <summary> Solution </summary>
 
+Correct! A. Hacking.
+
+- **Hacking**: A cybersecurity threat involving unauthorized access to computer systems; it is not a physical threat.
+- **Storm**: Can physically damage equipment and buildings.
+- **Fire**: Can destroy hardware and facilities.
+- **Flood**: Can damage computers, servers, and infrastructure.
+
+Which of the following is an example of a physical security measure?
+- [ ] A. Antivirus software
+- [ ] B. Firewall
+- [x] C. Biometric door access
+- [ ] D. Data encryption
+
+Correct! C. Biometric door access.
+
+Biometric door access is a physical security measure because it controls who can enter a building or restricted area using fingerprints, facial recognition, or other biometric features.
+
+Quick recap
+- **Physical security**: Protects buildings, equipment, and facilities.
+- **Cybersecurity**: Protects computer systems, networks, and data.
+
 
 </details>
 
+---
+
 Q.15 The SQL keyword……………….is used with wildcards.
-- [ ] A. `LIKE`
+- [x] A. `LIKE`
 - [ ] B. `IN`
 - [ ] C. `NOT IN`
 - [ ] D. `DISTINCT`
@@ -186,24 +572,89 @@ Q.15 The SQL keyword……………….is used with wildcards.
 <details>
   <summary> Solution </summary>
 
+Correct! The answer is A. LIKE.
+
+In SQL, `LIKE` is used with wildcards to match patterns in text.
+- `%` - Matches zero or more characters.
+- `_` - Matches exactly one character.
+
+Example:
+```sql
+SELECT * FROM Students WHERE name LIKE 'A%';
+
+-- This query finds students whose names start with A.
+```
+
+Which wildcard matches exactly one character in a SQL `LIKE` pattern?
+- [ ] A. `%`
+- [x] B. `_`
+- [ ] C. `*`
+- [ ] D. `#`
+
+Correct! B. `_` (underscore).
+
+Explanation: In SQL `LIKE` patterns:
+- `%` matches zero or more characters.
+- `_` matches exactly one character.
+
+```sql
+SELECT *
+FROM Students
+WHERE name LIKE 'A_';
+
+-- This matches two-character names starting with A, such as An or Al.
+```
+
+Quick recap
+> **`%` = any number of characters** <br/>
+> **`_` = exactly one character**
 
 </details>
+
+---
 
 Q.16 What is the key advantage of using a carry-lookahead adder instead of a ripple-carry
 adder?
 - [ ] A. Simplicity of design
-- [ ] B. Faster propagation delay
+- [x] B. Faster propagation delay
 - [ ] C. Lower power consumption
 - [ ] D. Reduced gate count
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Faster propagation delay.
+
+A carry-lookahead adder calculates carry signals in advance using generate and propagate logic. 
+
+This reduces the time needed to compute the final sum compared with a ripple-carry adder, where the carry moves through each stage sequentially.
+
+| Feature	          | Ripple-carry adder | Carry-lookahead adder       |
+|-------------------|--------------------|-----------------------------|
+| Carry calculation	| Sequential	       | Parallel-style calculation  | 
+| Propagation delay	| Higher	           | Lower                       |
+| Circuit design	  |Simpler	           | More complex                |
+
+In a ripple-carry adder, how does the carry signal move?
+- [ ] A. It is calculated for all bits simultaneously.
+- [x] B. It moves from one bit stage to the next.
+- [ ] C. It skips all intermediate stages.
+- [ ] D. It is generated only after the final sum.
+
+Correct! The answer is B. It moves from one bit stage to the next.
+
+In a ripple-carry adder, each bit stage passes its carry output to the next stage. The carry must propagate through the stages, which increases the total delay.
+
+Quick recap
+- **Ripple-carry adder**: Carry moves stage by stage.
+- **Carry-lookahead adder**: Calculates carries faster using generate and propagate logic.
 
 </details>
 
+---
+
 Q.17 What is the difference between a hard disk drive and a solid-state drive?
-- [ ] A. A hard disk drive uses spinning disks to store data, while a solid-state drive uses flash
+- [x] A. A hard disk drive uses spinning disks to store data, while a solid-state drive uses flash
 memory to store data.
 - [ ] B. A hard disk drive is slower than a solid-state drive.
 - [ ] C. A hard disk drive is more durable than a solid-state drive.
@@ -212,24 +663,65 @@ memory to store data.
 <details>
   <summary> Solution </summary>
 
+Correct! A. A hard disk drive uses spinning disks to store data, while a solid-state drive uses flash memory to store data.
+
+- HDDs use spinning magnetic disks; SSDs use flash memory and have no moving mechanical parts.
+- SSDs are usually faster than HDDs.
+- SSDs are generally more resistant to physical shocks because they have no moving parts.
+
+Which storage device has no moving mechanical parts?
+- [ ] A. HDD
+- [x] B. SSD
+- [ ] C. DVD drive
+- [ ] D. Magnetic tape drive
+
+Correct! B. SSD (Solid-State Drive)
+
+An SSD stores data using flash memory and has no moving mechanical parts. <br/>
+An HDD uses spinning magnetic disks and moving read/write components.
+
+Quick recap
+- **HDD**: Spinning disks, mechanical parts.
+- **SSD**: Flash memory, no moving parts.
 
 </details>
 
+---
+
 Q.18 In an operating system, a "buffer cache" is used to:
 - [ ] A. Store files in memory
-- [ ] B. Store copies of frequently used files in memory
+- [x] B. Store copies of frequently used files in memory
 - [ ] C. Store the operating system kernel
 - [ ] D. Store input/output devices
 
 <details>
   <summary> Solution </summary>
 
+Correct!  B. Store copies of frequently used files in memory.
+
+A **buffer cache** keeps copies of disk data blocks in memory so the operating system can reduce repeated disk access and improve performance.
+
+Strictly speaking, a buffer cache typically caches disk blocks, not necessarily entire files.
+
+What is the main benefit of using a buffer cache?
+- [ ] A. Increase disk access time
+- [x] B. Reduce repeated disk access
+- [ ] C. Increase file size
+- [ ] D. Replace the operating system kernel
+
+Correct! The answer is B. Reduce repeated disk access.
+
+The buffer cache stores disk data blocks in memory. When the same data is needed again, the operating system may retrieve it from memory instead of reading it from the disk, improving performance.
+
+Quick recap
+> **Buffer cache -> fewer disk accesses -> faster data retrieval**.
 
 </details>
 
-Q.19 _________ are the set of rules that governs how data can be transmitted
-over world wide web.
-- [ ] A. Hyper Text Transfer Protocol
+---
+
+Q.19 _________ are the set of rules that governs how data can be transmitted over world wide web.
+- [x] A. Hyper Text Transfer Protocol
 - [ ] B. Encryption Standards
 - [ ] C. Cyber forensic
 - [ ] D. Digital Certificates
@@ -237,12 +729,32 @@ over world wide web.
 <details>
   <summary> Solution </summary>
 
+Correct! The answer is A. Hyper Text Transfer Protocol (HTTP).
+
+**HTTP** is a protocol that defines rules for communication and data transfer between web clients (such as browsers) and web servers.
+
+- A. **HTTP**: Governs web communication.
+- B. **Encryption Standards**: Help protect data but are not the web's.
+- C. **Cyber forensic**: Concerns investigating digital evidence.
+- D. **Digital Certificates**: Help verify identities and support secure communication.
+
+
+Which secure version of HTTP is commonly used to protect data exchanged between a browser and a web server?
+- [ ] A. FTP
+- [ ] B. SMTP
+- [x] C. HTTPS
+- [ ] D. Telnet
+
+Correct! C. HTTPS
+
+HTTPS (Hypertext Transfer Protocol Secure) encrypts data exchanged between a browser and a web server, helping protect it from interception.
 
 </details>
 
+---
 
 Q.20 Multimedia system require hard real time scheduling ___________
-- [ ] A. to ensure critical tasks will be serviced within timing deadlines
+- [x] A. to ensure critical tasks will be serviced within timing deadlines
 - [ ] B. to deliver the media file to the client
 - [ ] C. to minimize the delay
 - [ ] D. for security
@@ -250,101 +762,290 @@ Q.20 Multimedia system require hard real time scheduling ___________
 <details>
   <summary> Solution </summary>
 
+Correct! A. To ensure critical tasks will be serviced within timing deadlines.
+
+Hard real-time scheduling ensures that critical tasks meet their specified deadlines. Missing a deadline can mean the system has failed to meet its requirements.
+
+Option B describes delivering media files, but it does not explain why hard real-time scheduling is needed.
+
+Which of the following is an example of a hard real-time system?
+- [ ] A. Online video streaming
+- [ ] B. Email delivery
+- [x] C. An aircraft flight-control system
+- [ ] D. Downloading a file
+
+Correct! C. An aircraft flight-control system.
+
+A hard real-time system must meet strict timing deadlines. Missing a deadline in an aircraft flight-control system could have serious safety consequences.
+
+Online video streaming (A) generally uses soft real-time requirements, where occasional delays may be tolerable.
 
 </details>
 
-Q.21 Which of the following applications is a typical use of microcontrollers in the field of
-home automation?
+---
+
+Q.21 Which of the following applications is a typical use of microcontrollers in the field of home automation?
 - [ ] A. Satellite communication
 - [ ] B. Air traffic control
-- [ ] C. Temperature and lighting control
+- [x] C. Temperature and lighting control
 - [ ] D. Space exploration
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. Temperature and lighting control.
+
+**Microcontrollers** are small, programmable computing units used to control devices. 
+
+In home automation, they can monitor temperature and control air conditioners, thermostats, lights, and other appliances.
+
+Which component is commonly used to detect room temperature in a home automation system?
+- [x] A. Temperature sensor
+- [ ] B. Loudspeaker
+- [ ] C. Printer
+- [ ] D. Keyboard
+
+Correct! The answer is A. Temperature sensor.
+
+A **temperature sensor** detects the room's temperature and sends readings to the microcontroller, which can then control heating or cooling devices.
 
 </details>
 
+---
+
 Q.22 What is the purpose of SQL injection attacks?
-- [ ] A.   To increase the performance of database queries
-- [ ] B. To bypass authentication systems
+- [ ] A. To increase the performance of database queries
+- [x] B. To bypass authentication systems
 - [ ] C. To improve database security
 - [ ] D. To enhance data encryption
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. To bypass authentication systems.
+
+**SQL injection** is an attack in which an attacker inserts malicious SQL code into an application's database queries. It can be used to bypass login checks, access unauthorized data, or modify database records.
+
+
+Which practice helps prevent SQL injection attacks?
+- [ ] A. Storing passwords in plain text
+- [x] B. Using prepared statements with parameterized queries
+- [ ] C. Giving every user administrator privileges
+- [ ] D. Disabling database backups
+
+Correct! B. Using prepared statements with parameterized queries.
+
+**Prepared statements** keep SQL commands separate from user-supplied input, helping prevent malicious input from changing the intended query.
+
+> **Prepared statements = protection against SQL injection**.
 
 </details>
 
+---
+
 Q.23 What is the primary purpose of data compression in data communication?
 - [ ] A. To increase latency
-- [ ] B. To reduce bandwidth usage
+- [x] B. To reduce bandwidth usage
 - [ ] C. To decrease error rates
 - [ ] D. To improve security
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. To reduce bandwidth usage.
+
+**Data compression** reduces the size of data before transmission. <br/>
+This helps use less network bandwidth and can reduce transmission time.
+
+> **Data compression -> smaller data size -> less bandwidth required.**
+
+Which type of compression allows the original data to be reconstructed exactly?
+- [ ] A. Lossy compression
+- [x] B. Lossless compression
+- [ ] C. Analog compression
+- [ ] D. Irreversible compression
+
+Correct! B. Lossless compression.
+
+E**Lossless compression** reduces the size of data without losing any information. The original data can be reconstructed exactly.
+
+Example: ZIP files and PNG images use lossless compression.
+
+Remember for the exam:
+- **Lossless**: Original data recovered exactly.
+- **Lossy**: Some information is permanently discarded.
+
+| Type	                       | Meaning                                               |
+|------------------------------|-------------------------------------------------------|
+| **Lossy compression**	       | Some information is permanently lost.                 |
+|	**Lossless compression**	   | Original data is reconstructed exactly.               |
+|	**Analog compression**	     | Not the standard answer for this digital-data question.|
+|	**Irreversible compression** | The original data cannot be recovered exactly.        |
+
+> **lossless = no data loss;** <br/>
+> **lossy = some data loss.**
 
 </details>
+
+---
+
+**OOP**
 
 Q.24 What is the term for a variable that references an instance of a class?
 - [ ] A. Property
 - [ ] B. Method
-- [ ] C. Object
+- [x] C. Object
 - [ ] D. Constructor
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. Object.
+
+An **object** is an instance of a class. <br/>
+A variable can reference that object so you can access its properties and methods.
+
+Example in Java:
+```java
+Car myCar = new Car();
+```
+Here, `Car` is the class, `new Car()` creates an object, and `myCar` is the reference variable.
+
+
+In object-oriented programming, what is a constructor primarily used for?
+- [x] A. To initialize a newly created object
+- [ ] B. To destroy a class
+- [ ] C. To store database records
+- [ ] D. To return a value from every method
+
+Correct! A. To initialize a newly created object.
+
+A **constructor** is a special member of a class that runs when an object is created. <br/>
+It is commonly used to initialize the object's data.
+
+Example in Java:
+```java
+class Car {
+    String color;
+
+    Car(String c) {
+        color = c;
+    }
+}
+```
+Here, `Car(String c)` is the constructor that initializes the car's color.
+
+> **Constructor -> initializes an object.**
 
 </details>
+
+---
+
+**Computer Networks**
 
 Q.25 Which network device serves as the entry and exit point of a network, as all data
 coming in or going out of a network must first pass through it?
 - [ ] A. Modem
-- [ ] B. Gateway
+- [x] B. Gateway
 - [ ] C. Switch
 - [ ] D. Repeater
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Gateway.
+
+A **gateway** connects different networks and serves as an entry and exit point for data moving between them.
+
+Remember:
+- **Gateway**: Connects different networks.
+- **Switch**: Connects devices within a local area network (LAN).
+- **Repeater**: Regenerates or boosts signals to extend network range.
+- **Modem**: Modulates and demodulates signals.
+
+Which network device forwards data frames to the correct device within a LAN using MAC addresses?
+- [ ] A. Repeater
+- [ ] B. Modem
+- [x] C. Switch
+- [ ] D. Gateway
+
+Correct! C. Switch.
+
+A **network switch** uses MAC addresses to forward data frames to the appropriate device within a LAN.
+
+> **Switch -> MAC address -> forwards frames within a LAN.**
 
 </details>
+
+---
+
+**Python Programming**
 
 Q.26 Identify the correct output of the following code snippet :
 ```py
 game="olympic2024"
-print (game. index ("C") )
+print(game.index("C") ) # ValueError
+print(game.find("C"))   # -1
 ```
 - [ ] A. 0
 - [ ] B. 6
 - [ ] C. -1
-- [ ] D. valueError
+- [x] D. valueError
 
 <details>
   <summary> Solution </summary>
 
+Correct! D. `ValueError`
+
+`.index("C")` -> raises `ValueError` if not found.
+`.find("C")` -> returns `-1` if not found.
+
+| Method	    | If the substring is missing |
+|-------------|-----------------------------|
+| `.index()`	| Raises ValueError           |
+| `.find()`	  | Returns `-1`                |
 
 </details>
 
-Q.27 In a B tree of order m, each internal node can have up to __ children.
+---
+
+**Data Structures (B-Tree)**
+
+Q.27 In a B tree of order `m`, each internal node can have up to __ children. 
 - [ ] A. `m - 1`
-- [ ] B. `m`
+- [x] B. `m`
 - [ ] C. `2m - 1`
 - [ ] D. `2m`
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. `m`
+
+In a B-tree of order `m`, an internal node can have at most `m` children and at most `m-1` keys.
+
+For example, in a B-tree of order 4:
+- Maximum children = 4
+- Maximum keys = 3
+
+> Exam tip: **Maximum children = `m`; maximum keys = `m-1`.
+
+In a B-tree of order 5, what is the maximum number of keys a node can contain?
+- [ ] A. 5
+- [x] B. 4
+- [ ] C. 10
+- [ ] D. 9
+
+Correct! B. 4 keys.
+
+In a B-tree of order `m`, the maximum number of keys is `m-1`.
 
 </details>
 
+---
+
 Q.28 Which of the following is the correct expansion of SMS ?
-- [ ] A. Short Message Service `p { font–family: Arial; }`
+- [x] A. Short Message Service `p { font–family: Arial; }`
 - [ ] B. Small Multimedia Service `p { fontfamily: Arial; }`
 - [ ] C. Short Multimedia Service `p { font: Arial; }`
 - [ ] D. Small Message Service `p { font–type: Arial; }`
@@ -352,19 +1053,37 @@ Q.28 Which of the following is the correct expansion of SMS ?
 <details>
   <summary> Solution </summary>
 
+**SMS stands for Short Message Service**, which allows users to send and receive text messages on mobile phones.
+
+> **SMS = Short Message Service**
+
+What does MMS stand for?
+- [ ] A. Mobile Messaging System
+- [x] B. Multimedia Messaging Service
+- [ ] C. Mobile Message Service
+- [ ] D. Multiple Messaging System
+
+Correct! B. Multimedia Messaging Service.
+
+**MMS** allows users to send multimedia content, such as pictures, audio, and video, through messaging services.
+
+Remember:
+- **SMS = Short Message Service**
+- **MMS = Multimedia Messaging Service**
 
 </details>
 
-Q.29 Which of the following statement (s) is/are TRUE in respect of Media Access Control
-(MAC) Address?
-A. It can be changed if a node is removed from one network and connected to another 
-network. <br/>
+---
+
+**Media Access Control (MAC) Address**
+
+Q.29 Which of the following statement (s) is/are TRUE in respect of Media Access Control (MAC) Address? <br/>
+A. It can be changed if a node is removed from one network and connected to another network. <br/>
 B. Each MAC address is a 12-digit hexadecimal number.  <br/>
 C. It is a unique value associated with a network adapter called NIC. <br/>
-D. It is provided by the Internet Service Provider to locate computers connected to the
-internet. <br/>
+D. It is provided by the Internet Service Provider to locate computers connected to the internet. <br/>
 Choose the correct answer from the options given below: 
-- [ ] A. (B) and (C) only
+- [x] A. (B) and (C) only
 - [ ] B. (A), (B) and (C) only
 - [ ] C. (C) and (D) only
 - [ ] D. (A) and (B) only
@@ -372,12 +1091,45 @@ Choose the correct answer from the options given below:
 <details>
   <summary> Solution </summary>
 
+Correct! A.
+
+**Media Access Control(MAC) Address**
+
+Moving a device to another network does not, by itself, change its MAC address. <br/>
+A MAC address can sometimes be changed or spoofed, but not simply because the network changes.
+
+A standard 48-bit MAC address is written as 12 hexadecimal digits <br/>
+for example, `00:1A:2B:3C:4D:5E`.
+
+A MAC address is associated with a **network interface controller (NIC)**.
+
+An **ISP(Internet Service Provider)** typically assigns an IP address, not the device's MAC address.
+
+> **MAC address -> Layer 2, NIC, 48 bits;** <br/>
+> **IP address -> Layer 3, logical addressing.**
+
+Which OSI layer primarily uses MAC addresses to forward frames?
+- [ ] A. Physical layer
+- [ ] B. Data Link layer
+- [x] C. Network layer
+- [ ] D. Transport layer
+
+Correct! B. Data Link layer.
+
+The **Data Link layer(Layer 2)** uses MAC addresses to identify devices on a local network and forward data frames.
+
+Remember:
+- **Layer 2 - Data Link: MAC addresses and frames**
+- **Layer 3 - Network: IP addresses and packets**
 
 </details>
 
-Q.30 While creating a table, which constraint does not allow insertion of duplicate values in
-the table ?
-- [ ] A. `UNIQUE`
+---
+
+**SQL Constraints**
+
+Q.30 While creating a table, which constraint does not allow insertion of duplicate values in the table ?
+- [x] A. `UNIQUE`
 - [ ] B. `DISTINCT`
 - [ ] C. `NOT NULL`
 - [ ] D. `HAVING`
@@ -385,46 +1137,182 @@ the table ?
 <details>
   <summary> Solution </summary>
 
+Correct! A. `UNIQUE`
+
+The `UNIQUE` constraint prevents duplicate values in a column or combination of columns in a table.
+
+| SQL keyword	| Purpose                                   |
+|-------------|-------------------------------------------|
+| `UNIQUE`	  | Prevents duplicate values                 |
+| `DISTINCT`	| Removes duplicate rows from query results |
+| `NOT NULL`	| Prevents NULL values                      |
+| `HAVING`	  | Filters groups after `GROUP BY `          |
+
+Which SQL constraint prevents a column from containing `NULL` values?
+- [ ] A. `UNIQUE`
+- [ ] B. `DEFAULT`
+- [x] C. `NOT NULL`
+- [ ] D. `CHECK`
+
+Correct! C. `NOT NULL`
+
+The `NOT NULL` constraint ensures that a column must contain a value and cannot be left `NULL`.
+
+Example:
+```sql
+CREATE TABLE Student (
+    name VARCHAR(50) NOT NULL
+);
+```
+Here, the `name` column cannot contain a `NULL` value.
+
+Remember:
+- `UNIQUE` -> prevents duplicate values.
+- `NOT NULL` -> prevents NULL values.
+
 
 </details>
 
-Q.31 Which term is used to describe the ability of different classes to be treated as objects of
-the same parent class?
+---
+
+**Object-Oriented Programming (OOP)**
+
+Q.31 Which term is used to describe the ability of different classes to be treated as objects of the same parent class?
 - [ ] A. Overloading
-- [ ] B. Polymorphism
+- [x] B. Polymorphism
 - [ ] C. Abstraction
 - [ ] D. Encapsulation
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Polymorphism.
+
+**Polymorphism** means "many forms". <br/>
+It allows objects of different classes to be treated through a common parent-class interface, while each object can provide its own behavior.
+
+Remember :
+- **Polymorphism**: One interface, different behaviors.
+- **Encapsulation**: Bundles data and methods together.
+- **Abstraction**: Hides implementation details.
+- **Overloading**: Uses the same function or method name with different parameter lists.
+
+Suppose `Dog` and `Cat` both inherit from `Animal`, and each provides its own implementation of `makeSound()`. Which OOP concept does this demonstrate?
+- [ ] A. Encapsulation
+- [ ] B. Abstraction
+- [x] C. Polymorphism
+- [ ] D. Constructor
+
+Correct C. Polymorphism
+
+Both `Dog` and `Cat` inherit from `Animal`, but each can implement `makeSound()` differently. <br/>
+This is **polymorphism** - the same method call can produce different behavior depending on the object.
+
+For example:
+- `Dog.makeSound()` -> Bark
+- `Cat.makeSound()` -> Meow
+
+ > **Same interface, different behavior = Polymorphism**.
 
 </details>
 
+---
+
+**Artificial Intelligence (Frame Structures)**
+
 Q.32 Building blocks of a frame structure are?
 - [ ] A. Facts and Data
-- [ ] B. Procedure and Default values
+- [x] B. Procedure and Default values
 - [ ] C. Frame names
 - [ ] D. Frame inference in hierarchy
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Procedure and Default values.
+
+In AI, a **frame** represents knowledge about an object or situation. <br/>
+A frame typically contains slots (attributes) and facets that describe information such as default values, constraints, or procedures.
+
+- **Facts and data** are knowledge that may be stored in frames, but they are not the most specific option here.
+- **Procedure and default values** are associated with frame slots and their facets.
+
+In an AI frame, what is a slot primarily used for?
+- [x] A. To store an attribute or property of an object
+- [ ] B. To execute machine instructions
+- [ ] C. To connect computers in a network
+- [ ] D. To encrypt stored information
+
+Correct! A. To store an attribute or property of an object.
+
+In an AI frame, a **slot** represents an attribute or property, such as a person's name, age, or address. <br/>
+Its value can describe that property.
+
+Example:
+- Frame: `Car`
+- Slot: `Colour`
+- Value: `Red`
+
+> **Frame = knowledge representation;** 
+
+> **Slot = attribute;**
+
+> **value = information stored in the slot.**
 
 </details>
 
-Q.33 Segmentation is a memory management technique where memory is divided into
-segments, with each segment containing:
+---
+
+**Operating Systems (Memory Management)**
+
+Q.33 Segmentation is a memory management technique where memory is divided into segments, with each segment containing:
 - [ ] A. Fixed-sized blocks of memory
 - [ ] B. Different types of data structures
-- [ ] C. Variable-sized blocks of memory
+- [x] C. Variable-sized blocks of memory
 - [ ] D. Non-contiguous blocks of memory
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. Variable-sized blocks of memory.
+
+In segmentation, a program is divided into logical units such as code, data, and stack. <br/>
+These segments can have different sizes.
+
+- **Segmentation**: Variable-sized segments.
+- **Paging**: Fixed-sized blocks called **pages (in logical memory)** and **frames (in physical memory)**.
+
+<img width="990" height="320" alt="image" src="https://github.com/user-attachments/assets/20599b92-9373-4baa-a56d-83ecc6007684" />
+
+
+<img width="1000" height="660" alt="image" src="https://github.com/user-attachments/assets/a92aad31-5045-4315-961e-3148b0cc5937" />
+
+
+In paging, what is the size of each page within a given paging system?
+- [ ] A. Variable, depending on the program
+- [x] B. Fixed
+- [ ] C. Always equal to the entire program size
+- [ ] D. Determined by the size of the data segment
+
+
+| Paging	                         | Segmentation                         |
+|----------------------------------|--------------------------------------|
+| Fixed-sized pages	               | Variable-sized segments              |
+| Divides memory into equal blocks | Divides a program into logical units | 
+| Uses a page table	               | Uses a segment table                 |
+
+> **Paging = equal pieces; segmentation = meaningful pieces.**
+
+If a paging system uses a page size of 4 KB, what is the size of every page in that system?
+- [ ] A. It varies for each page
+- [x] B. 4 KB
+- [ ] C. It equals the whole program size
+- [ ] D. It depends on the data segment
 
 </details>
+
+---
+
 
 Q.34 About IoT, which among the followings is not correct?
 - [ ] A. Light sensor is analog
