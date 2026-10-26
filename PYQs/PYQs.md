@@ -5161,7 +5161,7 @@ population is called
 - [ ] C. research
 - [x] D. sampling
 
-Correct D. Sampling. ✅
+Correct D. Sampling.
 
 **Sampling** is the process of selecting a subset of units from a population to study and estimate the characteristics of the entire population.
 
@@ -5635,15 +5635,590 @@ John Dewey emphasized learning by doing-students learn by participating in activ
 
 ---
 
+**Question 112 - Effective Teaching**
+
+Effective teaching includes:
+- [ ] A. The teacher is active, but students may or may not be active.
+- [ ] B. The teacher may be active or inactive, but students are active.
+- [x] C. Both the teacher and students are active.
+- [ ] D. All the above.
+
+
+A teacher asks students to solve a problem in groups, explain their ideas, and discuss different solutions. This is an example of:
+- [ ] A. Passive learning
+- [x] B. Active learning
+- [ ] C. Rote memorization
+- [ ] D. Learning through punishment
+
+Correct! B. Active learning.
+
+In active learning, students participate directly by solving problems, discussing ideas, asking questions, and explaining their reasoning rather than simply listening.
+
+---
+
+| Reasoning (Coding-Decoding) |
+|-----------------------------|
+
+Question 113 In a code, GROUND is written as HQPTOC. How will TIRED be written in the same code?
+- [x] A. UHSDE
+- [ ] B. VHSDE
+- [ ] C. UHSDC
+- [ ] D. UHQFC
+
+| Original	| `G`| `R`| `O` | `U`| `N`| `D`|
+|-----------|----|----|-----|----|----|----|
+| Coded	    | `H`| `Q`| `P` | `T`| `O`| `C`|
+|Shift	    | +1 | −1	| +1  | −1 | +1 | −1 |
+
+```
+GROUND
+HQPTOC
+
+TIRED
+UHSDE
+```
+
+**Question 114 - Computer Science**
+
+The practice of finding commonalities or fundamental connections across a range of particular circumstances is known as:
+- [x] A. Abstraction
+- [ ] B. Generalization
+- [ ] C. Problem solving
+- [ ] D. Reasoning
+
+- **Abstraction**: Identifying essential features and common underlying ideas while ignoring unnecessary details.
+
+- **Generalization**: Recognizing a pattern and applying it to other situations.
+These concepts are closely related, but this question uses the wording associated with abstraction in computational thinking.
+
+---
+
+A programmer focuses on the essential features of a car while ignoring details such as its colour and seat fabric. Which concept is being used?
+- [ ] A. Debugging
+- [x] B. Abstraction
+- [ ] C. Generalization
+- [ ] D. Sequencing
+
+**Abstraction** means focusing on the important details and ignoring irrelevant information.
+
+Example: When designing a car system, a programmer focuses on speed, braking, and fuel level rather than the colour of the seats.
+
+Remember the difference:
+- **Abstraction**: Focus on essential details.
+- **Generalization**: Apply a pattern or idea to different situations.
+
+---
+
+**Question 115 - Algorithms**
+
+What is the time complexity of the divide-and-conquer algorithm for finding the maximum and minimum elements in an array of size \(n\)?
+
+- [x] A. `O(n)`
+- [ ] B. `O(log n)`
+- [ ] C. `O(n log n)`
+- [ ] D. `O(n^2)`
+
+Correct!  A. `O(n)`
+
+Finding both the maximum and minimum using divide and conquer takes linear time, `O(n)`, because the algorithm processes the array elements across its recursive subproblems.
+
+A common recurrence is: `T(n) = 2T(n/2) + O(1)`
+
+By the Master Theorem, this gives `T(n) = O(n)`
+
+> Remember: Although the array is divided into smaller parts, the total work across all levels is linear - not `O(nlog n)`.
+
+What is the time complexity of binary search on a sorted array of \(n\) elements?
+- [ ] A. `O(n)`
+- [x] B. `O(log n)`
+- [ ] C. `O(n log n)`
+- [ ] D. `O(1)`
+
+Correct! B. `O(log n)`
+
+Binary search repeatedly divides the search interval in half. <br/>
+Each comparison eliminates approximately half of the remaining elements.
+
+For example, with 16 elements: `16 -> 8 -> 4 -> 2 -> 1` <br/>
+It takes about 4 halvings because `log_2 16 = 4`.
+
+Remember:
+- Linear search: `O(n)`
+- Binary search: `O(log n)`
+- Merge sort: `O(nlog n)`
+ 
+---
+
+Q.113 Primary teacher should try to or concentrate in:
+- [ ] A. Raising intellectual standard of the students
+- [ ] B. Improving physical standard of students
+- [x] C. Help all round development of students
+- [ ] D. Inculcating value in students
+
+A primary teacher should focus on the holistic development of children, including their intellectual, physical, emotional, social, and moral growth.
+- Intellectual development is important, but it is only one aspect.
+- Physical development is important, but it is not the only goal.
+- Correct : all-round development covers multiple aspects of a child's growth.
+- Inculcating values is important, but it is one part of overall development.
+
+What is the main aim of child-centred education?
+- [ ] A. Completing the syllabus as quickly as possible
+- [ ] B. Focusing only on academic marks
+- [x] C. Supporting the child's overall development
+- [ ] D. Maintaining strict discipline at all times
+
+Correct! C. Supporting the child's overall development.
+
+Child-centred education focuses on the learner’s needs, interests, abilities, and holistic development.
+
+---
+
+Q.116 Creativity is thought to be related to the concept of
+- [ ] A. fluid intelligence
+- [ ] B. crystallized intelligence
+- [ ] C. convergent thinking
+- [x] D. divergent thinking
+
+Correct! D. Divergent thinking.
+
+**Creativity** is strongly associated with divergent thinking, which means generating multiple, varied, and original ideas to solve a problem.
+- A. **Fluid intelligence**: Ability to reason and solve new problems.
+- B. **Crystallized intelligence**: Knowledge and skills acquired through learning and experience.
+- C. **Convergent thinking**: Finding one correct or best answer.
+- D. **Divergent thinking**: Producing many possible ideas or solutions.
+
+---
+
+Q.118 Which of the following best describes a **symposium**?
+- [ ] A. A meeting of delegates from a fraternal organization
+- [ ] B. A public meeting where a short course of study is addressed by a single expert
+- [x] C. A meeting where a small group of experts presents different aspects of a problem or
+topic to an audience
+- [ ] D. A debate between two opposing teams
+
+Correct! C. A meeting where a small group of experts presents different aspects of a problem or topic to an audience.
+
+A **symposium** is a formal meeting in which several experts present their views or knowledge on different aspects of a common topic.
+- several experts present different perspectives on one topic.
+
+Which teaching method involves participants actively discussing a topic and exchanging ideas in a group?
+- [ ] A. Lecture method
+- [x] B. Discussion method
+- [ ] C. Demonstration method
+- [ ] D. Dictation method
+
+Correct! B. Discussion method.
+
+The discussion method encourages learners to exchange ideas, share opinions, and learn from one another.
+
+---
+
+Q.121 You want to adopt the teaching profession because
+- [ ] A. there are many others in your family who are teachers
+- [ ] B. there is no other option to earn a livelihood
+- [ ] C. children give more respect and reverence
+- [x] D. you get an oppurtinity to handle/ train the future citizens of the nation
+
+Correct! D. You get an opportunity to handle/train the future citizens of the nation.
+
+Teaching is a profession that helps shape the knowledge, values, skills, and character of future generations. <br/>
+A teacher contributes to society by educating and guiding children.
+
+---
+
+Q.122 Areas/sources of information for psychological foundation are:
+- [ ] A. Learning process
+- [ ] B. Teaching method
+- [ ] C. Student characteristics
+- [x] D. All of these
+
+Correct! D. All of these.
+
+The **psychological foundation of education** draws on several sources of information:
+- **Learning process**: How students learn, remember, and develop skills.
+- **Teaching method**: How teaching approaches influence learning.
+- **Student characteristics**: Students’ abilities, interests, needs, motivation, and developmental stages.
+- All of these three contribute to understanding the psychological foundations of education.
+
+Educational psychology primarily helps teachers to:
+- [x] A. Understand students and improve teaching and learning
+- [ ] B. Focus only on completing the syllabus
+- [ ] C. Replace teaching with examinations
+- [ ] D. Treat all students as having identical abilities
+
+Correct! A. Understand students and improve teaching and learning.
+
+**Educational psychology** helps teachers understand students’ learning processes, individual differences, motivation, and behaviour.
+
+---
+
+Que 123. What is the objective of a teacher?
+- [ ] A. To gain possible maximum fame
+- [x] B. To extend the welfare of students to the possible maximum limit
+- [ ] C. To teach the possible maximum number of students
+- [ ] D. None of these
+
+Correct! B. To extend the welfare of students to the possible maximum limit.
+
+A teacher's primary objective is the welfare and overall development of students. <br/>
+Teaching should support their intellectual, social, emotional, and moral growth.
+
+What should be the primary focus of a teacher while planning a lesson?
+- [ ] A. Finishing the lesson as quickly as possible
+- [ ] B. Making the lesson difficult
+- [x] C. Ensuring students understand and learn effectively
+- [ ] D. Giving students the maximum amount of homework
+
+Correct! C. Ensuring students understand and learn effectively.
+
+A teacher should plan lessons around students’ learning needs and check whether they understand the concepts.
+
+---
+
+Q.124 Which statement is not true about planning of teaching?
+- [ ] A. Teacher should know about content
+- [x] B. Teacher become aggressive in class
+- [ ] C. Plans ways of providing regular meaningful feedback to students.
+- [ ] D. Decide upon/order textbooks(s), copies of articles, etc. which will be required.
+
+Teaching plans should help teachers organize content, prepare resources, and provide meaningful feedback. <br/>
+Aggressive behaviour is not a part of effective teaching planning.
+
+Which action is an essential part of effective lesson planning?
+- [ ] A. Ignoring students’ learning difficulties
+- [x] B. Preparing learning objectives and teaching materials
+- [ ] C. Avoiding feedback to students
+- [ ] D. Using the same method for every topic
+
+Correct! B. Preparing learning objectives and teaching materials.
+
+Effective lesson planning includes setting clear objectives, selecting teaching methods, preparing resources, and assessing students’ understanding.
+
+---
+
+Q 125. A  class is full of boys and girls. Which method would you adopt to improve
+co-operation between them?
+- [ ] A. Asking parents to discuss equality
+- [ ] B. Making boys and girls share a bench
+- [x] C. Setting tasks which have to be done together
+- [ ] D. Talking about equality in lessons
+
+Correct! C. Setting tasks which have to be done together.
+
+Cooperative tasks encourage boys and girls to work toward a common goal, communicate, share responsibilities, and respect one another. This builds cooperation through practical experience.
+
+
+Which classroom activity best promotes cooperative learning?
+- [ ] A. Students compete individually for marks.
+- [x] B. Students work in groups to solve a common problem.
+- [ ] C. The teacher gives a lecture while students listen silently.
+- [ ] D. Students complete all activities independently.
+
+Correct! B. Students work in groups to solve a common problem.
+
+Cooperative learning encourages teamwork, communication, shared responsibility, and mutual respect.
+
+---
+
+Q.133 Khudai Khidmatgars were popularly known as the ___________
+- [ ] A. Green Shirts
+- [x] B. Red Shirts
+- [ ] C. Black Shirts
+- [ ] D. White Shirts
+
+Correct! B. Red Shirts.
+
+The **Khudai Khidmatgar movement** was founded by **Khan Abdul Ghaffar Khan, also known as Frontier Gandhi**. Its members were popularly called the Red Shirts because they wore red uniforms. The movement promoted non-violence and opposed British colonial rule in the North-West Frontier Province.
+
+Khan Abdul Ghaffar Khan was popularly known as:
+- [ ] A. Punjab Kesari
+- [ ] B. Netaji
+- [x] C. Frontier Gandhi
+- [ ] D. Lokmanya
+
+Correct! C. Frontier Gandhi.
+
+Khan Abdul Ghaffar Khan earned this title for his commitment to non-violence and his role in India's freedom struggle.
+
+---
+
+Q.134 To kill fungus on crops we generally used………….
+- [ ] A. Insecticides
+- [ ] B. Pesticides
+- [x] C. Fungicides
+- [ ] D. All of these
+
+Correct! C. Fungicides.
+
+**Fungicides** are chemicals or other treatments used to prevent or control fungal diseases in crops.
+
+- **Insecticides**: Control insects.
+- **Pesticides**: A broad category of substances used to control pests, including insects, fungi, and weeds.
+- **Fungicides**: Specifically target fungi.
+- All of these is Not the best answer because fungicides are the specific treatment for fungi.
+
+Which substance is generally used to control insects that damage crops?
+- [ ] A. Fungicides
+- [x] B. Insecticides
+- [ ] C. Fertilizers
+- [ ] D. Herbicides
+
+Correct! B. Insecticides.
+- A. **Fungicides**: Control fungal diseases.
+- B. **Insecticides**: Control insects that damage crops.
+- C. **Fertilizers**: Supply nutrients to plants.
+- D. **Herbicides**: Control unwanted plants and weeds.
+
+> Remember: **Insecticides -> insects; Fungicides -> fungi; Herbicides -> weeds**.
+
+---
+
+Q.136 Choose the correct option instead of the question mark in the given question.
+`GOA : 761 :: KAIMUR : ?`
+- [ ] A. 119439
+- [ ] B. 219339
+- [x] C. 219439
+- [ ] D. 218349
+
+```
+GOA : 761 :: KAIMUR : ?
+761
+
+K  A I M U R
+2  1 9 4 3 9
+
+a b c d e f g h i j  k  l  m
+1 2 3 4 5 6 7 8 9 10 11 12 13
+                   1  2  3  4
+n  o   p  q   r   s   t   u   v  w   x   y   z                             
+14 15  16 17  18  19 20  21  22  23 24   25  26
+5   6  7  8   9   10  2   3   4   5  6   7    8
+```
 
 ---
 
 
+Q.137 What will come in place of ? in the sequence 3, 14, 39, 84, ?, 258?
+- [ ] A. 150,
+- [x] B. 155
+- [ ] C. 160
+- [ ] D. 176
+
+```
+3    14   39    84     ?   258
+1x3  2x7  3x13  4x21  5x?  6x43
+
+ 3, 14, 39,  84, 155, 258
+11, 25, 45,  71, 103         [ 1st Difference ]
+14, 20, 26,  32              [ 2nd Difference ]
+ 6,  6,  6                   [ 3rd Difference ]
+```
+
+---
+
+Q.139 A class VI mathematics teacher posed the following problem to her students:
+"In a morning walk, three persons started together. Their steps measure 70 cm , 85 cm
+and 95 cm respectively. What is the minimum distance each should walk so that all can
+cover the same distance in complete steps?"
+Which of the following concepts would be required to solve the given problem?
+- [x] A. Concept of LCM
+- [ ] B. Concept of division
+- [ ] C. Concept of proportion
+- [ ] D. Concept of HCF
+
+Correct! A. Concept of LCM (Least Common Multiple)
+
+The minimum distance must be exactly divisible by all three step lengths: 70 cm, 85 cm, and 95 cm.
+
+Therefore, we need to find their LCM.
+
+<img width="581" height="301" alt="image" src="https://github.com/user-attachments/assets/ca05194a-4b56-4d62-b738-7ef4d75fa10d" />
+
+Remember this rule for exams:
+- LCM -> Minimum distance or smallest common quantity.
+- HCF -> Greatest length or largest quantity that divides given numbers exactly.
+
+---
+
+Q.140 Out of 60 people in a colony, 10 speak only Bengali, 5 speak only Assamese, 10 speak
+both Hindi and Odia, 12 speak both Marathi and Hindi, 13 speak English, Tamil and
+Marathi, 5 speak both Assamese and Hindi and the remaining speak both Bengali and
+Hindi.
+How many people speak more than one language?
+- [ ] A. 15
+- [x] B. 45
+- [ ] C. 50
+- [ ] D. 55
+
+Correct answer: B. 45
+
+Total people = 60 <br/>
+People who speak only one language:
+- Only Bengali = 10
+- Only Assamese = 5
+Total speaking only one language = 10 + 5 = 15 <br/>
+Therefore, people who speak more than one language: 60-15= 45 <br/>
+
+```
+60 =
+
+10 Bengali only
+5 Assamese only
+10 both Hindi + odia
+12 both Marathi + Hindi
+13 English + Tamil + Marathi
+5 both Assames + Hindi
+? both Bengali + Hindi
+```
+
+---
+
+Q.142 The statement related to the congruence of a triangle - “Given the length of any two
+sides and the length of these sides and the measure of the angle between these sides” - is a restriction/condition.
+- [ ] A. SSS
+- [x] B. S.A.S.
+- [ ] C. ASA
+- [ ] D. RH
+
+Correct answer: B. S.A.S. (Side–Angle–Side)
+
+The question gives:
+- The lengths of two sides of a triangle.
+- The measure of the angle between those two sides.
+This is the SAS congruence condition.
+
+Quick revision:
+- **SSS**: Three sides are equal.
+- **SAS**: Two sides and the included angle are equal.
+- **ASA**: Two angles and the included side are equal.
+- **RHS**: Right angle, hypotenuse, and one side are equal.
+
+---
+
+Q.143 The number of Bricks each measuring 25 cm x 12.5 cm x 7.5 cm required to construct a
+wall 6 m Long, 5 m High, and 0.5 m Thick, While the Mortar occupies 5 Percent of the
+Volume of the Wall is?
+- [x] A. 8819
+- [ ] B. 6080
+- [ ] C. 9011
+- [ ] D. 2019
+
+Correct answer: A. 8819
+
+```
+Step 1: Find the volume of the wall.
+
+Convert all dimensions to centimetres:
+- Length = 6 m = 600 cm
+- Height = 5 m = 500 cm
+- Thickness = 0.5 m = 50 cm
+
+Volume of wall = 600 x 500 x 50
+               = 15,000,000 cm^3
+
+Step 2: Subtract the mortar volume.
+
+Mortar occupies 5%, so bricks occupy 95%.
+Volume of bricks = 15,000,000 x 0.95
+                 =14,250,000 cm^3
+
+Step 3: Find the volume of one brick.
+
+Volume of brick = 25 x 12.5 x 7.5
+                =2343.75 cm^3
+
+Step 4: Calculate the number of bricks.
+
+14,250,000 / 2343.75 = 6080
+```
+
+---
+
+Q.145 Which of the following is not an outdoor game?
+- [ ] A. Football
+- [ ] B. capture the flag
+- [x] C. Uno
+- [ ] D. Frisbee
+
+Correct answer: C. Uno
+
+Football, capture the flag, and Frisbee are generally played outdoors. <br/>
+Uno is a card game usually played indoors, so it is the option that is not an outdoor game.
+
+---
+
+Q.146 Mahendragiri, the highest peak of the Eastern Ghats, is located in which one of the
+following states?
+- [ ] A. Andhra Pradesh
+- [x] B. Odisha
+- [ ] C. Telangana
+- [ ] D. Tamil Nadu
+
+Correct answer: B. Odisha
+
+Mahendragiri Peak is located in the Gajapati district of Odisha, in the Eastern Ghats.
+
+Quick revision:
+- Mahendragiri - Odisha
+- Eastern Ghats - extend along India’s eastern side.
+- Western Ghats - run along India’s western side.
+
+---
+
+Q.148 Arrange the following in their chronological sequence :
+i. Cripps Mission
+ii. Montague Chelmsford Report
+iii. Simon Commission
+iv. Morley – Minto Reforms
+- [ ] A. ii, iii, i, iv
+- [x] B. iv, ii, iii, i
+- [ ] C. iii, i, ii, iv
+- [ ] D. i, iv, iii, ii
+
+Chronological order (earliest to latest):
+1. Morley–Minto Reforms - 1909 (iv)
+2. Montagu–Chelmsford Report - 1918 (ii)
+3. Simon Commission - 1927 (iii)
+4. Cripps Mission - 1942 (i)
+
+---
+
+Q.149 In the alphabet how many Letters will be in between 10th and 24th Letter form the left
+end ?
+- [x] A. 13
+- [ ] B. 14
+- [ ] C. 17
+- [ ] D. 18
+
+Correct answer: A. 13
+
+- 10th letter from the left = `J`
+- 24th letter from the left = `X`
+Letters between `J` and `X` are `K, L, M, N, O, P, Q, R, S, T, U, V, W`.
+
+Therefore, the number of letters between them is `24-10-1 = 13`.
+
+---
+
+Q 150. Which of the following is a types of natural disasters has no definite beginning and end ?
+- [ ] A. Earthquakes
+- [ ] B. Landslides
+- [ ] C. Hurricanes
+- [x] D. Droughts
+
+Correct answer: D. Droughts
+
+A drought develops gradually due to a prolonged lack of rainfall and may continue for months or years. <br/>
+Unlike earthquakes or hurricanes, it often has no clearly defined beginning and end.
 
 ---
 </details>
 <!----------------------------->
 
+
+
+
+### PYQs 2024
 
 <details>
   <summary> <b> PYQs 2024 </b> </summary>
