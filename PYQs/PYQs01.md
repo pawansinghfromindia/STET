@@ -1309,35 +1309,101 @@ If a paging system uses a page size of 4 KB, what is the size of every page in t
 - [ ] C. It equals the whole program size
 - [ ] D. It depends on the data segment
 
+Correct! B. 4 KB.
+
+Why? <br/>
+In a given paging system, every page has the same fixed size. <br/>
+If the page size is 4 KB, each page is 4 KB, regardless of how much data it contains.
+
+<img width="1000" height="227" alt="image" src="https://github.com/user-attachments/assets/817bac5a-80b0-40aa-8f85-52544b782e83" />
+
+
 </details>
 
 ---
 
+**Internet of Things (IoT)**
 
 Q.34 About IoT, which among the followings is not correct?
 - [ ] A. Light sensor is analog
-- [ ] B. microphone is a digital sensor
+- [x] B. microphone is a digital sensor
 - [ ] C. Keyboard is a digital sensor
 - [ ] D. Push button is a digital Sensor
+
 
 <details>
   <summary> Solution </summary>
 
+Correct! B. Microphone is a digital sensor.
+
+<img width="990" height="607" alt="image" src="https://github.com/user-attachments/assets/ab2c7364-02dc-4df6-8be4-da6f2e8758ba" />
+
+A **microphone** typically ***converts sound into an analog electrical signal***. <br/>
+A digital microphone can output digital data, but the question likely assumes a conventional analog microphone.
+
+- A. **Light sensor is analog**: generally true for an LDR.
+- B. Microphone is a digital sensor: generally false for a conventional analog microphone.
+- C. Keyboard is a digital sensor: treated as digital input in basic IoT contexts.
+- D. Push button is a digital sensor: treated as digital input.
+
+> **Analog = continuously changing;**
+
+>  **digital = discrete states such as 0 and 1**.
+
+Which of these is typically a digital input in a basic IoT project?
+- [ ] A. LDR light sensor
+- [ ] B. Analog temperature sensor
+- [x] C. Push button
+- [ ] D. Analog microphone
+
+Correct! C. Push button.
+
+A push button typically has two states:
+- `0` (LOW): Not pressed
+- `1` (HIGH): Pressed (depending on the circuit)
+
+<img width="987" height="317" alt="image" src="https://github.com/user-attachments/assets/c147876b-fbe8-4b59-b176-dea2b2a73282" />
+
+> A sensor's actual output depends on its design and interface, but basic IoT questions commonly classify LDRs as analog and push buttons as digital.
 
 </details>
+
+---
 
 Q.35 Connected components in a graph can be found using which graph traversal
 algorithm?
 - [ ] A. DFS
 - [ ] B. BFS
-- [ ] C. Both DFS and BFS
+- [x] C. Both DFS and BFS
 - [ ] D. Neither DFS nor BFS
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. Both DFS and BFS.
+
+Both Depth-First Search (DFS) and Breadth-First Search (BFS) can find connected components in an undirected graph.
+
+<img width="887" height="387" alt="image" src="https://github.com/user-attachments/assets/1092d6f0-6eee-48d3-89bb-8da7dc802810" />
+
+
+Suppose BFS starts from vertex A and visits every vertex reachable from A. What does this identify in an undirected graph?
+- [ ] A. The shortest cycle
+- [x] B. The connected component containing A
+- [ ] C. Every component in the graph automatically
+- [ ] D. The vertex with the highest degree
+
+Correct! B. The connected component containing A.
+
+BFS explores a graph level by level, visiting all vertices reachable from its starting vertex.
+
+- Degree is the number of edges connected to a vertex; BFS does not specifically search for that.
+
+> **DFS goes deep; BFS goes level by level. Both can identify connected components.**
 
 </details>
+
+---
 
 Q.36 A complex SCADA system has _______levels?
 - [ ] A. 6
@@ -1348,8 +1414,32 @@ Q.36 A complex SCADA system has _______levels?
 <details>
   <summary> Solution </summary>
 
+Correct! D. 4 levels.
+
+**SCADA (Supervisory Control and Data Acquisition)** <br/>
+SCADA systems are used to monitor and control industrial processes, such as power grids, water treatment plants, and manufacturing systems.
+
+<img width="972" height="626" alt="image" src="https://github.com/user-attachments/assets/fac7d353-f05f-4f05-8dd2-c7c2a6ebf157" />
+
+
+> Remember the flow: **Field devices -> Controllers -> Communication -> Master station.**
+
+What does SCADA stand for?
+- [ ] A. System Control and Digital Automation
+- [x] B. Supervisory Control and Data Acquisition
+- [ ] C. Supervisory Communication and Data Analysis
+- [ ] D. System Communication and Device Automation
+
+Correct! Answer: B. Supervisory Control and Data Acquisition.
+
+- **Supervisory Control**: Operators monitor and control industrial processes.
+- **Data Acquisition**: The system collects data from sensors and field devices.
+
+> Memory trick: **SCADA = Supervise + Control + Acquire Data**.
 
 </details>
+
+---
 
 Q.37 Hierarchical addressing in the Network Layer allows for:
 - [ ] A. More efficient use of IP addresses
@@ -1360,12 +1450,73 @@ Q.37 Hierarchical addressing in the Network Layer allows for:
 <details>
   <summary> Solution </summary>
 
+Correct! A. More efficient use of IP addresses.
+
+**Hierarchical IP addressing** divides an address into a network portion and a host portion. <br/>
+Networks can then be divided into subnets, helping allocate address ranges efficiently and allowing routers to group routes.
+
+<img width="987" height="420" alt="image" src="https://github.com/user-attachments/assets/2858b75f-c18a-44f7-9518-f01851413576" />
+
+> IP addressing belongs to the Network Layer (Layer 3);
+
+> MAC addressing belongs to the Data Link Layer (Layer 2).
+
+Which device primarily uses IP addresses to forward packets between different networks?
+- [ ] A. Hub
+- [x] B. Router
+- [ ] C. Repeater
+- [ ] D. Ethernet switch
+
+> Memory trick: Router = IP address; Switch = MAC address.
+
+Network devices: key differences
+
+1. **Router** - Network Layer (Layer 3)
+- Uses IP addresses to forward packets between networks.
+- Selects a suitable route for packets.
+- Example: connecting your home network to the internet.
+
+<img width="452" height="300" alt="image" src="https://github.com/user-attachments/assets/81e0e3e5-5b12-45c4-80b8-f71e1fd77fdf" />
+
+
+2. **Hub** - Physical Layer (Layer 1)
+- Repeats incoming bits to all other ports.
+- Does not inspect MAC or IP addresses to choose a destination.
+- Example: an older shared Ethernet network.
+
+<img width="320" height="302" alt="image" src="https://github.com/user-attachments/assets/0886d698-bf5c-4704-a0b8-0edb53896cec" />
+
+
+  3. **Repeater** - Physical Layer (Layer 1)
+- Regenerates or retimes a weakened signal.
+- Extends the distance a signal can travel.
+- Does not route packets using IP addresses.
+
+<img width="588" height="360" alt="image" src="https://github.com/user-attachments/assets/cc2b0360-6258-4876-9139-8ef34174b311" />
+
+
+4. **Ethernet switch** - usually Data Link Layer (Layer 2)
+- Learns MAC addresses and forwards frames to the appropriate port.
+- Connects devices within a LAN.
+- Some multilayer switches can also route using IP addresses.
+
+<img width="746" height="410" alt="image" src="https://github.com/user-attachments/assets/20b9974f-39f6-48c4-ab62-640c9b16bcb2" />
+
+
+| Device	 | OSI layer	            | Main job                      |
+|----------|------------------------|-------------------------------|
+| Router	 | Layer 3	              | Routes packets using IP       |
+| Hub	     | Layer 1	              | Sends bits to all other ports |
+| Repeater | Layer 1	              | Regenerates signals           |
+| Ethernet | switch	Usually Layer 2 | Forwards frames using MAC     |
 
 </details>
 
+---
+
 Q.38 According to Chomsky hierarchy, which of the following is recognized by Recursively
 Enumerable language?
-- [ ] A. Type 0
+- [x] A. Type 0
 - [ ] B. Type 1
 - [ ] C. Type 2
 - [ ] D. Type 3
@@ -1373,33 +1524,124 @@ Enumerable language?
 <details>
   <summary> Solution </summary>
 
+Correct! A. Type 0.
+
+**1. Understand the Chomsky hierarchy** <br/>
+The Chomsky hierarchy classifies formal languages into four types, from the most general to the most restricted.
+
+<img width="995" height="542" alt="image" src="https://github.com/user-attachments/assets/c6202243-afab-46c8-bbb2-606d5c8c7ccf" />
+
+**2. Memory trick, Remember the order: `0 → 1 → 2 → 3`**
+- Type 0: Recursively enumerable
+- Type 1: Context-sensitive
+- Type 2: Context-free
+- Type 3: Regular
+As we move from Type 0 to Type 3, the language classes become more restricted.
+
+Which computational model recognizes a regular language (Type 3)?
+- [ ] A. Turing machine
+- [ ] B. Pushdown automaton
+- [x] C. Finite automaton
+- [ ] D. Linear-bounded automaton
+
+**Correct! C. Finite automaton.**
+
+A **finite automaton (FA)** recognizes regular languages (Type 3). <br/>
+It has a finite number of states and does not require a stack or an unlimited tape.
+
+| Language type	                  | Computational model      |
+|---------------------------------|--------------------------|
+| Type 0 - Recursively enumerable	| Turing machine           |
+| Type 1 - Context-sensitive	    | Linear-bounded automaton |
+| Type 2 - Context-free	          | Pushdown automaton       |
+| Type 3 - Regular	              | Finite automaton
 
 </details>
+
+---
 
 Q.39 Which SQL clause is used to retrieve specific rows from a table?
 - [ ] A. `SEARCH`
 - [ ] B. `FETCH`
-- [ ] C. `SELECT`
+- [x] C. `SELECT`
 - [ ] D. `FIND`
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. `SELECT`
+
+The `SELECT` statement retrieves data from a table. <br/>
+To retrieve specific rows based on a condition, SQL typically uses `SELECT` together with the `WHERE` clause.
+```sql
+SELECT * FROM Student WHERE marks > 80;
+```
+
+Which SQL clause filters rows according to a condition?
+- [ ] A. `ORDER BY`
+- [x] B. `WHERE`
+- [ ] C. `GROUP BY`
+- [ ] D. `FROM`
+
+Correct! B. `WHERE`
+
+| SQL keyword	| Main purpose  |
+|-------------|---------------|
+| `SELECT`	  | Retrieve data |
+| `WHERE`	    | Filter rows   |
+| `ORDER BY`	| Sort rows     |
+| `GROUP BY`	| Group rows    |
+| `FETCH`	    | Limit or retrieve rows in supported contexts |
+
+**`FETCH`** <br/>
+Retrieves a specified number of rows or advances through a cursor.
+
+Example: `FETCH FIRST 5 ROWS ONLY` in SQL dialects that support this syntax. It does not replace `SELECT` as the main query statement.
 
 </details>
 
-Q.40 In conditional asymptotic notation, "`Θ(f(n)) if g(n)`" indicates that the algorithm's
-complexity is both upper and lower bounded by `f(n)` when:
+---
+
+Q.40 In conditional asymptotic notation, "`Θ(f(n))` if `g(n)`" indicates that the algorithm's complexity is both upper and lower bounded by `f(n)` when:
 - [ ] A. `g(n)` is a lower bound on `f(n)`
 - [ ] B. `g(n)` is an upper bound on `f(n)`
-- [ ] C. `g(n)` is true
+- [x] C. `g(n)` is true
 - [ ] D. `g(n)` is false
 
 <details>
   <summary> Solution </summary>
 
+**1. What does `Θ(f(n)` mean?** <br/>
+An algorithm has `Θ(f(n)` complexity when its growth rate is bounded both above and below by constant multiples of `f(n)`, for sufficiently large `n`.
+
+**2. How does the condition work?** <br/>
+The phrase “`Θ(f(n))` if `g(n)`” means the complexity classification applies when condition `g(n)` holds.
+- A. A lower bound on `f(n)`: this compares two functions, not a condition that must hold.
+- B. An upper bound on `f(n)`: likewise, it describes a bound rather than whether a condition is true.
+- C. `g(n)` is true: the condition is satisfied, so the stated complexity applies.
+- D. `g(n)` is false: the condition does not hold.
+
+
+An algorithm takes `Θ(n^2)` time when condition `P(n)` holds. What does this mean?
+- [ ] A. Its running time is always exactly `n^2`.
+- [x] B. Its running time grows proportionally to `n^2`, within constant factors, when `P(n)` holds.
+- [ ] C. Its running time is always at most `n`.
+- [ ] D. Its running time is independent of input size.
+
+Correct! Answer: B.
+
+When `P(n)` holds, the running time grows at the rate of `n^2`, within constant factors, for sufficiently large `n`.
+
+For example, if the running time is `T(n)=3n^2+2n+1`, then `T(n)=Θ(n^2)`, because the quadratic term dominates as `n` grows.
+
+Remember:
+- `O(f(n)`: asymptotic upper bound.
+- `Ω(f(n))`: asymptotic lower bound.
+- `Θ(f(n))`: both upper and lower bounds.
 
 </details>
+
+---
 
 Q.41 The OSI model consists of how many layers?
 - [ ] A. 5
@@ -1410,65 +1652,269 @@ Q.41 The OSI model consists of how many layers?
 <details>
   <summary> Solution </summary>
 
+Correct! C. 7 layers.
+
+The **OSI (Open Systems Interconnection) model** describes network communication using seven layers.
+
+**Visualize the 7 OSI layers** <br/>
+
+<img width="972" height="697" alt="image" src="https://github.com/user-attachments/assets/eb3c3f25-9d30-43ec-b550-d322e0dd91ad" />
+
+
+Memory trick, From Layer 1 to Layer 7: **`P`lease `D`o `N`ot `T`hrow `S`ausage `P`izza `A`way**.
+> **Physical -> Data Link -> Network -> Transport -> Session -> Presentation -> Application**.
+
+At which OSI layer does a router primarily operate?
+- [ ] A. Physical
+- [ ] B. Data Link
+- [x] C. Network
+- [ ] D. Transport
+
+Correct! C. Network Layer (Layer 3).
+
+A router primarily operates at Layer 3 and forwards packets using IP addresses to reach different networks.
 
 </details>
 
+---
+
 Q.42 In a relational database, what is a primary key?
 - [ ] A. A key used for opening encrypted data
-- [ ] B. A unique identifier for a record in a table @
+- [x] B. A unique identifier for a record in a table @
 - [ ] C. A foreign key from another table
 - [ ] D. An index for sorting data
 
 <details>
   <summary> Solution </summary>
 
+Correct!B. A unique identifier for a record in a table.
+
+A **primary key** uniquely identifies each row in a relational database table. <br/>
+It must contain unique values and cannot contain NULL.
+
+**Student table**
+| StudentID (PK) | Name	| Class |
+|----------------|------|-------|
+| 101	           | Neha	| 11    |
+| 102	           | Aman	| 12    |
+| 103	           | Raj	| 11    |
+`StudentID` is the primary key: each student has a distinct ID.
+
+**Primary key (PK)** <br/>
+Purpose: Uniquely identifies each row in a table.  <br/>
+Example: StudentID uniquely identifies each student.
+- Must be unique.
+- Cannot be NULL.
+- A table has only one primary-key constraint, which may contain multiple columns.
+
+**Foreign key (FK)** <br/>
+Purpose: Connects related tables and maintains referential integrity. <br/>
+Example: StudentID in an Enrollments table refers to a student in the Students table.
+- Values must match a referenced key, unless the foreign key permits NULL.
+- Duplicate values are allowed.
+- A table can have multiple foreign keys.
+
+**Index** <br/>
+Purpose: Helps the database find rows more efficiently. <br/>
+Think of an index like the index at the back of a textbook: it helps you locate information without scanning every page.
+- Can speed up searches, joins, and sorting.
+- Uses additional storage.
+- Can slow down inserts, updates, and deletes because the index may need updating.
+ 
+| Term	            | Meaning                                                                   |
+| `NULL`	          | Missing or unknown value; not the same as zero or an empty string         |
+| Unique constraint	| Prevents duplicate values in the constrained column or column combination |
+| Sorting	          | Arranges rows in an order, usually with `ORDER BY`                        |
+| Encryption key	  | A cryptographic key used to encrypt or decrypt data                       |
+
+Which statement about a primary key is correct?
+- [ ] A. It can contain duplicate values.
+- [ ] B. It can contain NULL values.
+- [x] C. It must uniquely identify each row and cannot be NULL.
+- [ ] D. It is always a column containing text.
+
+Correct! C. It must uniquely identify each row and cannot be NULL.
+
+| Concept	              | Remember                    |
+| Primary key	          | Identifies a row            |
+| Foreign key	          | Connects related tables     |
+| Index	                | Helps find data efficiently |
+| `UNIQUE` constraint	  | Prevents duplicate values   |
+| `NOT NULL` constraint | Requires a value            |
 
 </details>
+
+---
 
 Q.43 What will be the output of the following code segment?
 ```py
 a = 5
+
 def func_1(b=10):
-global a
-a=b-10
-b+=a
-print (a,b)
+  global a
+  a=b-10
+  b+=a
+  print (a,b)
+
 func_1(a)
 ```
 - [ ] A. 0 5
 - [ ] B. 5 0
 - [ ] C. 0 -5
-- [ ] D. -5 0
+- [x] D. -5 0
 
 <details>
   <summary> Solution </summary>
 
+The function has a default parameter value of `10`. <BR/>
+However, the call func_1(a) explicitly passes the current value of a, which is 5. <br/>
+So, inside the function, `b = 5`
+
+**Key concepts**
+
+**Global variable** <br/>
+A variable defined outside a function. <br/>
+The `global` keyword lets the function modify that variable.
+
+**Parameter and argument** <br/>
+`b` is the parameter; a in `func_1(a)` is the argument. Its value, `5`, is passed to `b`.
+
+**Augmented assignment (+=)** <br/>
+`b += a` adds a to the current value of b and stores the result in b.
 
 </details>
 
+---
+
 Q.44 Which JavaScript method is used to add a new HTML element to the DOM?
 - [ ] A. `appendElement()`
-- [ ] B. `createElement()`
+- [x] B. `createElement()`
 - [ ] C. `newElement()`
 - [ ] D. `addElement()`
 
 <details>
   <summary> Solution </summary>
 
+Correct answer is B. `createElement()`, with an important distinction: `createElement()` creates the element, but does not insert it into the DOM by itself.
+
+**1. Understand the concept** <br/>
+DOM (Document Object Model) is a tree-like representation of an HTML page. <br/>
+JavaScript can use it to create, modify, and remove HTML elements.
+
+<img width="520" height="465" alt="image" src="https://github.com/user-attachments/assets/02508469-284c-4795-b2ac-0c6020d22ccc" />
+
+
+**2. How to create and add an element** <br/>
+Suppose you want to add a new paragraph to a webpage.
+```html
+<body>
+  <h1>My Website</h1>
+
+  <script>
+    const paragraph = document.createElement("p");
+    paragraph.textContent = "Hello, students!";
+    document.body.appendChild(paragraph);
+  </script>
+</body>
+```
+
+<img width="672" height="277" alt="image" src="https://github.com/user-attachments/assets/e14a6b51-40fb-4bef-84b9-a1c8f4bd182a" />
+
+
+| Method	                    | Purpose                        |
+|-----------------------------|--------------------------------|
+| `document.createElement()`	| Creates an element             |
+| `appendChild()`	            | Inserts or moves an element    |
+| `remove()`	                | Removes an element from the DOM|
+
+
 
 </details>
+
+---
+
+**Network Security: Firewall**
 
 Q.45 The primary function of firewall in network security is
 - [ ] A. To monitor network traffic and detect anomalies.
 - [ ] B. To create virtual private networks for secure communication.
-- [ ] C. To filter incoming and outgoing network traffic based on security rules
+- [x] C. To filter incoming and outgoing network traffic based on security rules
 - [ ] D. To encrypt data before Transmission
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. To filter incoming and outgoing network traffic based on security rules.
+
+**1. How does a firewall work?**
+- A firewall is a network security system that allows or blocks network traffic according to configured security rules. 
+- It helps prevent unauthorized network connections.
+
+For example, a firewall may block incoming connections to a service that should not be accessible from the internet.
+
+<img width="961" height="465" alt="image" src="https://github.com/user-attachments/assets/0a49dd44-b1a4-4d67-b948-2987e84caa65" />
+
+| Concept	                                   | Explanation                                              |
+|--------------------------------------------|----------------------------------------------------------|
+| **Network monitoring and anomaly detection** | Monitoring tools and intrusion detection systems (IDS) specialize in identifying suspicious patterns. Some advanced firewalls also provide these features, but filtering traffic is the primary function asked here. |
+|	**VPN (Virtual Private Network)** |	A VPN creates a protected communication tunnel between devices or networks. A firewall may support VPN connections, but creating the tunnel is not its main function. |
+|	**Traffic filtering**	| A **firewall** evaluates network traffic against security rules and allows or blocks it. |
+|	**Encryption**	 | Encryption transforms readable data into an encoded form to protect confidentiality. Protocols such as TLS commonly provide encryption for data in transit. |
+
+**3. Important key terms**
+
+**Firewall**
+- Controls network traffic using security rules.
+  
+**IDS - Intrusion Detection System**
+- Detects suspicious activity and raises alerts.
+- An IDS does not necessarily block traffic.
+
+**VPN - Virtual Private Network**
+- Creates a protected tunnel for communication across a network.
+
+**Encryption**
+- Protects data confidentiality by encoding it so unauthorized parties cannot readily read it.
+
+> **Memory trick**:
+- **Firewall -> Filter**
+- **IDS -> Detect**
+- **VPN -> Tunnel**
+- **Encryption -> Protect data confidentiality**
+
+A company wants to detect suspicious network activity and generate alerts, without necessarily blocking the traffic. Which system is designed primarily for this purpose?
+- [ ] A. Firewall
+- [x] B. Intrusion Detection System (IDS)
+- [ ] C. Virtual Private Network (VPN)
+- [ ] D. Encryption algorithm
+
+Correct! B. Intrusion Detection System (IDS).
+
+An IDS monitors network or system activity for suspicious behavior and generates alerts when it detects potential threats. Its primary role is detection, not necessarily blocking.
+
+For example, if someone repeatedly attempts to access a company's server using suspicious login patterns, an IDS may flag the activity and alert the administrator.
+
+- **Firewall**: Primarily filters network traffic according to security rules, allowing or blocking connections.
+
+- **IDS**: Detects suspicious activity and generates alerts. Correct.
+
+- **VPN**: Creates a protected tunnel for communication over a network.
+
+- **Encryption algorithm**: Encodes data to protect its confidentiality.
+
+| Security tool	 | Main purpose        |
+|----------------|---------------------|
+| **Firewall**   | Filter traffic      |
+| **IDS**        | Detect and alert    |
+| **IPS (Intrusion Prevention System)** | Detect and actively block threats |
+| **VPN**        | Create a protected communication tunnel |
+| **Encryption** | Protect data confidentiality  |
 
 </details>
+
+---
+
+**Artificial Intelligence: Knowledge Representation**
 
 Q.46 In AI systems, Knowledge can be represented in two ways. What are these two ways? <br/>
 i. Machine Logic <br/>
@@ -1477,14 +1923,61 @@ iii. Propositional Logic <br/>
 iv. Compound Logic
 - [ ] A. (i) and (ii)
 - [ ] B. (i) and (iii)
-- [ ] C. (ii) and (iii)
+- [x] C. (ii) and (iii)
 - [ ] D. (iii) and (vi)
 
 <details>
   <summary> Solution </summary>
 
+Correct! C. (ii) and (iii) - Predicate Logic and Propositional Logic.
+
+These are two fundamental forms of logic used in AI to represent knowledge. 
+
+Let's understand how they differ.
+
+**1. Propositional Logic** <br/>
+Propositional logic represents knowledge using complete statements that are either true or false.
+
+Examples:
+- `P`: "The computer is switched on."
+- `Q`: "The network is connected."
+We can combine statements using logical operators:
+- `AND` 
+- `OR` 
+- `NOT` 
+- `IMPLIES` (->)
+For example, `P ^ Q` means the computer is switched on and the network is connected.
+
+**2. Predicate Logic** <br/>
+Predicate logic represents objects, their properties, and relationships between them. <br/>
+It can use variables and quantifiers.
+
+For example: `Student(Aman)`  This means "Aman is a student."
+
+Another example: `forall x, Human(x) -> Mortal(x)` This means "Every human is mortal."
+
+<img width="707" height="412" alt="image" src="https://github.com/user-attachments/assets/640a3fcd-58d3-4817-96e9-061b6fa4195e" />
+
+**Key terms**
+- **Proposition**: A statement that has a truth value.
+- **Predicate**: A property or relationship, such as `Student(x)`.
+- **Variable**: A symbol such as `x` that can stand for an object.
+- **Quantifier**: Specifies how many objects a statement applies to, such as `forall` (all) and `exists` (there exists).
+- **Knowledge representation**: The way an AI system stores facts and relationships so it can reason about them.
+
+Which statement best describes Predicate Logic?
+- [ ] A. It represents only complete statements without variables.
+- [x] B. It represents objects, properties, relationships, and quantifiers.
+- [ ] C. It stores knowledge only as numerical values.
+- [ ] D. It is a programming language used to build neural networks
+
+Correct! B. It represents objects, properties, relationships, and quantifiers.
+
+
 
 </details>
+
+---
 
 Q.47 What is the difference between a URL and a web address?
 - [ ] A. A URL is a Uniform Resource Locator, while a web address is away to identify a
@@ -1499,6 +1992,8 @@ website on the internet.
 
 </details>
 
+---
+
 Q.48 Monitors are primarily used for achieving:
 - [ ] A. Deadlocks
 - [ ] B. Starvation
@@ -1510,6 +2005,8 @@ Q.48 Monitors are primarily used for achieving:
 
 
 </details>
+
+---
 
 Q.49 In EDI, I stands for?
 - [ ] A. Indian
@@ -1523,6 +2020,8 @@ Q.49 In EDI, I stands for?
 
 </details>
 
+---
+
 Q.50 Which protocol provides connectionless communication with minimal overhead?
 - [ ] A. TCP
 - [ ] B. UDP
@@ -1534,6 +2033,8 @@ Q.50 Which protocol provides connectionless communication with minimal overhead?
 
 
 </details>
+
+---
 
 Q.51 Which maintenance activity involves updating software to work with new hardware or
 software environments?
@@ -1547,6 +2048,8 @@ software environments?
 
 </details>
 
+---
+
 Q.52 A formal model of protection in an operating system provides:
 - [ ] A. A mathematical framework for analyzing resource allocation
 - [ ] B. Guidelines for designing user interfaces
@@ -1557,6 +2060,8 @@ Q.52 A formal model of protection in an operating system provides:
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.53 minimum number of states required to recognize an octal number divisible by 3 are/is
 - [ ] A. 3
@@ -1569,6 +2074,8 @@ Q.53 minimum number of states required to recognize an octal number divisible by
 
 </details>
 
+---
+
 Q.54 Which command is used to remove a relation from an SQL?
 - [ ] A. Drop table
 - [ ] B. Delete
@@ -1580,6 +2087,8 @@ Q.54 Which command is used to remove a relation from an SQL?
 
 </details>
 
+---
+
 Q.55 What does the term "Software Maintenance" refer to?
 - [ ] A. Developing new software applications
 - [ ] B. Enhancing software performance
@@ -1590,6 +2099,8 @@ Q.55 What does the term "Software Maintenance" refer to?
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.56 The recurrence equation `T(n) = T(n/2) + T(n/3) + n` represents the time complexity of
 which algorithmic paradigm?
@@ -1603,6 +2114,8 @@ which algorithmic paradigm?
 
 </details>
 
+---
+
 Q.57 What does the term "harvard architecture" refer to in the context of microcontrollers?
 data
 - [ ] A. A type of microcontroller with high processing speed
@@ -1614,6 +2127,8 @@ data
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.58 Consider the statements given below and then choose the correct output from the
 given options :
@@ -1631,6 +2146,8 @@ print (L[::-1])
 
 </details>
 
+---
+
 Q.59 Which of the following is not an attribute of the tag ?
 - [ ] A. face
 - [ ] B. height
@@ -1641,6 +2158,8 @@ Q.59 Which of the following is not an attribute of the tag ?
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.60 The term "multi-user" in an OS context refers to:
 - [ ] A. An OS that can execute multiple programs simultaneously
@@ -1653,6 +2172,8 @@ Q.60 The term "multi-user" in an OS context refers to:
 
 </details>
 
+---
+
 Q.61 TPDU (Transport Protocol Data Unit) refers to:
 - [ ] A. A unit of data in the physical layer
 - [ ] B. A unit of data in the data link layer
@@ -1664,6 +2185,8 @@ Q.61 TPDU (Transport Protocol Data Unit) refers to:
 
 </details>
 
+---
+
 Q.62 **`A*` search algorithm** is based on?
 - [ ] A. BFS
 - [ ] B. DFS
@@ -1674,6 +2197,8 @@ Q.62 **`A*` search algorithm** is based on?
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.63 What is the primary purpose of using Don't Care conditions in Karnaugh Map
 simplification?
@@ -1687,6 +2212,8 @@ simplification?
 
 </details>
 
+---
+
 Q.64 Which among the followins is not a type of Zigbee Device?
 - [ ] A. Zigbee Coordinator device
 - [ ] B. Zigbee Router
@@ -1697,6 +2224,8 @@ Q.64 Which among the followins is not a type of Zigbee Device?
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.65 Zigbee is a task group in-----
 - [ ] A. LAN
@@ -1709,6 +2238,8 @@ Q.65 Zigbee is a task group in-----
 
 </details>
 
+---
+
 Q.66 In a threaded binary tree, the space required for threads is usually:
 - [ ] A. Greater than the space required for regular pointers
 - [ ] B. Equal to the space required for regular pointers
@@ -1719,6 +2250,8 @@ Q.66 In a threaded binary tree, the space required for threads is usually:
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.67 Given the Boolean expression `F(A, B, C, D) = Σ(0, 1, 2, 3, 8, 9, 10, 11)`, what is the
 simplified expression using the algebraic method?
@@ -1732,6 +2265,8 @@ simplified expression using the algebraic method?
 
 </details>
 
+---
+
 Q.68 Which model considers risk assessment and incremental development in software
 projects?
 - [ ] A. Waterfall Model
@@ -1743,6 +2278,8 @@ projects?
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.69 Which of the following expression in SQL would calculate the square root of 16?
 - [ ] A. `POWER (16,2)`
@@ -1756,6 +2293,8 @@ Q.69 Which of the following expression in SQL would calculate the square root of
 </details>
 
 
+---
+
 Q.70 A relation in a relational database is also known as:
 - [ ] A. A data type
 - [ ] B. An attribute
@@ -1768,6 +2307,7 @@ Q.70 A relation in a relational database is also known as:
 </details>
 
 
+---
 
 Q.71 A Database Management System is a type of _________software.
 - [ ] A. It is a type of system software
@@ -1780,6 +2320,7 @@ Q.71 A Database Management System is a type of _________software.
 
 </details>
 
+---
 
 Q.72 A grammar that produces more than one parse tree for the same sentence is called
 - [ ] A. Contiguous
@@ -1792,6 +2333,7 @@ Q.72 A grammar that produces more than one parse tree for the same sentence is c
 
 </details>
 
+---
 
 Q.73 Which traversal technique is used to visit each node of a linked list exactly once?
 - [ ] A. Preorder traversal
@@ -1804,6 +2346,7 @@ Q.73 Which traversal technique is used to visit each node of a linked list exact
 
 </details>
 
+---
 
 Q.74 Which of the following is not a Search Engine available over the Internet ?
 - [ ] A. Google
@@ -1816,6 +2359,7 @@ Q.74 Which of the following is not a Search Engine available over the Internet ?
 
 </details>
 
+---
 
 Q.75 In a PLA, what components are used to implement the combinational logic functions?
 - [ ] A. `AND` gates and `OR` gates
@@ -1828,6 +2372,7 @@ Q.75 In a PLA, what components are used to implement the combinational logic fun
 
 </details>
 
+---
 
 Q.76 Which protocol is used for sending emails?
 - [ ] A. HTTP
@@ -1840,6 +2385,7 @@ Q.76 Which protocol is used for sending emails?
 
 </details>
 
+---
 
 Q.77 …………….are the unorganized facts that can be processed to generate meaningful
 information.
@@ -1853,6 +2399,7 @@ information.
 
 </details>
 
+---
 
 Q.78 Which one of the following resource is not necessarily required on a file server?
 - [ ] A. secondary storage
@@ -1865,6 +2412,7 @@ Q.78 Which one of the following resource is not necessarily required on a file s
 
 </details>
 
+---
 
 Q.79 The letter S in the abbreviation HTTPS in context of Networking protocols, stands for :
 - [ ] A. Single
@@ -1877,6 +2425,7 @@ Q.79 The letter S in the abbreviation HTTPS in context of Networking protocols, 
 
 </details>
 
+---
 
 Q.80 Which version control system is commonly used for collaborative web development projects?
 - [ ] A. SVN
@@ -1889,6 +2438,7 @@ Q.80 Which version control system is commonly used for collaborative web develop
 
 </details>
 
+---
 
 Q.81 The term "DFD" stands for?
 - [ ] A. Data file diagram
@@ -1901,6 +2451,7 @@ Q.81 The term "DFD" stands for?
 
 </details>
 
+---
 
 Q.82 Which symbol is used to define the start and end of `XML` tags?
 - [ ] A.  ` `  
@@ -1913,6 +2464,7 @@ Q.82 Which symbol is used to define the start and end of `XML` tags?
 
 </details>
 
+---
 
 Q.83 What is the full form of FTP ?
 - [ ] A. File Transfer Protocol
@@ -1925,6 +2477,7 @@ Q.83 What is the full form of FTP ?
 
 </details>
 
+---
 
 Q.84 The language accepted by Push down Automaton:
 - [ ] A. Recursive Language
@@ -1938,6 +2491,7 @@ Q.84 The language accepted by Push down Automaton:
 
 </details>
 
+---
 
 Q.85 What is an encryption system that uses two keys: a public key that everyone can have
 and a private key for only the recipient?
@@ -1951,6 +2505,7 @@ and a private key for only the recipient?
 
 </details>
 
+---
 
 Q.86 Let u='1101', v='0001', then uv=11010001 and vu= 00011101. Using the given information
 what is the identity element for the string?
@@ -1965,6 +2520,7 @@ Ans
 
 </details>
 
+---
 
 Q.87 Which keyword is used to create an instance of a class in most programming
 languages?
@@ -1978,6 +2534,7 @@ languages?
 
 </details>
 
+---
 
 Q.88 Which of the following is known as a set of entities of the same type that share same
 properties, or attributes?
@@ -1991,6 +2548,7 @@ properties, or attributes?
 
 </details>
 
+---
 
 Q.89 What is the time complexity of Merge Sort for sorting an array of size "n"?
 - [ ] A. `O(n)`
@@ -2003,6 +2561,7 @@ Q.89 What is the time complexity of Merge Sort for sorting an array of size "n"?
 
 </details>
 
+---
 
 Q.90 Maximum read range of RFID module is?
 - [ ] A. 10 CM
@@ -2015,6 +2574,7 @@ Q.90 Maximum read range of RFID module is?
 
 </details>
 
+---
 
 Q.91 Which type of register is primarily used to temporarily hold data during arithmetic and
 logical operations in a microprocessor?
@@ -2028,6 +2588,7 @@ logical operations in a microprocessor?
 
 </details>
 
+---
 
 Q.92   Safeguards in an operating system are mechanisms used to:
 - [ ] A. Ensure the efficient utilization of CPU time
@@ -2040,6 +2601,7 @@ Q.92   Safeguards in an operating system are mechanisms used to:
 
 </details>
 
+---
 
 
 Q.93 Which of the following is a service for real-time text communication on the internet ?
@@ -2053,6 +2615,7 @@ Q.93 Which of the following is a service for real-time text communication on the
 
 </details>
 
+---
 
 Q.94 If the dictionary D1 is defined as: `D1 = {1: 'a', 2: 'b'}`
 then which of the following statements is incorrect and hence will result in an error?
@@ -2066,6 +2629,7 @@ then which of the following statements is incorrect and hence will result in an 
 
 </details>
 
+---
 
 Q.95 Telnet is commonly used for:
 - [ ] A. Secure file transfers
@@ -2078,7 +2642,7 @@ Q.95 Telnet is commonly used for:
 
 </details>
 
-
+---
 
 Q.96 Separate chaining involves storing collided elements in separate data structures,
 typically in:
@@ -2092,6 +2656,7 @@ typically in:
 
 </details>
 
+---
 
 Q.97 PDA can be represented with the help of
 - [ ] A. Instantaneous description
@@ -2104,6 +2669,7 @@ Q.97 PDA can be represented with the help of
 
 </details>
 
+---
 
 Q.98 Which Karnaugh Map simplification technique involves grouping cells that are not
 adjacent but share a common variable value?
@@ -2117,6 +2683,7 @@ adjacent but share a common variable value?
 
 </details>
 
+---
 
 Q.99 which of the following is/ are components of Expert Systems?
 - [ ] A. Knowledge Base
@@ -2128,6 +2695,8 @@ Q.99 which of the following is/ are components of Expert Systems?
   <summary> Solution </summary>
 
 </details>
+
+---
 
 Q.100 Arrange the following electromagnetic waves in increasing order of their frequency
 range.
@@ -2146,6 +2715,7 @@ Choose the correct answer from the options given below :
 
 </details>
 
+---
 
 Q.101 The mirror of the Society is:
 - [ ] A. playground
@@ -2158,7 +2728,7 @@ Q.101 The mirror of the Society is:
 
 </details>
 
-
+---
 
 Q.102 The number of domains in taxonomies of educational objective is
 - [ ] A. Two
@@ -2171,6 +2741,7 @@ Q.102 The number of domains in taxonomies of educational objective is
 
 </details>
 
+---
 
 Q.103 Who has developed the 'Guidelines on information literacy for lifelong learning?
 - [ ] A. RUSA
@@ -2183,6 +2754,7 @@ Q.103 Who has developed the 'Guidelines on information literacy for lifelong lea
 
 </details>
 
+---
 
 Q.104 Which type of lesson plan is simple and straightforward?
 - [ ] A. Daily lesson plan
@@ -2195,6 +2767,7 @@ Q.104 Which type of lesson plan is simple and straightforward?
 
 </details>
 
+---
 
 
 Q.105 The most natural and simple way of teaching a lesson is to proceed from <br/>
@@ -2213,6 +2786,7 @@ Choose the correct option:
 
 </details>
 
+---
 
 Q.106 Which one of the following options best describes progressive education?
 - [ ] A. Learning by doing, project method, cooperative learning
@@ -2225,6 +2799,7 @@ Q.106 Which one of the following options best describes progressive education?
 
 </details>
 
+---
 
 Q.107 In M.C.Q the correct option is:
 - [ ] A. Response
@@ -2237,6 +2812,7 @@ Q.107 In M.C.Q the correct option is:
 
 </details>
 
+---
 
 Q.108 Which of the following is a sign of motivated teaching?
 - [ ] A. Maximum presence of students in the class
@@ -2249,6 +2825,7 @@ Q.108 Which of the following is a sign of motivated teaching?
 
 </details>
 
+---
 
 Q.109 In M.C.Qs the statement of the problem is:
 - [ ] A. Option
@@ -2261,6 +2838,7 @@ Q.109 In M.C.Qs the statement of the problem is:
 
 </details>
 
+---
 
 Q.110 The stage in problem solving that includes the preparation of suitable hypothesis for
 investigation.
@@ -2274,6 +2852,7 @@ investigation.
 
 </details>
 
+---
 
 
 Q.111 While discussing about friction, a teacher gave a number of examples to explain the
@@ -2294,6 +2873,7 @@ The correct examples were
 
 </details>
 
+---
 
 Q.112  Having variety of question sets in a question paper increases it __________
 - [ ] A. Objectivity
@@ -2306,7 +2886,7 @@ Q.112  Having variety of question sets in a question paper increases it ________
 
 </details>
 
-
+---
 
 Q.113 If you join a teacher fraternity and choose to dress like most of the others in your
 group, you are exhibiting
@@ -2320,7 +2900,7 @@ group, you are exhibiting
 
 </details>
 
-
+---
 
 Q.114 What is the 4 steps for constructing a test ?
 - [ ] A. Planning and preparing the test
@@ -2333,6 +2913,7 @@ Q.114 What is the 4 steps for constructing a test ?
 
 </details>
 
+---
 
 Q.115 Continuous and Comprehensive evaluation was initiated by:
 - [ ] A. NCTE
@@ -2345,6 +2926,7 @@ Q.115 Continuous and Comprehensive evaluation was initiated by:
 
 </details>
 
+---
 
 Q.116 Learning is generally considered as a permanent change in behavior' based on
 - [x] A. Practice and experience.
@@ -2358,6 +2940,7 @@ Q.116 Learning is generally considered as a permanent change in behavior' based 
 
 </details>
 
+---
 
 Q.117 The characteristics of discussion method is
 - [ ] A. Ensure maximum participation
@@ -2370,6 +2953,7 @@ Q.117 The characteristics of discussion method is
 
 </details>
 
+---
 
 Q.118 Which of the following teaching method is focused on the development of creative minds?
 - [ ] A. Project 
@@ -2383,6 +2967,7 @@ Q.118 Which of the following teaching method is focused on the development of cr
 
 </details>
 
+---
 
 Q.119 Which type of lesson plan is concise and focused on specific concepts or skills?
 - [ ] A. Sequential lesson plans
@@ -2395,6 +2980,7 @@ Q.119 Which type of lesson plan is concise and focused on specific concepts or s
 
 </details>
 
+---
 
 Q.120 The 5E learning cycle boosts student engagement and motivation through
 - [x] A. Constructivist approach
@@ -2407,6 +2993,7 @@ Q.120 The 5E learning cycle boosts student engagement and motivation through
 
 </details>
 
+---
 
 Q.121 The part of the curriculum designed to meet the needs of all students is:
 - [ ] A. General education
@@ -2419,6 +3006,7 @@ Q.121 The part of the curriculum designed to meet the needs of all students is:
 
 </details>
 
+---
 
 
 Q.122. To demonstrate success by focusing on the learner’s desired outcome, a reasonable list of 
@@ -2433,6 +3021,7 @@ _____________objectives should be provided.
 
 </details>
 
+---
 
 Q.123 In comparing lecture and demonstration lessons, which one of the following is not
 true?
@@ -2446,6 +3035,7 @@ true?
 
 </details>
 
+---
 
 Q.124 Which one of the following is the duty of a class teacher?
 - [ ] A. Check the books, exercise books and bages of the students suddenly
@@ -2458,6 +3048,7 @@ Q.124 Which one of the following is the duty of a class teacher?
 
 </details>
 
+---
 
 Q.125 The most expected immediate outcome of teaching is
 - [ ] A. Changes in the behavior of students in a desirable direction.
@@ -2470,6 +3061,7 @@ Q.125 The most expected immediate outcome of teaching is
 
 </details>
 
+---
 
 
 Q.126 To select subject matter, one should consider student’s:
@@ -2483,6 +3075,7 @@ Q.126 To select subject matter, one should consider student’s:
 
 </details>
 
+---
 
 
 Q.127 Micro teaching was first adopted at Stanford University by
@@ -2496,6 +3089,7 @@ Q.127 Micro teaching was first adopted at Stanford University by
 
 </details>
 
+---
 
 
 Q.128 Introduce a problem that students might not be able to solve yet is an example of
@@ -2509,6 +3103,7 @@ Q.128 Introduce a problem that students might not be able to solve yet is an exa
 
 </details>
 
+---
 
 
 Q.129 Full form of SIOP Model is
@@ -2522,6 +3117,7 @@ Q.129 Full form of SIOP Model is
 
 </details>
 
+---
 
 Q.130 Which one of the following is the most suitable to improve children's learning?
 - [ ] A. Regular assessment test should be conducted.
@@ -2534,6 +3130,7 @@ Q.130 Which one of the following is the most suitable to improve children's lear
 
 </details>
 
+---
 
 Q.131 Which one among the following is NOT a major oil field located in Gujarat?
 - [ ] A. Ankaleshwar
@@ -2546,6 +3143,7 @@ Q.131 Which one among the following is NOT a major oil field located in Gujarat?
 
 </details>
 
+---
 
 Q.132 Who among the following is the author of the book 'The Indian Struggle 1920 - 1942' ?
 - [ ] A. Vinayak Damodar Savarkar
@@ -2558,6 +3156,7 @@ Q.132 Who among the following is the author of the book 'The Indian Struggle 192
 
 </details>
 
+---
 
 Q.133 7 is to 34 as 5 is to ?
 - [ ] A. 33
@@ -2570,7 +3169,7 @@ Q.133 7 is to 34 as 5 is to ?
 
 </details>
 
-
+---
 
 Q.134 Chronologically arrange the following political events related to Indian National
 Movement beginning from the earliest :
@@ -2590,6 +3189,7 @@ Select the correct answer from the given options:
 
 </details>
 
+---
 
 Q.135 As per the Cabinet Resolution of 1st January 2015, the NITI Aayog consists of :
 1. Prime Minister of India
@@ -2609,6 +3209,7 @@ Select the correct answer from the given options :
 
 </details>
 
+---
 
 Q.136 Which nutrient protects us from diseases?
 - [ ] A. Vitamin and minerals
@@ -2621,6 +3222,7 @@ Q.136 Which nutrient protects us from diseases?
 
 </details>
 
+---
 
 Q.137 In the given letter series what letter will come in place of the question Symbol.
 DIL, GLO, JOR, ?
@@ -2634,6 +3236,7 @@ DIL, GLO, JOR, ?
 
 </details>
 
+---
 
 Q.138 B is the Aunt of C. A is the Husband of B. B is the sister of D. Tell how A is related to D?
 - [ ] A. Uncle
@@ -2647,6 +3250,7 @@ Q.138 B is the Aunt of C. A is the Husband of B. B is the sister of D. Tell how 
 
 </details>
 
+---
 
 Q.139 The joint between separate faces of a solid is called an…...............
 - [ ] A. edge
@@ -2659,6 +3263,7 @@ Q.139 The joint between separate faces of a solid is called an…...............
 
 </details>
 
+---
 
 Q.140 Which is the longest National Highway in India?
 - [ ] A. NH 5
@@ -2671,6 +3276,7 @@ Q.140 Which is the longest National Highway in India?
 
 </details>
 
+---
 
 Q.141 Aaron weight 49 kg 357 g and Ron weights 32 kg 458 g. Who weighs less and by how
 much?
@@ -2684,6 +3290,7 @@ much?
 
 </details>
 
+---
 
 Q.142 If we combine two consecutive triangular numbers, we get?
 - [ ] A. Rational Number
@@ -2697,6 +3304,7 @@ Q.142 If we combine two consecutive triangular numbers, we get?
 
 </details>
 
+---
 
 Q.143 Which of the following is a waterborne disease?
 - [ ] A. Measles
@@ -2709,6 +3317,7 @@ Q.143 Which of the following is a waterborne disease?
 
 </details>
 
+---
 
 Q.144 “Family is a unit consisting of a mother, father and their two children”. This statement is
 - [ ] A. incorrect, because the statement should specify that the children are biological
@@ -2723,6 +3332,7 @@ being of only one kind
 
 </details>
 
+---
 
 Q.145 If the median of the data 30,8,7,3,17,15,21,24,29,23 is x and the median of the data
 obtained by replacing 3 by 33 and 8 by 18 in the above data is y, then what is the
@@ -2737,6 +3347,7 @@ difference between y and x ?
 
 </details>
 
+---
 
 Q.146 Choose the correct option instead of the question mark in the given question.
 456 : 15 :: 627 : ?
@@ -2750,6 +3361,7 @@ Q.146 Choose the correct option instead of the question mark in the given questi
 
 </details>
 
+---
 
 Q.147 In English alphabet which Letter is in between the Letter S and the Letter G ?
 - [ ] A. N
@@ -2762,6 +3374,7 @@ Q.147 In English alphabet which Letter is in between the Letter S and the Letter
 
 </details>
 
+---
 
 Q.148 Which of the following are macronutrients commonly found in soil?
 - [ ] A. Carbon, Hydrogen, Oxygen
@@ -2774,6 +3387,7 @@ Q.148 Which of the following are macronutrients commonly found in soil?
 
 </details>
 
+---
 
 
 Q.149 ABCD is a rhombus in which ∠ADB = 25 Degree. Then, the value of ( 2∠BAD - ∠ABC ) is:
@@ -2787,6 +3401,7 @@ Q.149 ABCD is a rhombus in which ∠ADB = 25 Degree. Then, the value of ( 2∠BA
 
 </details>
 
+---
 
 Q.150 Globalization signifies which of the following :
 - [ ] A. Time-space compression
@@ -2803,3 +3418,4 @@ Q.150 Globalization signifies which of the following :
 
 </details>
 <!----------------------------------------->
+
