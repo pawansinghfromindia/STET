@@ -619,9 +619,11 @@ Q 31. In the Tower of Hanoi problem with n disks, how many moves are required to
 <details>
   <summary> Solution </summary>
 
+```
 n = 3
 2^n-1 =  2^3-1 = 7 
-
+```
+ 
 </details>
 <!----------------------------->
 
@@ -776,11 +778,55 @@ Q 40. Which type of queue allows insertion and deletion of elements at both the 
 
 ---
 
-Q 41. 
-- [ ] A.
-- [ ] B.
-- [ ] C.
-- [ ] D.
+Q 41. In pointer implementation of linked lists, which operation can be performed in constant time O(1) when inserting or
+deleting nodes?
+- [x] A. Inserting at the begining
+- [ ] B. Inserting at the end
+- [ ] C. Inserting at a specific position
+- [ ] D. Deleting a specific node
+
+<details>
+  <summary> Solution </summary>
+
+[Linkedlist Insertion](https://www.scaler.com/topics/insertion-in-linked-list/)
+
+
+</details>
+<!----------------------------->
+
+---
+
+Q 42. For a 2D Array represents in **row-major order**, the index formula to access the element at row `i` and column `j` using the
+base address `B` is:
+- [x] A. Index = `B + (i * n + j)`
+- [ ] B. Index = `B + (j * n + i)`
+- [ ] C. Index = `B + (i + j)`
+- [ ] D. Index = `B + (i * m + j)`
+
+<details>
+  <summary> Solution </summary>
+
+```
+Row-major order
+A[m][n]
+A[i][j] = Base Address + (i*n + j) x word size
+-----------------------------------------------
+
+Column-major order
+A[i][j] = base Address + (i + j*m ) x word size
+```
+
+</details>
+<!----------------------------->
+
+---
+
+Q 43. **Conditional Asymptotic notation** allows for a more nuanced analysis of algorithm behaviour under specific conditions.
+This is particularly useful when:
+- [ ] A. Analyzing algorithms with constant time complexity
+- [ ] B. The input size is fixed
+- [ ] C. The input data is random
+- [x] D. Algorithm bahavior varies based on certain inputc charactersistics
 
 <details>
   <summary> Solution </summary>
@@ -790,11 +836,11 @@ Q 41.
 
 ---
 
-Q 42. 
-- [ ] A.
-- [ ] B.
-- [ ] C.
-- [ ] D.
+Q 44. If an algorithms's behaviour is bounded by "O(f(n) if g(n)", what notation does it become when the condition is removed?
+- [x] A. O(f(n))
+- [ ] B. O(g(n)
+- [ ] C. O(f(n)+g(n))
+- [ ] D. O(f(n)*g(n))
 
 <details>
   <summary> Solution </summary>
@@ -804,58 +850,418 @@ Q 42.
 
 ---
 
-Q 43. 
-- [ ] A.
-- [ ] B.
-- [ ] C.
-- [ ] D.
+Q 45. **Divide and Conquer** is an algorithm paradigm that solves problems by:
+- [ ] A. Iteratively solving subproblems
+- [x] B. Recursively solving subproblems
+- [ ] C. Using heuristics to find dolutions
+- [ ] D. Greedy combining solutions
 
 <details>
   <summary> Solution </summary>
+
+> **Heuristics** are mental shortcuts or "rules of thumb" that allow individuals and systems to make quick decisions and solve problems efficiently without processing all available information.
+
+
+Divide and Conquer uses recurrence.
 
 </details>
 <!----------------------------->
 
 ---
 
-Q 44. 
-- [ ] A.
-- [ ] B.
-- [ ] C.
-- [ ] D.
+Q 46. In an AVL Tree, the balance factors of a node is the difference between the height of its:
+- [x] A. Left and Right subtree
+- [ ] B. Left subtree and parent
+- [ ] C. Right subtree and parent
+- [ ] D. Left and right children
 
 <details>
   <summary> Solution </summary>
+
+[AVL Tree](https://www.w3schools.com/dsa/dsa_data_avltrees.php)
+
+```
+            45
+           /
+         44
+       /
+     43
+    /
+  42
+
+Balance factor must between [-1, 0, 1]
+
+B.F = Height(left subtree - right subtree)
+
+           45 1
+           /
+    1    44
+       /
+     43
+    /
+  42
+
+Rotation Rule: LL, RR, LR, RL
+```
 
 </details>
 <!----------------------------->
 
 ---
 
-Q 45. 
-- [ ] A.
-- [ ] B.
-- [ ] C.
-- [ ] D.
+Q 47. Which traversal algorithm is typically **implemented using a stack**
+- [x] A. DFS
+- [ ] B. BFS
+- [ ] C. Both DFS and BFS
+- [ ] D. Neither DFS nor BFS
 
 <details>
-  <summary> Solution </summary>
+ <summary> Solution </summary>
+
+```
+DFS -> Stack
+BFS -> Queue
+```
+
+[DFS vs BFS](https://www.wscubetech.com/resources/dsa/dfs-vs-bfs)
 
 </details>
-<!----------------------------->
+<!---------------------------->
 
 ---
 
-Q 46. 
-- [ ] A.
-- [ ] B.
-- [ ] C.
-- [ ] D.
+Q 48. In a **directed graph**, an edge that points from vertex A to vertex B is denoted as:
+- [x] A. `(A,B)`
+- [ ] B. `[A,B]`
+- [ ] C. `<A,B>`
+- [ ] D. `{A,B}`
 
 <details>
-  <summary> Solution </summary>
+ <summary> Solution </summary>
+
+[Graph](https://www.tutorialspoint.com/graph_theory/graph_theory_directed_graphs.htm)
 
 </details>
-<!----------------------------->
+<!---------------------------->
+
 
 ---
+
+Q 49. _________ compares neighbouring elements only and swaps them when necessary.
+- [ ] A. Selection Sort
+- [x] B. Bubble Sort
+- [x] C. Insertion Sort
+- [ ] D. Quick Sort
+
+<details>
+ <summary> Solution </summary>
+
+[Sorting Algo](https://www.programiz.com/dsa/sorting-algorithm)
+
+```
+Selection Sort -> choose an element and compare it with every other element whether it is smallest or not
+
+Bubble Sort -> Number of passes, in each pass, check adjecent element if required swapping
+
+
+```
+
+</details>
+<!---------------------------->
+
+---
+
+Q 50. **Algorithm Analysis** is primarily concerned with:
+- [ ] A. Determining the best algorithm for a specified problem
+- [x] B. Measuring the time and space effieciently of an algorithm
+- [ ] C. Creating new algorithms from scratch
+- [ ] D. Solving algorithmic problems using any available approach
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 51. In the **Tower of Hanoi** problem with `n` disks, how many moves rae required to solve the problem
+- [ ] A. `n`
+- [ ] B. `2n`
+- [x] C. `2^n-1`
+- [ ] D. `2^n`
+
+<details>
+ <summary> Solution </summary>
+
+[Tower Of Hanoi](https://www.mathsisfun.com/games/towerofhanoi.html)
+
+[Tower Of Hanoi](https://www.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/a/towers-of-hanoi)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 52. The process of removing recursion involves replacing recursive function calls with:
+- [ ] A. More recursive function calls
+- [x] B. Loops
+- [ ] C. Additional memory allocation
+- [ ] D. Non-recursive function calls
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 53. Which among the following search algorithm require least memory?
+- [ ] A. optimal Search
+- [x] B. Linear search
+- [ ] C. DFS
+- [ ] D. BFS
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 54. What is the worst **time complexity of Binary Search** for an array of size `n`?
+- [x] A. **`O(logn)`**
+- [ ] B. `O(n)`
+- [ ] C. `O(nlogn)`
+- [ ] D. `O(1)`
+
+<details>
+ <summary> Solution </summary>
+
+[Binary Search](https://www.w3schools.com/dsa/dsa_algo_binarysearch.php)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 55. In the context of **Minimum spanning tree**, the "cut property" is used to justify the correctness of Prim's algorithm.
+What does the cut property state?
+- [ ] A. The algorithm always cuts the maximum weight edge.
+- [ ] B. The algorithm always cuts the minimum weight edge.
+- [x] C. The algorithm always cuts an edge crossing the cut with the minimum weight.
+- [ ] D. The algorithm always cuts an edge crossing the cut with the maximum weight.
+
+<details>
+ <summary> Solution </summary>
+
+[Cut Property](https://www.baeldung.com/cs/minimum-spanning-tree-cut)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 56. Which **property of dynamic programming** is particularly useful for solving **optimal Search Tree problems**?
+- [x] A. Optimal Substructure
+- [ ] B. Greedy choice property
+- [ ] C. Divide and Conquer
+- [ ] D. Linear programming
+
+<details>
+ <summary> Solution </summary>
+
+[DP](https://herovired.com/learning-hub/blogs/optimal-binary-search-tree)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 57. The **Floyd-Warshall algorithm** is a popular method for solving the **All-Pair Shortest Path** problem. What is the time complexity of Floyd-Warshall algorithm for a graph with `n` vertices?
+- [x] A. `O(n)`
+- [ ] B. `O(n log n)`
+- [ ] C. `O(n^2)`
+- [x] D. `O(n^3)`
+
+<details>
+ <summary> Solution </summary>
+
+[Floyd-Warshall algorithm](https://www.tutorialspoint.com/data_structures_algorithms/floyd_warshall_algorithm.htm)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 58. Which traversal technique is used to visit each node of linked list exactly once?
+- [ ] A. Preorder traversal
+- [ ] B. Inorder traversal
+- [ ] C. Postorder traversal
+- [x] D. Linear traversal
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 59. In binary subtraction using the simple method, if a borrow is needed from a digit and the borrowed digit is 1, what happens to the next digit's value?
+- [ ] A. It remains unchanged
+- [ ] B. It is incremented by 1
+- [x] C. It is decremented by 1
+- [ ] D. It becomes 0
+
+<details>
+ <summary> Solution </summary>
+
+```
+     1 0
+  -  0 1
+-----------
+       1
+    
+```
+
+</details>
+<!---------------------------->
+
+---
+
+Q 60. Which representation is best suited for matrices with a small number of non-zero elements in each row and column?
+- [x] A. Triple representation
+- [ ] B. Compressed Sparse row(CSR) format
+- [x] C. Compressed sparse column(CSC) format
+- [ ] D. Array representation
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 61. In computer graphics, arrays can be used to store pixel values for images. Why type of array would be suitable for this purpose?
+- [ ] A. 1D Array
+- [x] B. 2D Array
+- [ ] C. 3D Array
+- [ ] D. 4D Array
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 62. In **Divide and Conquer algorithm** for **finding the max and min elements**, how are the results from left and right subarray combined?
+- [ ] A. By comparing the avg of max and min
+- [x] B. By comparing the max of the left and right subarrays and min of the left and right subarrays
+- [ ] C. By adding the max of the left and right subarrays and min of the left and right subarrays
+- [ ] D. By multiplying the max of the left and right subarrays and min of the left and right subarrays
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 63. **Uniform-cost search** expands the node `n` with the ___________
+- [x] A. Lower Path cost
+- [ ] B. Heuristic cost
+- [ ] C. Highets path cost
+- [ ] D. Average path cost
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 64. Which of the following is the best case for a **recursive factorial** function?
+- [x] A. `n==0`
+- [ ] B. `n==1`
+- [ ] C. `n<0`
+- [ ] D. `n>0`
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 65. In the context of **Recursion**, what is the purpose of **stack** data structure?
+- [x] A. to store variable and function calls for backtracking
+- [ ] B. to store only variables
+- [ ] C. to store only function calls
+- [ ] D. to store loop counters
+
+<details>
+ <summary> Solution </summary>
+
+[Recursion](https://www.w3schools.com/programming/prog_recursion.php)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 66. In the context of **dynamic programming** for solving multistage graph problems, **what is memorization** used for?
+- [ ] A. Dividing the graph into stages
+- [ ] B. Sorting the vertices in the graph
+- [x] C. Storing solutions to overlapping subproblems
+- [ ] D. finding the shortest path
+
+<details>
+ <summary> Solution </summary>
+
+[DP-multistage graph problems](https://www.vrakshacademy.com/2021/06/multistage-graph-dynamic-programming-ada.html)
+
+</details>
+<!---------------------------->
+
+---
+
+Q 67. What is the time complexity of **Divide and Conquer** algorithm for finding max and min elements in an array of size `n`?
+- [x] A. `O(n)`
+- [ ] B. `O(log n)`
+- [ ] C. `O(n log n)`
+- [ ] D. `O(n^2)`
+
+<details>
+ <summary> Solution </summary>
+
+</details>
+<!---------------------------->
+
+---
+
+Q 68. When adding two positive binary numbers using 2's complement method, if the result has a carry-out the most significant bit(MSB), what should be done?
+- [x] A. Ignore carry
+- [ ] B. Add the carry to the least significant bit(LSB)
+- [ ] C. Add the carry to the sign bit
+- [ ] D. Subtract the carry from MSB
+
+<details>
+ <summary> Solution </summary>
+
+```
+2's Complement = Ignore carry
+1's Complement =  carry forward
+
+```
+
+</details>
+<!---------------------------->
